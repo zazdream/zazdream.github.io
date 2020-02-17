@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zazdream.com/"/>
-  <updated>2020-02-17T11:48:45.123Z</updated>
+  <updated>2020-02-17T12:07:37.762Z</updated>
   <id>http://zazdream.com/</id>
   
   <author>
@@ -17,34 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HEXO的安装与使用</title>
-    <link href="http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
-    <published>2020-02-17T05:22:00.000Z</published>
-    <updated>2020-02-17T11:48:45.123Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;什么是-Hexo&quot;&gt;&lt;a href=&quot;#什么是-Hexo&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo&quot;&gt;&lt;/a&gt;&lt;strong&gt;什么是 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;h3 id=&quot;安装HEXO&quot;&gt;&lt;a href=&quot;#安装HEXO&quot; class=&quot;headerlink&quot; title=&quot;安装HEXO&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装HEXO&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;安装前提&lt;/strong&gt;&lt;br&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
-&lt;p&gt;（1）&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)&lt;br&gt;（2）&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
-    
-    
-      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Git的安装与使用</title>
     <link href="http://zazdream.com/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
     <id>http://zazdream.com/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
-    <published>2020-02-17T04:44:20.000Z</published>
-    <updated>2020-02-17T11:51:03.508Z</updated>
+    <published>2020-02-17T05:44:20.000Z</published>
+    <updated>2020-02-17T12:07:37.762Z</updated>
     
     <summary type="html">
     
@@ -66,7 +43,7 @@
     <link href="http://zazdream.com/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/"/>
     <id>http://zazdream.com/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/</id>
     <published>2020-02-17T04:44:06.000Z</published>
-    <updated>2020-02-17T11:49:01.556Z</updated>
+    <updated>2020-02-17T12:05:54.215Z</updated>
     
     <summary type="html">
     
@@ -81,6 +58,29 @@
     
     
       <category term="Node.js" scheme="http://zazdream.com/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HEXO的安装与使用</title>
+    <link href="http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-02-17T02:22:00.000Z</published>
+    <updated>2020-02-17T12:06:33.859Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;什么是-Hexo&quot;&gt;&lt;a href=&quot;#什么是-Hexo&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo&quot;&gt;&lt;/a&gt;&lt;strong&gt;什么是 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h3 id=&quot;安装HEXO&quot;&gt;&lt;a href=&quot;#安装HEXO&quot; class=&quot;headerlink&quot; title=&quot;安装HEXO&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装HEXO&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;安装前提&lt;/strong&gt;&lt;br&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
+&lt;p&gt;（1）&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)&lt;br&gt;（2）&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
     
   </entry>
   

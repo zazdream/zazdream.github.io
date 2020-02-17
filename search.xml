@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HEXO的安装与使用</title>
-    <url>/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="什么是-Hexo"><a href="#什么是-Hexo" class="headerlink" title="什么是 Hexo"></a><strong>什么是 Hexo</strong></h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h3 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a><strong>安装HEXO</strong></h3><p><strong>安装前提</strong><br>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
-<p>（1）<a href="https://nodejs.org/en/">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)<br>（2）<a href="https://git-scm.com/">Git</a></p>
-<a id="more"></a>
-
-<p><strong>安装Node.js</strong><br>请查看我的文章：<a href="/2020/02/17/Node-js的安装与使用">Node.js的安装与使用</a></p>
-<p><strong>安装 Git</strong><br>请查看我的文章：<a href="/2020/02/17/Git的安装与使用">Git的安装与使用</a></p>
-<p><strong>安装 Hexo</strong><br>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo，从桌面快捷方式打开Git Bash键入命令如下：<br><code>$ npm install -g hexo-cli</code></p>
-<h3 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a><strong>使用Hexo</strong></h3><p>（1）在本地磁盘的任意位置新建文件夹并设置名称，例如“我的博客网站”，该文件夹将作为以后所有的博客网站本地文件存放位置。<br>（2）进入该文件夹，鼠标右击，选择Git Bash Here打开Git，执行下列命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;  &#x2F;&#x2F;新建指定文件夹作为当前博客网站存放位置</span><br><span class="line">$ cd &lt;folder&gt;  &#x2F;&#x2F;进入该文件夹</span><br><span class="line">$ npm install  &#x2F;&#x2F;同步相关依赖库</span><br></pre></td></tr></table></figure>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init zazdream</span><br><span class="line">$ cd zazdream</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>执行命令完成后，指定文件夹的目录如下：<br>.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
-<p>目录解释:</p>
-<p><code>_config.yml</code>：网站的配置信息。可以在此配置大部分的参数。<br><code>package.json</code>：应用程序的信息。<br><code>scaffolds</code>：模版文件夹。当新建文章时，Hexo 会根据 scaffold 来建立文件。<br><code>source</code>：资源文件夹。是存放用户资源的地方。<br><code>themes</code>：主题 文件夹。Hexo 会根据主题来生成静态页面。</p>
-<p><strong>常用的命令</strong></p>
-<p><code>$ hexo init [folder]</code><br>例如：<code>hexo init zazdream</code><br>释义：新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站</p>
-<p><code>$ hexo new [layout] &lt;title&gt;</code><br>例如：<code>$ hexo new &quot;post title with whitespace</code><br>释义：新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来</p>
-<p><code>$ hexo generate</code><br>简写：<code>$ hexo g</code><br>释义：生成静态文件</p>
-<p><code>$ hexo server</code><br>释义：启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
-<p><code>$ hexo deploy</code><br>简写：<code>$ hexo d</code><br>释义：部署网站。</p>
-<p><code>$ hexo clean</code><br>释义：清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>备注：在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<p><code>$ hexo version</code><br>释义：显示 Hexo 版本。</p>
-<p><strong>查看更多关于Hexo的命令请访问：<a href="https://hexo.io/zh-cn/docs/commands">Hexo指令</a></strong></p>
-]]></content>
-      <categories>
-        <category>博客网站的搭建</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git的安装与使用</title>
     <url>/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="什么是Git？"><a href="#什么是Git？" class="headerlink" title="什么是Git？"></a><strong>什么是Git？</strong></h2><p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是Linus Torvalds为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
@@ -82,7 +47,7 @@
 <p><code>步骤7</code>：确认无误后，点击Install<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/007.png" alt></p>
 <p><code>步骤7</code>：半分钟后，安装完成，点击Finish</p>
 <p><code>步骤8</code>：配置环境变量（已自动配置，无需再次配置）。</p>
-<p><code>备注</code>：默认Node.js在安装完毕后，会自动在系统的path环境变量中配置node.exe的目录路径，无需再次配置。但是，可能部分人的电脑在安装完成后，dos命令下输入node会提示错误，此时需配置环境，配置环境详细设置请查看<a href="https://blog.csdn.net/muzidigbig/article/details/80493880">muzidigbig的博文</a>。</p>
+<p><code>备注</code>：默认Node.js在安装完毕后，会自动在系统的path环境变量中配置node.exe的目录路径，无需再次配置。但是，可能部分人的电脑在安装完成后，dos命令下输入node会提示错误，此时需配置环境，配置环境具体方法请查看<a href="https://blog.csdn.net/muzidigbig/article/details/80493880">muzidigbig的博文</a>。</p>
 <p><code>步骤9</code>：检测是否安装成功</p>
 <p>点击开win+R打开cmd，键入命令：<code>node --version</code>查看当前Node.js版本</p>
 ]]></content>
@@ -91,6 +56,41 @@
       </categories>
       <tags>
         <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HEXO的安装与使用</title>
+    <url>/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="什么是-Hexo"><a href="#什么是-Hexo" class="headerlink" title="什么是 Hexo"></a><strong>什么是 Hexo</strong></h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h3 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a><strong>安装HEXO</strong></h3><p><strong>安装前提</strong><br>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<p>（1）<a href="https://nodejs.org/en/">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)<br>（2）<a href="https://git-scm.com/">Git</a></p>
+<a id="more"></a>
+
+<p><strong>安装Node.js</strong><br>请查看我的文章：<a href="/2020/02/17/Node-js的安装">Node.js的安装与使用</a></p>
+<p><strong>安装 Git</strong><br>请查看我的文章：<a href="/2020/02/17/Git的安装与使用">Git的安装与使用</a></p>
+<p><strong>安装 Hexo</strong><br>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo，从桌面快捷方式打开Git Bash键入命令如下：<br><code>$ npm install -g hexo-cli</code></p>
+<h3 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a><strong>使用Hexo</strong></h3><p>（1）在本地磁盘的任意位置新建文件夹并设置名称，例如“我的博客网站”，该文件夹将作为以后所有的博客网站本地文件存放位置。<br>（2）进入该文件夹，鼠标右击，选择Git Bash Here打开Git，执行下列命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;  &#x2F;&#x2F;新建指定文件夹作为当前博客网站存放位置</span><br><span class="line">$ cd &lt;folder&gt;  &#x2F;&#x2F;进入该文件夹</span><br><span class="line">$ npm install  &#x2F;&#x2F;同步相关依赖库</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init zazdream</span><br><span class="line">$ cd zazdream</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>执行命令完成后，指定文件夹的目录如下：<br>.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
+<p>目录解释:</p>
+<p><code>_config.yml</code>：网站的配置信息。可以在此配置大部分的参数。<br><code>package.json</code>：应用程序的信息。<br><code>scaffolds</code>：模版文件夹。当新建文章时，Hexo 会根据 scaffold 来建立文件。<br><code>source</code>：资源文件夹。是存放用户资源的地方。<br><code>themes</code>：主题 文件夹。Hexo 会根据主题来生成静态页面。</p>
+<p><strong>常用的命令</strong></p>
+<p><code>$ hexo init [folder]</code><br>例如：<code>hexo init zazdream</code><br>释义：新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站</p>
+<p><code>$ hexo new [layout] &lt;title&gt;</code><br>例如：<code>$ hexo new &quot;post title with whitespace</code><br>释义：新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来</p>
+<p><code>$ hexo generate</code><br>简写：<code>$ hexo g</code><br>释义：生成静态文件</p>
+<p><code>$ hexo server</code><br>释义：启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p><code>$ hexo deploy</code><br>简写：<code>$ hexo d</code><br>释义：部署网站。</p>
+<p><code>$ hexo clean</code><br>释义：清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>备注：在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<p><code>$ hexo version</code><br>释义：显示 Hexo 版本。</p>
+<p><strong>查看更多关于Hexo的命令请访问：<a href="https://hexo.io/zh-cn/docs/commands">Hexo指令</a></strong></p>
+]]></content>
+      <categories>
+        <category>博客网站的搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
