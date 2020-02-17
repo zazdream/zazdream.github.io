@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>我的初篇博客《Hello World》 - zazdream</title>
+<title>Node.js的安装 - zazdream</title>
 
 
-    <meta name="description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;大家好，这是我的第一篇博客。&amp;#160; &amp;#160; &amp;#160; &amp;#160;作为一名程序员，为了保持优良的传统，所以就从Hello World 开始吧。 简单的介绍关于名字&amp;#160; &amp;#160; &amp;#160; &amp;#160;我的网站名字是zazdream。思来想去，感觉梦想对于现在的我们来说是最重要的，引用匈牙利诗人乌尔曼的一句话：诗人">
+    <meta name="description" content="在安装Node.js之前，我们应改弄清两个问题：（1）NodeJS是什么？（2）NodeJS能做什么？ NodeJS是什么脚本语言需要一个解析器才能运行，JavaScript是脚本语言，在不同的位置有不一样的解析器，对于需要独立运行的JS，NodeJS就是一个解析器。 NodeJS能做什么NodeJS的作者说，他创造NodeJS的目的是为了实现高性能Web服务器。对于前端而言，简单方面可以通过No">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的初篇博客《Hello World》">
-<meta property="og:url" content="http://zazdream.com/2020/02/09/my-first-blog/index.html">
+<meta property="og:title" content="Node.js的安装">
+<meta property="og:url" content="http://zazdream.com/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="zazdream">
-<meta property="og:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;大家好，这是我的第一篇博客。&amp;#160; &amp;#160; &amp;#160; &amp;#160;作为一名程序员，为了保持优良的传统，所以就从Hello World 开始吧。 简单的介绍关于名字&amp;#160; &amp;#160; &amp;#160; &amp;#160;我的网站名字是zazdream。思来想去，感觉梦想对于现在的我们来说是最重要的，引用匈牙利诗人乌尔曼的一句话：诗人">
+<meta property="og:description" content="在安装Node.js之前，我们应改弄清两个问题：（1）NodeJS是什么？（2）NodeJS能做什么？ NodeJS是什么脚本语言需要一个解析器才能运行，JavaScript是脚本语言，在不同的位置有不一样的解析器，对于需要独立运行的JS，NodeJS就是一个解析器。 NodeJS能做什么NodeJS的作者说，他创造NodeJS的目的是为了实现高性能Web服务器。对于前端而言，简单方面可以通过No">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://zazdream.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-09T07:35:37.000Z">
-<meta property="article:modified_time" content="2020-02-13T06:03:52.516Z">
+<meta property="article:published_time" content="2020-02-17T04:44:06.000Z">
+<meta property="article:modified_time" content="2020-02-17T11:49:01.556Z">
 <meta property="article:author" content="张之卿">
-<meta property="article:tag" content="初篇">
+<meta property="article:tag" content="Node.js">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://zazdream.com/images/og_image.png">
 
@@ -82,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="我的初篇博客《Hello World》" height="28">
+                <img src="/images/logo.svg" alt="Node.js的安装" height="28">
             
             </a>
         </div>
@@ -150,17 +150,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-09T07:35:37.000Z">2020-02-09</time>
+                <time class="level-item has-text-grey" datetime="2020-02-17T04:44:06.000Z">2020-02-17</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/">专业知识分享</a>
+                <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 555 个字)
+                    4 分钟 读完 (大约 531 个字)
                 </span>
                 
                 
@@ -174,41 +174,28 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                我的初篇博客《Hello World》
+                Node.js的安装
             
         </h1>
         <div class="content">
-            <p>&#160; &#160; &#160; &#160;大家好，这是我的第一篇博客。<br>&#160; &#160; &#160; &#160;作为一名程序员，为了保持优良的传统，所以就从Hello World 开始吧。</p>
-<h2 id="简单的介绍"><a href="#简单的介绍" class="headerlink" title="简单的介绍"></a>简单的介绍</h2><h3 id="关于名字"><a href="#关于名字" class="headerlink" title="关于名字"></a>关于名字</h3><p>&#160; &#160; &#160; &#160;我的网站名字是zazdream。思来想去，感觉梦想对于现在的我们来说是最重要的，引用匈牙利诗人乌尔曼的一句话：诗人年老的不是岁月，而是梦想的失去。</p>
-<h3 id="我的日常"><a href="#我的日常" class="headerlink" title="我的日常"></a>我的日常</h3><p>&#160; &#160; &#160; &#160;目前主要从事网络工程相关的学习，是一名大三在校学生，业余时对计算机组装、网络安全比较感兴趣。闲来喜欢和朋友打打游戏，爱好是听音乐、做运动，梦想是成为一名合格、健康的网络工程师。</p>
+            <p>在安装Node.js之前，我们应改弄清两个问题：（1）NodeJS是什么？（2）NodeJS能做什么？</p>
+<h3 id="NodeJS是什么"><a href="#NodeJS是什么" class="headerlink" title="NodeJS是什么"></a><strong>NodeJS是什么</strong></h3><p>脚本语言需要一个解析器才能运行，JavaScript是脚本语言，在不同的位置有不一样的解析器，对于需要独立运行的JS，NodeJS就是一个解析器。</p>
+<h3 id="NodeJS能做什么"><a href="#NodeJS能做什么" class="headerlink" title="NodeJS能做什么"></a><strong>NodeJS能做什么</strong></h3><p>NodeJS的作者说，他创造NodeJS的目的是为了实现高性能Web服务器。对于前端而言，简单方面可以通过NodeJS使用命令交互模式调试JS代码片段，复杂方面可以使用NodeJS编写工具提升工作效率。</p>
 <a id="more"></a>
 
-<h2 id="为什么写博客"><a href="#为什么写博客" class="headerlink" title="为什么写博客"></a>为什么写博客</h2><ul>
-<li><p>整体梳理相关技术，查漏补缺。</p>
-</li>
-<li><p>与他人相互沟通验证，提高个人能力。</p>
-</li>
-<li><p>做下技术备忘吧，经常发现有些看过的东西，后期想回忆时还要从新找。</p>
-</li>
-<li><p>希望能通过文章给他人带来一些帮助吧，为社会做点贡献。</p>
-</li>
-<li><p>提高个人沟通能力。</p>
-<p>所以呢，小伙伴们跟我一起行动起来吧。</p>
-</li>
-</ul>
-<h2 id="接下来打算写什么"><a href="#接下来打算写什么" class="headerlink" title="接下来打算写什么"></a>接下来打算写什么</h2><ul>
-<li><p>围绕思科网络搭建过程中遇到的各种问题和解决方案。</p>
-</li>
-<li><p>围绕博客网站建设过程中遇到的各种问题和解决方案。</p>
-</li>
-<li><p>围绕电脑日常使用过程中遇到的问题和解决方案。</p>
-</li>
-<li><p>围绕各种PC端软件安装过程中遇到的问题和解决方案。</p>
-<p>内容有点多，计划是一周写一篇吧，争取在半年内写完吧。<br>有些东西我也是刚接触，咱们就一起学习，共同进步吧。</p>
-</li>
-</ul>
-<h2 id="推荐一本好书给大家看看"><a href="#推荐一本好书给大家看看" class="headerlink" title="推荐一本好书给大家看看"></a>推荐一本好书给大家看看</h2><p>&#160; &#160; &#160; &#160;以后打算没更新一篇博客就带着推荐一本好书给大家看看。<br>&#160; &#160; &#160; &#160;《方与圆》 作者：丁远峙</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>&#160; &#160; &#160; &#160;最后，希望各位小伙伴多多关注，多多指教！</p>
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a><strong>如何安装</strong></h3><p>安装环境：<code>Windows10  x64</code></p>
+<p><code>步骤1</code>：进入<a href="https://nodejs.org/en/">NodeJS官网</a>下载Node.js安装程序<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/001.png" alt><br><code>备注</code>：建议选择图中框选出的版本，为稳定版。</p>
+<p><code>步骤2</code>：打开下载好的应用程序安装包，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/002.png" alt></p>
+<p><code>步骤3</code>：勾选同意，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/003.png" alt></p>
+<p><code>步骤4</code>：Node.js默认安装路径为“C:\Program Files\nodejs\”，你可以点击Change修改，这里保持默认，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/004.png" alt></p>
+<p><code>步骤5</code>：这里无需修改，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/005.png" alt></p>
+<p><code>步骤6</code>：勾选自动安装必要组件，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/006.png" alt></p>
+<p><code>步骤7</code>：确认无误后，点击Install<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/007.png" alt></p>
+<p><code>步骤7</code>：半分钟后，安装完成，点击Finish</p>
+<p><code>步骤8</code>：配置环境变量（已自动配置，无需再次配置）。</p>
+<p><code>备注</code>：默认Node.js在安装完毕后，会自动在系统的path环境变量中配置node.exe的目录路径，无需再次配置。但是，可能部分人的电脑在安装完成后，dos命令下输入node会提示错误，此时需配置环境，配置环境详细设置请查看<a href="https://blog.csdn.net/muzidigbig/article/details/80493880">muzidigbig的博文</a>。</p>
+<p><code>步骤9</code>：检测是否安装成功</p>
+<p>点击开win+R打开cmd，键入命令：<code>node --version</code>查看当前Node.js版本</p>
 
         </div>
         
@@ -216,7 +203,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/%E5%88%9D%E7%AF%87/" rel="tag">初篇</a>
+                    <a class="has-link-grey -link" href="/tags/Node-js/" rel="tag">Node.js</a>
                 </div>
             </div>
         </div>
@@ -267,12 +254,19 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/09/suibi1/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">随笔一</span>
+                <span class="level-item">Git的安装与使用</span>
             </a>
         </div>
         
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/09/suibi1/">
+                <span class="level-item">随笔一</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
         
     </div>
 </div>
@@ -607,7 +601,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="我的初篇博客《Hello World》" height="28">
+                    <img src="/images/logo.svg" alt="Node.js的安装" height="28">
                 
                 </a>
                 <p class="is-size-7">

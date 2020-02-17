@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zazdream.com/"/>
-  <updated>2020-02-16T09:31:07.008Z</updated>
+  <updated>2020-02-17T11:48:45.123Z</updated>
   <id>http://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HEXO的安装与使用</title>
+    <link href="http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-02-17T05:22:00.000Z</published>
+    <updated>2020-02-17T11:48:45.123Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;什么是-Hexo&quot;&gt;&lt;a href=&quot;#什么是-Hexo&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo&quot;&gt;&lt;/a&gt;&lt;strong&gt;什么是 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h3 id=&quot;安装HEXO&quot;&gt;&lt;a href=&quot;#安装HEXO&quot; class=&quot;headerlink&quot; title=&quot;安装HEXO&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装HEXO&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;安装前提&lt;/strong&gt;&lt;br&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
+&lt;p&gt;（1）&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)&lt;br&gt;（2）&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git的安装与使用</title>
+    <link href="http://zazdream.com/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://zazdream.com/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-02-17T04:44:20.000Z</published>
+    <updated>2020-02-17T11:51:03.508Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是Git？&quot;&gt;&lt;a href=&quot;#什么是Git？&quot; class=&quot;headerlink&quot; title=&quot;什么是Git？&quot;&gt;&lt;/a&gt;&lt;strong&gt;什么是Git？&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是Linus Torvalds为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。&lt;/p&gt;
+&lt;p&gt;尽管最初 Git 的开发是为了辅助 Linux 内核开发的过程，但是现在很多其他自由软件项目中也使用了 Git。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Git" scheme="http://zazdream.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js的安装</title>
+    <link href="http://zazdream.com/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+    <id>http://zazdream.com/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/</id>
+    <published>2020-02-17T04:44:06.000Z</published>
+    <updated>2020-02-17T11:49:01.556Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在安装Node.js之前，我们应改弄清两个问题：（1）NodeJS是什么？（2）NodeJS能做什么？&lt;/p&gt;
+&lt;h3 id=&quot;NodeJS是什么&quot;&gt;&lt;a href=&quot;#NodeJS是什么&quot; class=&quot;headerlink&quot; title=&quot;NodeJS是什么&quot;&gt;&lt;/a&gt;&lt;strong&gt;NodeJS是什么&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;脚本语言需要一个解析器才能运行，JavaScript是脚本语言，在不同的位置有不一样的解析器，对于需要独立运行的JS，NodeJS就是一个解析器。&lt;/p&gt;
+&lt;h3 id=&quot;NodeJS能做什么&quot;&gt;&lt;a href=&quot;#NodeJS能做什么&quot; class=&quot;headerlink&quot; title=&quot;NodeJS能做什么&quot;&gt;&lt;/a&gt;&lt;strong&gt;NodeJS能做什么&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;NodeJS的作者说，他创造NodeJS的目的是为了实现高性能Web服务器。对于前端而言，简单方面可以通过NodeJS使用命令交互模式调试JS代码片段，复杂方面可以使用NodeJS编写工具提升工作效率。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Node.js" scheme="http://zazdream.com/tags/Node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>随笔一</title>
@@ -57,32 +125,6 @@
     
     
       <category term="初篇" scheme="http://zazdream.com/tags/%E5%88%9D%E7%AF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello Blog</title>
-    <link href="http://zazdream.com/2020/02/09/hello-world/"/>
-    <id>http://zazdream.com/2020/02/09/hello-world/</id>
-    <published>2020-02-09T06:42:14.269Z</published>
-    <updated>2020-02-16T09:31:12.408Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="http://zazdream.com/categories/Hexo/"/>
-    
-    
-      <category term="HelloBlog" scheme="http://zazdream.com/tags/HelloBlog/"/>
-    
-      <category term="博客创建" scheme="http://zazdream.com/tags/%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/"/>
     
   </entry>
   

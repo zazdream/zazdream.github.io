@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HEXO的安装与使用</title>
+    <url>/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="什么是-Hexo"><a href="#什么是-Hexo" class="headerlink" title="什么是 Hexo"></a><strong>什么是 Hexo</strong></h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h3 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a><strong>安装HEXO</strong></h3><p><strong>安装前提</strong><br>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<p>（1）<a href="https://nodejs.org/en/">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)<br>（2）<a href="https://git-scm.com/">Git</a></p>
+<a id="more"></a>
+
+<p><strong>安装Node.js</strong><br>请查看我的文章：<a href="/2020/02/17/Node-js的安装与使用">Node.js的安装与使用</a></p>
+<p><strong>安装 Git</strong><br>请查看我的文章：<a href="/2020/02/17/Git的安装与使用">Git的安装与使用</a></p>
+<p><strong>安装 Hexo</strong><br>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo，从桌面快捷方式打开Git Bash键入命令如下：<br><code>$ npm install -g hexo-cli</code></p>
+<h3 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a><strong>使用Hexo</strong></h3><p>（1）在本地磁盘的任意位置新建文件夹并设置名称，例如“我的博客网站”，该文件夹将作为以后所有的博客网站本地文件存放位置。<br>（2）进入该文件夹，鼠标右击，选择Git Bash Here打开Git，执行下列命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;  &#x2F;&#x2F;新建指定文件夹作为当前博客网站存放位置</span><br><span class="line">$ cd &lt;folder&gt;  &#x2F;&#x2F;进入该文件夹</span><br><span class="line">$ npm install  &#x2F;&#x2F;同步相关依赖库</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init zazdream</span><br><span class="line">$ cd zazdream</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>执行命令完成后，指定文件夹的目录如下：<br>.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
+<p>目录解释:</p>
+<p><code>_config.yml</code>：网站的配置信息。可以在此配置大部分的参数。<br><code>package.json</code>：应用程序的信息。<br><code>scaffolds</code>：模版文件夹。当新建文章时，Hexo 会根据 scaffold 来建立文件。<br><code>source</code>：资源文件夹。是存放用户资源的地方。<br><code>themes</code>：主题 文件夹。Hexo 会根据主题来生成静态页面。</p>
+<p><strong>常用的命令</strong></p>
+<p><code>$ hexo init [folder]</code><br>例如：<code>hexo init zazdream</code><br>释义：新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站</p>
+<p><code>$ hexo new [layout] &lt;title&gt;</code><br>例如：<code>$ hexo new &quot;post title with whitespace</code><br>释义：新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来</p>
+<p><code>$ hexo generate</code><br>简写：<code>$ hexo g</code><br>释义：生成静态文件</p>
+<p><code>$ hexo server</code><br>释义：启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p><code>$ hexo deploy</code><br>简写：<code>$ hexo d</code><br>释义：部署网站。</p>
+<p><code>$ hexo clean</code><br>释义：清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>备注：在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<p><code>$ hexo version</code><br>释义：显示 Hexo 版本。</p>
+<p><strong>查看更多关于Hexo的命令请访问：<a href="https://hexo.io/zh-cn/docs/commands">Hexo指令</a></strong></p>
+]]></content>
+      <categories>
+        <category>博客网站的搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git的安装与使用</title>
+    <url>/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="什么是Git？"><a href="#什么是Git？" class="headerlink" title="什么是Git？"></a><strong>什么是Git？</strong></h2><p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是Linus Torvalds为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
+<p>尽管最初 Git 的开发是为了辅助 Linux 内核开发的过程，但是现在很多其他自由软件项目中也使用了 Git。</p>
+<a id="more"></a>
+
+<h2 id="如何下载与安装Git？"><a href="#如何下载与安装Git？" class="headerlink" title="如何下载与安装Git？"></a><strong>如何下载与安装Git？</strong></h2><p><strong>下载</strong></p>
+<p>打开<a href="https://git-scm.com/">Git官网</a>，下载最新版本Git<br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/001.jpg" alt><br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/002.jpg" alt><br><code>备注</code>：点击框选出的位置即可下载，或者按照提示根据自己电脑系统版本下载相应Git</p>
+<p><strong>安装</strong><br>打开下载好的Git安装包后，一直点击Next，保持默认选项，直到出现Install，点击Install，安装完成后点击Finish。</p>
+<p><strong>使用</strong><br>安装好后，在电脑桌面或者打开某一本地磁盘，在空白位置右击鼠标会发现多了两个选项<code>Git GUI Here</code>和<code>Git Bash Here</code>，如图所示，点击<code>Git Bash Here</code>即可从当前位置打开并使用使用Git。<br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/003.jpg" alt></p>
+<p><strong>检查Git是否正确安装</strong><br>win+r，输入并打开cmd，键入git命令，弹出如图所示界面，说明Git已正确安装。<br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/004.jpg" alt></p>
+<h2 id="配置Git环境"><a href="#配置Git环境" class="headerlink" title="配置Git环境"></a><strong>配置Git环境</strong></h2><p><code>第一步：</code><br>打开<a href="https://github.com/">GitHub</a>官网，注册一个账号，注册好后，双击桌面上的Git Bash快捷图标，进行环境配置。</p>
+<p><code>第二步：</code><br>配置用户名<br><code>git config --global user.name &quot;username&quot;</code>   // username是自己的账户名<br>配置邮箱<br><code>git config --global user.email &quot;username@email.com&quot;</code>//username@email.com注册账号时用的邮箱</p>
+<p><code>第三步：</code><br>键入<code>git config --global --list</code>命令查看之前的配置是否成功</p>
+<p><code>第四步：</code><br>键入<code>ssh-keygen -t rsa</code>生成ssh，连敲三次回车键，结束后去系统盘目录下（一般在 C:\用户\当前用户\ .ssh）查看是否生成  <code>.ssh</code> 文件夹，此文件夹中包含以下两个文件：<code>id_rsa</code>、<code>id_rsa.pub</code></p>
+<p><code>第五步：</code><br>以记事本打开方式，将<code>id_rsa.pub</code>文件打开，其中内容即为公钥，将公匙复制后添加到GitHub管理平台中。</p>
+<p><code>添加公钥方式如下：</code><br>登入自己的Github账户后-&gt;点击右上角自己的头像-&gt;点击出现选项中的Settings-&gt;点击左边侧栏的SSH and GPG keys-&gt;点击右上角绿色按钮New SSH key-&gt;填好内容，点击绿色按钮Add SSH key<br><code>备注：</code>Title：内容随便，建议取个人网站名称，方便记忆；Key：将公钥复制粘贴到其中。</p>
+<p><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/005.jpg" alt></p>
+<p><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/006.jpg" alt></p>
+<p><code>第六步</code><br>测试配置是否成功，在Git Bush命令框中键入<code>ssh -T git@github.com</code>命令，回车后若出现下面情况，则说明环境配置成功。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">14513@DESKTOP-OCFQBHA MINGW64 ~&#x2F;zazdream</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi zazdream! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客网站的搭建</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node.js的安装</title>
+    <url>/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>在安装Node.js之前，我们应改弄清两个问题：（1）NodeJS是什么？（2）NodeJS能做什么？</p>
+<h3 id="NodeJS是什么"><a href="#NodeJS是什么" class="headerlink" title="NodeJS是什么"></a><strong>NodeJS是什么</strong></h3><p>脚本语言需要一个解析器才能运行，JavaScript是脚本语言，在不同的位置有不一样的解析器，对于需要独立运行的JS，NodeJS就是一个解析器。</p>
+<h3 id="NodeJS能做什么"><a href="#NodeJS能做什么" class="headerlink" title="NodeJS能做什么"></a><strong>NodeJS能做什么</strong></h3><p>NodeJS的作者说，他创造NodeJS的目的是为了实现高性能Web服务器。对于前端而言，简单方面可以通过NodeJS使用命令交互模式调试JS代码片段，复杂方面可以使用NodeJS编写工具提升工作效率。</p>
+<a id="more"></a>
+
+<h3 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a><strong>如何安装</strong></h3><p>安装环境：<code>Windows10  x64</code></p>
+<p><code>步骤1</code>：进入<a href="https://nodejs.org/en/">NodeJS官网</a>下载Node.js安装程序<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/001.png" alt><br><code>备注</code>：建议选择图中框选出的版本，为稳定版。</p>
+<p><code>步骤2</code>：打开下载好的应用程序安装包，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/002.png" alt></p>
+<p><code>步骤3</code>：勾选同意，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/003.png" alt></p>
+<p><code>步骤4</code>：Node.js默认安装路径为“C:\Program Files\nodejs\”，你可以点击Change修改，这里保持默认，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/004.png" alt></p>
+<p><code>步骤5</code>：这里无需修改，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/005.png" alt></p>
+<p><code>步骤6</code>：勾选自动安装必要组件，点击Next<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/006.png" alt></p>
+<p><code>步骤7</code>：确认无误后，点击Install<br><img src="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/007.png" alt></p>
+<p><code>步骤7</code>：半分钟后，安装完成，点击Finish</p>
+<p><code>步骤8</code>：配置环境变量（已自动配置，无需再次配置）。</p>
+<p><code>备注</code>：默认Node.js在安装完毕后，会自动在系统的path环境变量中配置node.exe的目录路径，无需再次配置。但是，可能部分人的电脑在安装完成后，dos命令下输入node会提示错误，此时需配置环境，配置环境详细设置请查看<a href="https://blog.csdn.net/muzidigbig/article/details/80493880">muzidigbig的博文</a>。</p>
+<p><code>步骤9</code>：检测是否安装成功</p>
+<p>点击开win+R打开cmd，键入命令：<code>node --version</code>查看当前Node.js版本</p>
+]]></content>
+      <categories>
+        <category>博客网站的搭建</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>随笔一</title>
     <url>/2020/02/09/suibi1/</url>
     <content><![CDATA[<h2 id="刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情"><a href="#刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情" class="headerlink" title="刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情"></a>刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情</h2><p>&#160; &#160; &#160; &#160;很多人喜欢苏轼，是因为他在风雨中还能那般从容淡定，高歌“一蓑烟雨任平生”。其实在唐朝也有一位诗人像苏轼那般豁达，他就是人称“诗豪”的刘禹锡。刘禹锡和苏轼有很多相似之处，都是前半生春风得意，后半生一路贬谪。人生不幸，诗词兴，他们的很多诗词都是在逆境中写就的。其中的乐观洒脱之情鼓舞了无数人。</p>
@@ -58,33 +151,6 @@
       </categories>
       <tags>
         <tag>初篇</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello Blog</title>
-    <url>/2020/02/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<a id="more"></a>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>HelloBlog</tag>
-        <tag>博客创建</tag>
       </tags>
   </entry>
 </search>
