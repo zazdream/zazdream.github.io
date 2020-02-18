@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 document.addEventListener('DOMContentLoaded', function () {
     if (typeof ($.fn.lightGallery) === 'function') {
--       $('.article').lightGallery({ selector: '.gallery-item'});
-+       $('.article').lightGallery({ selector: '.gallery-item', loop: true, escKey: true, keyPress: true});
+        $('.article').lightGallery({ selector: '.gallery-item', loop: true, escKey: true, keyPress: true});
     }
     if (typeof ($.fn.justifiedGallery) === 'function') {
         $('.justified-gallery').justifiedGallery({rowHeight:400, margins:4});

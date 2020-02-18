@@ -7,21 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Git的安装与使用 - zazdream</title>
+<title>Hexo博客主题之Icarus的设置与美化（进阶） - zazdream</title>
 
 
-    <meta name="description" content="什么是Git？Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是Linus Torvalds为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 尽管最初 Git 的开发是为了辅助 Linux 内核开发的过程，但是现在很多其他自由软件项目中也使用了 Git。">
+    <meta name="description" content="Icarus的瀑布流相册Icarus的主题已经默认支持瀑布流的相册布局，我们可以添加到文章的任意位置。 第一步：修改博客网站的主题配置文件_config.yml，开启相册功能 123456plugins:    # Enable page animations    animejs: true    # Enable the lightGallery and Justified Gallery p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git的安装与使用">
-<meta property="og:url" content="http://zazdream.com/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="Hexo博客主题之Icarus的设置与美化（进阶）">
+<meta property="og:url" content="http://zazdream.com/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/index.html">
 <meta property="og:site_name" content="zazdream">
-<meta property="og:description" content="什么是Git？Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是Linus Torvalds为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 尽管最初 Git 的开发是为了辅助 Linux 内核开发的过程，但是现在很多其他自由软件项目中也使用了 Git。">
+<meta property="og:description" content="Icarus的瀑布流相册Icarus的主题已经默认支持瀑布流的相册布局，我们可以添加到文章的任意位置。 第一步：修改博客网站的主题配置文件_config.yml，开启相册功能 123456plugins:    # Enable page animations    animejs: true    # Enable the lightGallery and Justified Gallery p">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://zazdream.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-17T05:44:20.000Z">
-<meta property="article:modified_time" content="2020-02-17T12:07:37.762Z">
+<meta property="article:published_time" content="2020-02-18T09:01:19.000Z">
+<meta property="article:modified_time" content="2020-02-18T11:24:08.597Z">
 <meta property="article:author" content="张之卿">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Icarus">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://zazdream.com/images/og_image.png">
 
@@ -82,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Git的安装与使用" height="28">
+                <img src="/images/logo.svg" alt="Hexo博客主题之Icarus的设置与美化（进阶）" height="28">
             
             </a>
         </div>
@@ -142,7 +143,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-17T05:44:20.000Z">2020-02-17</time>
+                <time class="level-item has-text-grey" datetime="2020-02-18T09:01:19.000Z">2020-02-18</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
@@ -152,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 786 个字)
+                    11 分钟 读完 (大约 1604 个字)
                 </span>
                 
                 
@@ -166,36 +167,55 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Git的安装与使用
+                Hexo博客主题之Icarus的设置与美化（进阶）
             
         </h1>
         <div class="content">
-            <h2 id="什么是Git？"><a href="#什么是Git？" class="headerlink" title="什么是Git？"></a><strong>什么是Git？</strong></h2><p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是Linus Torvalds为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
-<p>尽管最初 Git 的开发是为了辅助 Linux 内核开发的过程，但是现在很多其他自由软件项目中也使用了 Git。</p>
+            <h3 id="Icarus的瀑布流相册"><a href="#Icarus的瀑布流相册" class="headerlink" title="Icarus的瀑布流相册"></a><strong>Icarus的瀑布流相册</strong></h3><p>Icarus的主题已经默认支持瀑布流的相册布局，我们可以添加到文章的任意位置。</p>
+<p><code>第一步</code>：修改博客网站的主题配置文件<code>_config.yml</code>，开启相册功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">    # Enable page animations</span><br><span class="line">    animejs: true</span><br><span class="line">    # Enable the lightGallery and Justified Gallery plugins</span><br><span class="line">    # https:&#x2F;&#x2F;ppoffice.github.io&#x2F;hexo-theme-icarus&#x2F;Plugins&#x2F;General&#x2F;gallery-plugin&#x2F;</span><br><span class="line">    gallery: true  &#x2F;&#x2F;修改为true</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 
-<h2 id="如何下载与安装Git？"><a href="#如何下载与安装Git？" class="headerlink" title="如何下载与安装Git？"></a><strong>如何下载与安装Git？</strong></h2><p><strong>下载</strong></p>
-<p>打开<a href="https://git-scm.com/">Git官网</a>，下载最新版本Git<br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/001.jpg" alt><br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/002.jpg" alt><br><code>备注</code>：点击框选出的位置即可下载，或者按照提示根据自己电脑系统版本下载相应Git</p>
-<p><strong>安装</strong><br>打开下载好的Git安装包后，一直点击Next，保持默认选项，直到出现Install，点击Install，安装完成后点击Finish。</p>
-<p><strong>使用</strong><br>安装好后，在电脑桌面或者打开某一本地磁盘，在空白位置右击鼠标会发现多了两个选项<code>Git GUI Here</code>和<code>Git Bash Here</code>，如图所示，点击<code>Git Bash Here</code>即可从当前位置打开并使用使用Git。<br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/003.jpg" alt></p>
-<p><strong>检查Git是否正确安装</strong><br>win+r，输入并打开cmd，键入git命令，弹出如图所示界面，说明Git已正确安装。<br><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/004.jpg" alt></p>
-<h2 id="配置Git环境"><a href="#配置Git环境" class="headerlink" title="配置Git环境"></a><strong>配置Git环境</strong></h2><p><code>第一步：</code><br>打开<a href="https://github.com/">GitHub</a>官网，注册一个账号，注册好后，双击桌面上的Git Bash快捷图标，进行环境配置。</p>
-<p><code>第二步：</code><br>配置用户名<br><code>git config --global user.name &quot;username&quot;</code>   // username是自己的账户名<br>配置邮箱<br><code>git config --global user.email &quot;username@email.com&quot;</code>//username@email.com注册账号时用的邮箱</p>
-<p><code>第三步：</code><br>键入<code>git config --global --list</code>命令查看之前的配置是否成功</p>
-<p><code>第四步：</code><br>键入<code>ssh-keygen -t rsa</code>生成ssh，连敲三次回车键，结束后去系统盘目录下（一般在 C:\用户\当前用户\ .ssh）查看是否生成  <code>.ssh</code> 文件夹，此文件夹中包含以下两个文件：<code>id_rsa</code>、<code>id_rsa.pub</code></p>
-<p><code>第五步：</code><br>以记事本打开方式，将<code>id_rsa.pub</code>文件打开，其中内容即为公钥，将公匙复制后添加到GitHub管理平台中。</p>
-<p><code>添加公钥方式如下：</code><br>登入自己的Github账户后-&gt;点击右上角自己的头像-&gt;点击出现选项中的Settings-&gt;点击左边侧栏的SSH and GPG keys-&gt;点击右上角绿色按钮New SSH key-&gt;填好内容，点击绿色按钮Add SSH key<br><code>备注：</code>Title：内容随便，建议取个人网站名称，方便记忆；Key：将公钥复制粘贴到其中。</p>
-<p><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/005.jpg" alt></p>
-<p><img src="/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/006.jpg" alt></p>
-<p><code>第六步</code><br>测试配置是否成功，在Git Bush命令框中键入<code>ssh -T git@github.com</code>命令，回车后若出现下面情况，则说明环境配置成功。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">14513@DESKTOP-OCFQBHA MINGW64 ~&#x2F;zazdream</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi zazdream! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p><code>第二步</code>：添加相册图片（我们可以放在文章任何位置，这里我单独作为相册页面，修改的是之前创建的photo页面的内容，即修改photo.md文件内容）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;justified-gallery&quot;&gt;</span><br><span class="line"></span><br><span class="line">![姐姐和小侄女](&#x2F;photo&#x2F;index&#x2F;family&#x2F;001.jpg)  &#x2F;&#x2F;照片路径为照片文件相对于source文件夹的路径</span><br><span class="line">![我和小侄子](&#x2F;photo&#x2F;index&#x2F;family&#x2F;002.jpg)</span><br><span class="line">![香香](&#x2F;photo&#x2F;index&#x2F;family&#x2F;003.jpg)</span><br><span class="line">![香香](&#x2F;photo&#x2F;index&#x2F;family&#x2F;004.jpg)</span><br><span class="line">![香香](&#x2F;photo&#x2F;index&#x2F;family&#x2F;005.jpg)</span><br><span class="line">![香香](&#x2F;photo&#x2F;index&#x2F;family&#x2F;006.jpg)</span><br><span class="line">![香香](&#x2F;photo&#x2F;index&#x2F;family&#x2F;007.jpg)</span><br><span class="line">![小侄子](&#x2F;photo&#x2F;index&#x2F;family&#x2F;008.gif)</span><br><span class="line">![小侄子](&#x2F;photo&#x2F;index&#x2F;family&#x2F;009.gif)</span><br><span class="line">![大帅](&#x2F;photo&#x2F;index&#x2F;family&#x2F;010.jpg)</span><br><span class="line">![我和姐姐](&#x2F;photo&#x2F;index&#x2F;family&#x2F;011.jpg)</span><br><span class="line">![我和妈妈](&#x2F;photo&#x2F;index&#x2F;family&#x2F;012.jpg)</span><br><span class="line">![我们](&#x2F;photo&#x2F;index&#x2F;family&#x2F;013.jpg)</span><br><span class="line">![妈妈](&#x2F;photo&#x2F;index&#x2F;family&#x2F;014.jpg)</span><br><span class="line">![我和小侄女](&#x2F;photo&#x2F;index&#x2F;family&#x2F;015.jpg)</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>第三步</code>：其实第二步完成后，已经完成了相册的设置，但是相册默认的样式高度和间隙看着有点难受，可以适当修改。打开Icarus主题文件夹，通过相应路径<code>source/js/gallery.js</code>，找到<code>gallery.js</code>文件修改如下，这里我将相册的每行高度修改为160px，间隔为4px。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&#39;DOMContentLoaded&#39;, function () &#123;</span><br><span class="line">    if (typeof ($.fn.lightGallery) &#x3D;&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">        $(&#39;.article&#39;).lightGallery(&#123; selector: &#39;.gallery-item&#39;, loop: true, escKey: true, keyPress: true&#125;);&#x2F;&#x2F;如果不想使用lightGallery，这里可不做修改</span><br><span class="line">    &#125;</span><br><span class="line">    if (typeof ($.fn.justifiedGallery) &#x3D;&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">        $(&#39;.justified-gallery&#39;).justifiedGallery(&#123;rowHeight:400, margins:4&#125;);</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：Icarus主题中的gallery有两个样式，一个是 light Gallery 另一个是 justified Gallery ，这里我选择的是justified Gallery。如果想更换gallery样式，在第二步添加相册图片时，修改<code>&lt;div class=&quot;justified-gallery&quot;&gt;</code>里对应内容即可。</p>
+<h3 id="调整文章内容显示区域"><a href="#调整文章内容显示区域" class="headerlink" title="调整文章内容显示区域"></a><strong>调整文章内容显示区域</strong></h3><p>之前我们将侧边栏所有的应用都放在了页面左边，导致右边出现了大片空白区域，浏览文章时我们也会发现文章内容显示的区域相对较窄，这里我们可以适当放宽文章显示的区域，以下修改方法将文章显示区域修改为12格布局。</p>
+<p><code>第一步</code>：打开Icarus主题文件夹，通过相应路径<code>source/css/style.styl</code>，找到<code>style.styl</code>文件修改如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* ---------------------------------</span><br><span class="line"> *       Override CSS Framework</span><br><span class="line"> * --------------------------------- *&#x2F;</span><br><span class="line">html</span><br><span class="line">    font-size: 14px</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">    background-color: #f7f7f7</span><br><span class="line"></span><br><span class="line">body, button, input, select, textarea</span><br><span class="line">    font-family: family-sans</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">@media screen and (min-width: screen-widescreen)</span><br><span class="line">    .is-1-column .container</span><br><span class="line">    .is-2-column .container</span><br><span class="line">        max-width: screen-widescreen - 2 * gap</span><br><span class="line">        width: screen-widescreen - 2 * gap</span><br><span class="line">@media screen and (min-width: screen-fullhd)</span><br><span class="line">    .is-2-column .container</span><br><span class="line">        max-width: screen-fullhd - 2 * gap</span><br><span class="line">        width: screen-fullhd - 2 * gap</span><br><span class="line">    .is-1-column .container</span><br><span class="line">        max-width: screen-desktop - 2 * gap</span><br><span class="line">        width: screen-desktop - 2 * gap</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br></pre></td></tr></table></figure>
+
+<p><code>第二步</code>：打开Icarus主题文件夹，通过相应路径<code>layout/layout.ejs</code>，找到<code>layout.ejs</code>文件修改如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body class&#x3D;&quot;is-&lt;%&#x3D; column_count() %&gt;-column&quot;&gt;</span><br><span class="line">    &lt;%- _partial(&#39;common&#x2F;navbar&#39;) %&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">    &lt;% function main_column_class() &#123;</span><br><span class="line">        switch (column_count()) &#123;</span><br><span class="line">            case 1:</span><br><span class="line">                return &#39;is-12&#39;;</span><br><span class="line">            case 2:</span><br><span class="line">                return &#39;is-8-tablet is-9-desktop is-9-widescreen&#39;;</span><br><span class="line">            case 3:</span><br><span class="line">                return &#39;is-8-tablet is-8-desktop is-6-widescreen&#39;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#39;&#39;;</span><br><span class="line">    &#125; %&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br></pre></td></tr></table></figure>
+
+<p><code>第三步</code>：打开Icarus主题文件夹，通过相应路径<code>layout/common/widget.ejs</code>，找到<code>widget.ejs</code>文件修改如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (get_widgets(position).length) &#123; %&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">&lt;% function side_column_class() &#123;</span><br><span class="line">    switch (column_count()) &#123;</span><br><span class="line">        case 2:</span><br><span class="line">            return &#39;is-4-tablet is-3-desktop is-3-widescreen&#39;;</span><br><span class="line">        case 3:</span><br><span class="line">            return &#39;is-4-tablet is-4-desktop is-3-widescreen&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    return &#39;&#39;;</span><br><span class="line">&#125; %&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加最近文章的缩略图"><a href="#添加最近文章的缩略图" class="headerlink" title="添加最近文章的缩略图"></a><strong>添加最近文章的缩略图</strong></h3><p>打开博客网站，我们发现页面左侧的侧边栏中，所有的最新文章前面都有个缩略图，但却还没有设置，这里为了方便，我们可以直接通过设置随机图片来添加缩略图，省去了以后写一篇文章就要添加一张缩略图的烦恼。</p>
+<p>第一步：新建一个文件夹<code>suiji</code>放置需要的图片，这里我的文件夹路径为<code>/photo/index/suiji</code>，此路径是相对于博客网站的根目录的<code>source</code>文件夹来说的，将修改好的图片放入其中。这里需要注意两点：（1）图片是作为缩略图来使用的，所以尽量将图片分辨率修改为普通头像图片分辨率的大小；（2）图片的命名规则：image0、image1、image2···<code>名称+数字</code>依次递增，下标从0开始，<code>image</code>可以换成其他名称。</p>
+<p>第二步：打开Icarus主题文件夹，通过相应路径<code>includes/helpers/page.js</code>，找到<code>page.js</code>文件修改如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; function (hexo) &#123;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">    hexo.extend.helper.register(&#39;has_random_recent_thumbnail&#39;, function (post) &#123;</span><br><span class="line">        const getConfig &#x3D; hexo.extend.helper.get(&#39;get_config&#39;).bind(this);</span><br><span class="line">        return getConfig(&#39;article.random_recent_thubnail&#39;, true);</span><br><span class="line">    &#125;);</span><br><span class="line">    </span><br><span class="line">    hexo.extend.helper.register(&#39;get_random_recent_thumbnail&#39;, function (post) &#123;</span><br><span class="line">      const autothubnail &#x3D; hexo.extend.helper.get(&#39;has_random_recent_thumbnail&#39;).bind(this)(post);</span><br><span class="line">      var url &#x3D; &quot;images&#x2F;thumbnail.svg&quot;;</span><br><span class="line">      if(autothubnail)&#123;</span><br><span class="line">        url &#x3D; &quot;&#x2F;photo&#x2F;index&#x2F;suiji&#x2F;article&quot; + Math.floor(Math.random()*7) + &quot;.jpg&quot;;  </span><br><span class="line">&#x2F;&#x2F;此路径是图片相对于博客网站的根目录的source文件夹来说的，记住去掉数字，例如这里我的图片名称是article0、···，后面Math.random()*7里的数字7是suiji文件夹中的图片总数量</span><br><span class="line">      &#125;</span><br><span class="line">      return this.url_for(url);</span><br><span class="line">    &#125;);</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br></pre></td></tr></table></figure>
+
+<p>第三步：修改博客网站的主题配置文件<code>_config.yml</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">article:</span><br><span class="line">    # Code highlight settings</span><br><span class="line">    highlight:</span><br><span class="line">        # Code highlight themes</span><br><span class="line">        # https:&#x2F;&#x2F;github.com&#x2F;highlightjs&#x2F;highlight.js&#x2F;tree&#x2F;master&#x2F;src&#x2F;styles</span><br><span class="line">        theme: atom-one-light</span><br><span class="line">        # Show code copying button</span><br><span class="line">        clipboard: true</span><br><span class="line">        # Default folding status of the code blocks. Can be &quot;&quot;, &quot;folded&quot;, &quot;unfolded&quot;</span><br><span class="line">        fold: unfolded</span><br><span class="line">    # Whether to show article thumbnail images</span><br><span class="line">    thumbnail: true</span><br><span class="line">    # Whether to show estimate article reading time</span><br><span class="line">    readtime: true</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">    random_recent_thubnail: true</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br></pre></td></tr></table></figure>
+
+<p>第四步：打开Icarus主题文件夹，通过相应路径<code>layout/widget/recent_posts.ejs</code>，找到<code>recent_posts.ejs</code>修改如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">        &lt;article class&#x3D;&quot;media&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">            &lt;% if (!has_config(&#39;article.random_recent_thubnail&#39;) || get_config(&#39;article.random_recent_thubnail&#39;) !&#x3D;&#x3D; false) &#123; %&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">            &lt;a href&#x3D;&quot;&lt;%- url_for(post.link ? post.link : post.path) %&gt;&quot; class&#x3D;&quot;media-left&quot;&gt;</span><br><span class="line">                &lt;p class&#x3D;&quot;image is-64x64&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">                    &lt;img class&#x3D;&quot;thumbnail&quot; src&#x3D;&quot;&lt;%&#x3D; get_random_recent_thumbnail(post) %&gt;&quot; alt&#x3D;&quot;&lt;%&#x3D; post.title %&gt;&quot;&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">                &lt;&#x2F;p&gt;</span><br><span class="line">            &lt;&#x2F;a&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="文章图片居中"><a href="#文章图片居中" class="headerlink" title="文章图片居中"></a><strong>文章图片居中</strong></h3><p>我们写文章的时候发现图片默认是左对齐的，为了美观，这里可以修改成置中。</p>
+<p>打开Icarus主题文件夹，通过相应路径<code>source/js/main.js</code>，找到main.js修改如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(function ($) &#123;</span><br><span class="line">    $(&#39;.article img:not(&quot;.not-gallery-item&quot;)&#39;).each(function () &#123;</span><br><span class="line">        &#x2F;&#x2F; wrap images with link and add caption if possible</span><br><span class="line">        if ($(this).parent(&#39;a&#39;).length &#x3D;&#x3D;&#x3D; 0) &#123;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">            $(this).wrap(&#39;&lt;a class&#x3D;&quot;gallery-item&quot; style&#x3D;&quot;display:block;text-align:center;&quot; href&#x3D;&quot;&#39; + $(this).attr(&#39;src&#39;) + &#39;&quot;&gt;&lt;&#x2F;a&gt;&#39;);</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">            if (this.alt) &#123;</span><br><span class="line">                $(this).after(&#39;&lt;div class&#x3D;&quot;has-text-centered is-size-6 has-text-grey caption&quot;&gt;&#39; + this.alt + &#39;&lt;&#x2F;div&gt;&#39;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Git/" rel="tag">Git</a>
+                    <a class="has-link-grey -link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="has-link-grey -link" href="/tags/Icarus/" rel="tag">Icarus</a>
                 </div>
             </div>
         </div>
@@ -245,17 +265,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Hexo博客主题之Icarus的设置与美化（基础）</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/">
-                <span class="level-item">Node.js的安装</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/">
+                <span class="level-item">Hexo博客主题之Icarus的设置与美化（基础）</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -593,7 +606,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Git的安装与使用" height="28">
+                    <img src="/images/logo.svg" alt="Hexo博客主题之Icarus的设置与美化（进阶）" height="28">
                 
                 </a>
                 <p class="is-size-7">

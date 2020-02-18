@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zazdream.com/"/>
-  <updated>2020-02-17T12:07:37.762Z</updated>
+  <updated>2020-02-18T11:24:08.597Z</updated>
   <id>http://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客主题之Icarus的设置与美化（进阶）</title>
+    <link href="http://zazdream.com/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/"/>
+    <id>http://zazdream.com/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/</id>
+    <published>2020-02-18T09:01:19.000Z</published>
+    <updated>2020-02-18T11:24:08.597Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Icarus的瀑布流相册&quot;&gt;&lt;a href=&quot;#Icarus的瀑布流相册&quot; class=&quot;headerlink&quot; title=&quot;Icarus的瀑布流相册&quot;&gt;&lt;/a&gt;&lt;strong&gt;Icarus的瀑布流相册&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Icarus的主题已经默认支持瀑布流的相册布局，我们可以添加到文章的任意位置。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;第一步&lt;/code&gt;：修改博客网站的主题配置文件&lt;code&gt;_config.yml&lt;/code&gt;，开启相册功能&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;plugins:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # Enable page animations&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    animejs: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # Enable the lightGallery and Justified Gallery plugins&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # https:&amp;#x2F;&amp;#x2F;ppoffice.github.io&amp;#x2F;hexo-theme-icarus&amp;#x2F;Plugins&amp;#x2F;General&amp;#x2F;gallery-plugin&amp;#x2F;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    gallery: true  &amp;#x2F;&amp;#x2F;修改为true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
+    
+      <category term="Icarus" scheme="http://zazdream.com/tags/Icarus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客主题之Icarus的设置与美化（基础）</title>
+    <link href="http://zazdream.com/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/"/>
+    <id>http://zazdream.com/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/</id>
+    <published>2020-02-18T05:09:02.000Z</published>
+    <updated>2020-02-18T11:22:30.249Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;博客网站根配置文件-config-yml的常见修改&quot;&gt;&lt;a href=&quot;#博客网站根配置文件-config-yml的常见修改&quot; class=&quot;headerlink&quot; title=&quot;博客网站根配置文件_config.yml的常见修改&quot;&gt;&lt;/a&gt;&lt;strong&gt;博客网站根配置文件&lt;code&gt;_config.yml&lt;/code&gt;的常见修改&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;这个配置文件在你的博客网站本地文件的根目录，不要同主题的配置文件弄混淆。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/001.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;第一个需要修改的地方：网站的一些基本信息&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#Site&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;title: zazdream  &amp;#x2F;&amp;#x2F;网站的标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;subtitle: &amp;#39;&amp;#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;description: &amp;#39;&amp;#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;keywords:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;author: 张之卿  &amp;#x2F;&amp;#x2F;网站的建设者&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;language: zh-CN  &amp;#x2F;&amp;#x2F;网站的默认语言，如何对照修改请查看备注（1）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;timezone: &amp;#39;&amp;#39;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
+    
+      <category term="Icarus" scheme="http://zazdream.com/tags/Icarus/"/>
+    
+  </entry>
   
   <entry>
     <title>Git的安装与使用</title>
@@ -66,7 +117,7 @@
     <link href="http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
     <id>http://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
     <published>2020-02-17T02:22:00.000Z</published>
-    <updated>2020-02-17T12:06:33.859Z</updated>
+    <updated>2020-02-18T06:14:42.699Z</updated>
     
     <summary type="html">
     
