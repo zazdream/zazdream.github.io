@@ -5,7 +5,7 @@ html {
   font-size: 14px;
 }
 body {
-  background-color: #f7f7f7;
+  background-color: #c1cdc1;
 }
 body,
 button,
@@ -51,11 +51,11 @@ textarea {
   }
 }
 .tag.is-grey {
-  background: #e7e7e7;
+  background: #cdb7b5;
 }
 .card {
   border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 1px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(205,193,197,0.8), 0 0 4px rgba(205,193,197,0.8);
 }
 .card + .card,
 .card + .column-right-shadow {
@@ -125,7 +125,7 @@ img.thumbnail {
   }
 }
 .footer {
-  background: #fff;
+  background: #c1cdc1;
 }
 .footer .field .button {
   background: transparent;
