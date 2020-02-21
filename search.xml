@@ -1,6 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo中常用插件的安装与使用</title>
+    <url>/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="hexo-asset-image插件的安装与使用"><a href="#hexo-asset-image插件的安装与使用" class="headerlink" title="hexo-asset-image插件的安装与使用"></a><strong>hexo-asset-image插件的安装与使用</strong></h3><p><strong>为何引入该插件？</strong></p>
+<p>在我们没有安装相关插件的情况下，我们在博文中需要引入图片时，按照通常思维引入图片的正常路径是：图片所在的位置相对于博客网站根目录内的source文件夹的路径。但运行网站后发现无法正常显示图片，查询相关资料后了解到在博文中引入图片前，首先需要在博客网站根目录内的<code>_posts</code>文件夹下建立一个与博文文件同名的文件夹，例如博文文件的名称是hello-world.md，那么文件夹的名称就是<code>hello-world</code>；然后，把需要引用的图片就放在该文件夹下，例如图片的名称是<code>hello.jpg</code>；最后我们在博文中引用这张图片时这样书写：<code>![](hello-world/hello.jpg)</code>，但运行网站后发现还是无法正常显示图片，于是又经过查询发现正确引用路径应为<code>![](hello.jpg)</code>。如果熟悉 Markdown 语法，我们会发现这个引用路径有反常规。</p>
+<p>这时，我们会有个疑问：为什么在引用图片的时候不需要加入图片所在文件夹的路径呢？</p>
+<a id="more"></a>
+
+<p>原来，这是因为<code>Hexo</code>在渲染的时候，会把博文文件<code>hello-world.md</code>按照时间渲染为 <code>public/2020/01/01/hello-world</code>下的<code>index.html</code>网页文件，而且会把对应文件夹下的静态资源，比如图片<code>hello.jpg</code>也拷贝到<code>public/2020/01/01/hello-world</code>下。</p>
+<p>所以，我们在书写博文时，博文和图片虽然不在统一的文件夹下，但最终它们被渲染后，是处于同一个文件夹的，那么我们在博文中引用图片时，就得把它们当作在同一个文件夹来处理，即引用图片时去掉文件夹路径。</p>
+<p>我们或许会觉得这样引用图片有点难受，这时我们可以引入<code>hexo-asset-image插件</code>来帮我们处理。</p>
+<p>安装该插件并配置开启后，我们就可以在博文里按照常规引用方式来引用图片。</p>
+<p> <strong>hexo-asset-image插件的工作原理</strong></p>
+<p><code>hexo-asset-image插件</code>的工作原理很简单，实际上他是帮我们完成了一个字符串替换的流程，使我们在博文中引用图片时书写的正常路径转换为 Hexo 渲染时使用的路径。</p>
+<p><strong>hexo-asset-image插件的安装与使用步骤</strong></p>
+<p><code>第一步</code>：修改博客网站的根配置文件<code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#Writing</span><br><span class="line"></span><br><span class="line">post_asset_folder: true  &#x2F;&#x2F;由false改为true</span><br></pre></td></tr></table></figure>
+
+<p><code>第二步</code>：在博客网站的根目录打开并运行Git控制台，键入命令如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>备注：等待一段时间后，再通过Git控制台键入<code>hexo new &quot;001.md&quot;</code>命令来生成博文文件时，我们会发现在<code>/source/_posts</code>文件夹内除了<code>001.md</code>文件还有一个同名的文件夹<code>001</code>。</p>
+<p><code>第三步</code>：在博文<code>001.md</code>中引入图片时,例如<code>001.jpg</code>，先把图片<code>001.jpg</code>复制到<code>001</code>这个文件夹中，然后在博文<code>001.md</code>中需要引入图片的位置按照<code>Markdown语法</code>格式输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![这是图片001](001&#x2F;001.jpg)</span><br></pre></td></tr></table></figure>
+
+<p><code>第四步</code>：检查有无出现错误，通过Git控制台键入命令<code>hexo g</code>生成博客页面后，进入<code>public\2020\01\01\index.html</code>文件中查看相关字段，发现<code>html标签</code>内的语句是<code>&lt;img src=&quot;2020/01/01/001/001.jpg&quot;&gt;</code>，而不是<code>&lt;img src=&quot;001/001.jpg&gt;</code>，说明图片路径转换正确，最后打开网页验证是否正确加载，一般情况下不会出现错误。</p>
+<h3 id="APlayer音乐播放器插件的安装与使用"><a href="#APlayer音乐播放器插件的安装与使用" class="headerlink" title="APlayer音乐播放器插件的安装与使用"></a><strong>APlayer音乐播放器插件的安装与使用</strong></h3><p><strong>写在前面</strong></p>
+<p>在个人的站点上，如果有音乐播放的功能，那么读者可以一遍阅读文章，一边欣赏音乐，是一件很愉快的事情。下面就以我的博客网站为案例，分享增加<code>Aplayer音乐播放器插件</code>的步骤。</p>
+<p><strong>安装步骤</strong></p>
+<p><code>第一步</code>：打开GitHub上的<a href="https://github.com/MoePlayer/APlayer">APlayer下载地址</a>，下载APlayer插件。</p>
+<p><code>第二步</code>：将下载好的APlayer插件压缩包解压到本地磁盘指定位置，把根文件夹内的<code>dist</code>文件夹复制到<code>\themes\hexo-theme-icarus-master\source</code>目录中（对应自己主题文件的位置，我的主题是icarus）。</p>
+<p><code>第三步</code>：打开<code>dist</code>文件夹，新建<code>music.js</code>文件并打开，粘贴如下代码。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">const ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;),</span><br><span class="line">    fixed: false,</span><br><span class="line">    autoplay: false,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: &quot;逆追风少年&quot;,</span><br><span class="line">        artist: &#39;吴奇隆&#39;,</span><br><span class="line">        url: &#39;..&#x2F;music&#x2F;index&#x2F;吴奇隆-追风少年.mp3&#39;,  &#x2F;&#x2F;音乐文件的路径</span><br><span class="line">        cover: &#39;..&#x2F;music&#x2F;index&#x2F;zhuifengshaonian.jpg&#39;,  &#x2F;&#x2F;音乐封面图片的路径，注意要适当修改图片分辨率</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: &#39;起风了&#39;,</span><br><span class="line">        artist: &#39;买辣椒也用券&#39;,</span><br><span class="line">        url: &#39;..&#x2F;music&#x2F;index&#x2F;买辣椒也用券-起风了.mp3&#39;,</span><br><span class="line">        cover: &#39;..&#x2F;music&#x2F;index&#x2F;qifengle.jpg&#39;,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: &#39;白兰鸽巡游记&#39;,</span><br><span class="line">        artist: &#39;丢火车乐队&#39;,</span><br><span class="line">        url: &#39;..&#x2F;music&#x2F;index&#x2F;丢火车乐队-白兰鸽巡游记.mp3&#39;,</span><br><span class="line">        cover: &#39;..&#x2F;music&#x2F;index&#x2F;bailangexunyouji.jpg&#39;,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>备注</code>：因为是我们的个人博客网站，音乐不易过多，3~4首即可。</p>
+<p><code>第四步</code>：到了这一步，<code>APlayer音乐播放器</code>有多种实现方式，常见的两种实现方式如下</p>
+<p>（1）将APlayer音乐播放器放置在博客网站的右下角展示</p>
+<p>修改<code>\themes\hexo-theme-icarus-master\layout\layout.ejs</code>的<code>layout.ejs</code>文件如下，放在<code>&lt;/body&gt;</code>标签上方即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 音频播放 --&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.css&quot;&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;aplayer&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;music.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>（2）通过Git控制台创建一个音乐播放页面，创建过程可以参考我的文章<a href="/2020/02/18/Hexo博客主题之Icarus的设置与美化（基础）">Hexo博客主题之Icarus的设置与美化（基础）</a>里面的内容，然后将页面内容修改如下即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 音频播放 --&gt;</span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.css&quot;&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;aplayer&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;music.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>备注：通过Git控制台依次键入命令<code>hexo clean</code>-&gt;<code>hexo g</code>-&gt;<code>hexo server</code>打开博客网站即可查看效果。</p>
+<h3 id="APlayer音乐播放器插件的使用效果"><a href="#APlayer音乐播放器插件的使用效果" class="headerlink" title="APlayer音乐播放器插件的使用效果"></a><strong>APlayer音乐播放器插件的使用效果</strong></h3><p><a href="/music">点击这里即可查看</a></p>
+]]></content>
+      <categories>
+        <category>博客网站的搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博文书写之Markdown的基本语法和注意事项</title>
+    <url>/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
+    <content><![CDATA[<h3 id="Markdown是什么？"><a href="#Markdown是什么？" class="headerlink" title="Markdown是什么？"></a><strong>Markdown是什么？</strong></h3><p>Markdown是一种纯文本标记语言。Markdown 易于阅读，方便创作web文档，利于各平台无缝分发。Markdown 语法灵感最大的来源还是纯文本 email 的格式，完全由标点符号标签组成的纯文本。</p>
+<a id="more"></a>
+
+<h3 id="Markdown在书写时应该注意什么？"><a href="#Markdown在书写时应该注意什么？" class="headerlink" title="Markdown在书写时应该注意什么？"></a><strong>Markdown在书写时应该注意什么？</strong></h3><p>（1）内联 HTML 语法</p>
+<p>HTML 是一种发布格式，Markdown 是一种创作格式。Markdown语法集合比较小，只是HTML标签的一小部分。对于 Markdown 中未包含的标签, 可以直接使用 HTML标签。</p>
+<p>（2）特殊字符自动转义</p>
+<p>在 HTML 中, 有两个字符需要特殊对待: <code>&lt;</code>和 <code>&amp;</code>，左尖括号用于起始标签。果你想将它们用作字面量, 你必须将它们转义为字符实体, 例如<code>&amp;lt;</code>和 <code>&amp;amp;</code>。</p>
+<h3 id="Markdown的基本语法"><a href="#Markdown的基本语法" class="headerlink" title="Markdown的基本语法"></a><strong>Markdown的基本语法</strong></h3><p><strong>行内语法</strong></p>
+<p><strong>（一）注释的表述</strong></p>
+<ul>
+<li>代码法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&#39;display: none&#39;&gt;我是注释，不会在浏览器中显示。&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>html注释</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!--我是注释，不会在浏览器中显示。--&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--</span><br><span class="line">我是多段注释，</span><br><span class="line">不会在浏览器中显示。</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>hack方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&#x2F;&#x2F;]: # &quot;我是注释，不会在浏览器中显示。&quot;</span><br><span class="line">[&#x2F;&#x2F;]: &lt;&gt; &quot;我是注释，不会在浏览器中显示。&quot;</span><br><span class="line">[^_^]: # (我是注释，不会在浏览器中显示。)</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：hack方法比上面2种方法稳定得多，但是语义化太差。</p>
+<p><strong>（二）分级标题</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：一级标题字号最大，依级递减，最多6级标题。</p>
+<p><strong>（三）缩进、换行、空行、对齐方式</strong></p>
+<ul>
+<li>首行缩进</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&amp;emsp;或&amp;#8195; &#x2F;&#x2F;全角</span><br><span class="line">&amp;ensp;或&amp;#8194; &#x2F;&#x2F;半角</span><br><span class="line">&amp;nbsp;或&amp;#160;  &#x2F;&#x2F;半角之半角</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：不同特殊占位符所占空白是不一样大的。</p>
+<ul>
+<li><p>换行，由于markdown编辑器的不同，可能出现两种情况：（1）在一行字后面，直接回车可实现换行；（2）在一行字后面必须得空两格才能实现换行。</p>
+</li>
+<li><p>空行，在编辑的时候，两段或两行之间不论间隔有多少个空行(一行内只有回车或者space，没有其他字符就算空行)，在渲染之后，只间隔一行。</p>
+</li>
+<li><p>对齐方式</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;center&gt;行中心对齐&lt;&#x2F;center&gt;</span><br><span class="line">&lt;p align&#x3D;&quot;left&quot;&gt;行左对齐&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p align&#x3D;&quot;right&quot;&gt;行右对齐&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>（四）斜体、粗体、删除线、下划线、背景高亮</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体*  或  _斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br><span class="line">++下划线++</span><br><span class="line">&#x3D;&#x3D;背景高亮&#x3D;&#x3D;</span><br></pre></td></tr></table></figure>
+
+<p><strong>（五）超链接、页内链接、自动链接、注脚</strong></p>
+<ul>
+<li>超链接的行内式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">欢迎访问我的主页 [zazdream](https:&#x2F;&#x2F;zazdream.com &quot;zazdream&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：<code>[    ]</code>里写链接文字，<code>(    )</code>里写链接地址，<code>(    )</code>中的<code>&quot;    &quot;</code>中可以为链接指定title属性，title属性可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字，链接地址与title需要间隔一个空格。</p>
+<ul>
+<li>超链接的参考式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">我经常去的几个网站[Baidu][1]、[CSDN][2]。</span><br><span class="line"></span><br><span class="line">[1]:http:&#x2F;&#x2F;www.baidu.com</span><br><span class="line">[2]:https:&#x2F;&#x2F;www.csdn.net</span><br></pre></td></tr></table></figure>
+
+<p><code>备注（1）</code>：如果某一个链接在文章中多处使用，那么使用引用 的方式创建链接将非常好，它可以让你对链接进行统一的管理。</p>
+<p><code>备注（2）</code>：参考式链接有两种写法：第一种，首先在博文中书写 <code>[链接文字][链接标记]</code>，然后在博文的任意位置添加<code>[链接标记]:链接地址</code>即可使用；第二种，如果链接文字本身可以做为链接标记，首先在博文中书写<code>[链接文字][]</code>，然后在博文的任意位置添加<code>[链接文字]：链接地址</code>即可使用。</p>
+<ul>
+<li>锚点（页内超链接）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。需要注意的是只支持在标题后插入锚点，其它地方无效。</p>
+<ul>
+<li>自动链接</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;http:&#x2F;&#x2F;zazdream.com&gt;</span><br><span class="line"></span><br><span class="line">&lt;zazdream@163.com&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用<code>&lt; &gt;</code>包起来， Markdown 就会自动把它转换成链接。</p>
+<ul>
+<li>注脚</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 Markdown[^1]可以高效地书写文档, 而且他能直接转换成 HTML[^2]。</span><br><span class="line"></span><br><span class="line">[^1]:Markdown是一种纯文本标记语言</span><br><span class="line"></span><br><span class="line">[^2]:HyperText Markup Language 超文本标记语言</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：在需要添加注脚的文字后加上注脚名字[^注脚名字]，称为加注。 然后在文本的任意位置(一般在最后)添加注脚，注脚前必须有对应的注脚名字。注脚与注脚之间必须空一行，不然会失效。需要注意的是经Markdown转换后，注脚会自动归类到文章的最后。</p>
+<p><strong>（六）无序列表、有序列表、定义型列表</strong></p>
+<ul>
+<li>无序列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 无序列表项一</span><br><span class="line">+ 无序列表项二</span><br><span class="line">- 无序列表项三</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：使用 <code>*</code>或<code>+</code>或<code>-</code> 表示无序列表</p>
+<ul>
+<li>有序列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 有序列表项一</span><br><span class="line">2. 有序列表项二</span><br><span class="line">3. 有序列表项三</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：使用数字紧跟一个英文句点</p>
+<ul>
+<li>定义型列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Markdown</span><br><span class="line">:	轻量级文本标记语言</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：定义型列表由名词和解释组成，一行写上名词，紧跟下一行写上解释，解释的写法<code>:紧跟一个缩进(Tab)</code></p>
+<p><strong>（七）插入图像</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![我和小侄子](https:&#x2F;&#x2F;zazdream.com&#x2F;photo&#x2F;index&#x2F;family&#x2F;002.jpg &quot;我和小侄子&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：插入图片的格式就是<code>![图片Alt](图片地址 &quot;图片Title&quot;)</code>， 图片Title表示鼠标悬停与图片上时出现的文字， 图片Alt 和 图片Title都不是必须的，可以省略。</p>
+<p><strong>（八）多级引用</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; 人生天地之间，若白驹过隙，忽然而已。——庄子</span><br><span class="line">&gt;&gt; 盛年不重来，一日难再晨。及时当勉励，岁月不待人。——陶渊明</span><br><span class="line">&gt; 时间就是生命，时间就是速度，时间就是力量。——郭沫若</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：在被引用的文本前加上<code>&gt;</code>符号和空格，允许多层嵌套。</p>
+<p><strong>（九）转义字符、字体、字号、颜色</strong></p>
+<ul>
+<li>转义字符</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\ 反斜杠</span><br><span class="line">&#96; 反引号</span><br><span class="line">* 星号</span><br><span class="line">_ 下划线</span><br><span class="line">&#123;&#125; 大括号</span><br><span class="line">[] 中括号</span><br><span class="line">() 小括号</span><br><span class="line"># 井号</span><br><span class="line">+ 加号</span><br><span class="line">- 减号</span><br><span class="line">. 英文句号</span><br><span class="line">! 感叹号</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：Markdown中的转义字符为<code>\</code></p>
+<ul>
+<li>字体、字号、颜色</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;font face&#x3D;&quot;黑体&quot;&gt;我是黑体字&lt;&#x2F;font&gt;</span><br><span class="line">&lt;font face&#x3D;&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;&#x2F;font&gt;</span><br><span class="line">&lt;font face&#x3D;&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;&#x2F;font&gt;</span><br><span class="line">&lt;font color&#x3D;#0099ff size&#x3D;12 face&#x3D;&quot;黑体&quot;&gt;黑体&lt;&#x2F;font&gt;</span><br><span class="line">&lt;font color&#x3D;gray size&#x3D;5&gt;gray&lt;&#x2F;font&gt;</span><br><span class="line">&lt;font color&#x3D;#00ffff size&#x3D;3&gt;null&lt;&#x2F;font&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Markdown的块语法"><a href="#Markdown的块语法" class="headerlink" title="Markdown的块语法"></a><strong>Markdown的块语法</strong></h3><p><strong>（一）内容目录</strong></p>
+<p>在段落中填写 <code>[TOC]</code> 以显示全文内容的目录结构。</p>
+<p><strong>（二）代码块</strong></p>
+<p>对于程序员来说这个功能是必不可少的，插入程序代码的方式有两种，一种是利用缩进(Tab)，另一种是利用反引号`（一般在ESC键下方）包裹代码。</p>
+<ul>
+<li>行内式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">C语言里的函数 &#96;scanf()&#96; 怎么使用？</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>缩进式多行代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">空格空格空格空格#include &lt;stdio.h&gt;</span><br><span class="line">空格空格空格空格int main(void)</span><br><span class="line">空格空格空格空格&#123;</span><br><span class="line">空格空格空格空格    printf(&amp;#34;Hello world\n&amp;#34;);</span><br><span class="line">空格空格空格空格&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：每行开头缩进 4 个空格或是 1 个制表符，一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。</p>
+<ul>
+<li>用六个反引号`包裹多行代码</li>
+</ul>
+<p><img src="/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/001.png" alt></p>
+<p><strong>（三）表格</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|学号|姓名|序号|</span><br><span class="line">|-|-|-|</span><br><span class="line">|小明明|男|5|</span><br><span class="line">|小红|女|79|</span><br><span class="line">|小陆|男|192|</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。列于列之间用管道符<code>|</code>隔开。第二行还可以为不同的列指定对齐方向。默认为左对齐，在<code>-</code>右边加上<code>:</code>就右对齐。对齐方式：<code>-</code>左对齐， <code>:-:</code> 中心对齐，<code>-:</code> 右对齐</p>
+<p><strong>（四）分隔线</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">******</span><br><span class="line">---</span><br><span class="line">- - -</span><br><span class="line">------</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：一行中用三个以上的星号、减号，或者在星号、减号中间插入空格，来建立一个分隔线，行内不能书写其他内容。</p>
+<p><strong>（五）特殊字</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">特殊字符</th>
+<th align="center">描述</th>
+<th align="center">字符的代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">空格符</td>
+<td align="center"></td>
+<td align="center"><code>&amp;nbsp;</code></td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于号</td>
+<td align="center"><code>&amp;lt;</code></td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于号</td>
+<td align="center"><code>&amp;gt;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center">和号</td>
+<td align="center"><code>&amp;amp;</code></td>
+</tr>
+<tr>
+<td align="center">￥</td>
+<td align="center">人民币</td>
+<td align="center"><code>&amp;yen;</code></td>
+</tr>
+<tr>
+<td align="center">©</td>
+<td align="center">版权</td>
+<td align="center"><code>&amp;copy;</code></td>
+</tr>
+<tr>
+<td align="center">®</td>
+<td align="center">注册商标</td>
+<td align="center"><code>&amp;reg;</code></td>
+</tr>
+<tr>
+<td align="center">°C</td>
+<td align="center">摄氏度</td>
+<td align="center"><code>&amp;deg;C</code></td>
+</tr>
+<tr>
+<td align="center">±</td>
+<td align="center">正负号</td>
+<td align="center"><code>&amp;plusmn;</code></td>
+</tr>
+<tr>
+<td align="center">×</td>
+<td align="center">乘号</td>
+<td align="center"><code>&amp;times;</code></td>
+</tr>
+<tr>
+<td align="center">÷</td>
+<td align="center">除号</td>
+<td align="center"><code>&amp;divide;</code></td>
+</tr>
+<tr>
+<td align="center">²</td>
+<td align="center">平方（上标²）</td>
+<td align="center"><code>&amp;sup2;</code></td>
+</tr>
+<tr>
+<td align="center">³</td>
+<td align="center">立方（上标³）</td>
+<td align="center"><code>&amp;sup3;</code></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>博客网站的搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客主题之Icarus的设置与美化（进阶）</title>
     <url>/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/</url>
     <content><![CDATA[<h3 id="Icarus的瀑布流相册"><a href="#Icarus的瀑布流相册" class="headerlink" title="Icarus的瀑布流相册"></a><strong>Icarus的瀑布流相册</strong></h3><p>Icarus的主题已经默认支持瀑布流的相册布局，我们可以添加到文章的任意位置。</p>

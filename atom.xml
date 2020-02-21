@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zazdream.com/"/>
-  <updated>2020-02-18T11:24:08.597Z</updated>
+  <updated>2020-02-21T11:49:51.681Z</updated>
   <id>http://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo中常用插件的安装与使用</title>
+    <link href="http://zazdream.com/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://zazdream.com/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-02-21T09:30:21.000Z</published>
+    <updated>2020-02-21T11:49:51.681Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;hexo-asset-image插件的安装与使用&quot;&gt;&lt;a href=&quot;#hexo-asset-image插件的安装与使用&quot; class=&quot;headerlink&quot; title=&quot;hexo-asset-image插件的安装与使用&quot;&gt;&lt;/a&gt;&lt;strong&gt;hexo-asset-image插件的安装与使用&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;为何引入该插件？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在我们没有安装相关插件的情况下，我们在博文中需要引入图片时，按照通常思维引入图片的正常路径是：图片所在的位置相对于博客网站根目录内的source文件夹的路径。但运行网站后发现无法正常显示图片，查询相关资料后了解到在博文中引入图片前，首先需要在博客网站根目录内的&lt;code&gt;_posts&lt;/code&gt;文件夹下建立一个与博文文件同名的文件夹，例如博文文件的名称是hello-world.md，那么文件夹的名称就是&lt;code&gt;hello-world&lt;/code&gt;；然后，把需要引用的图片就放在该文件夹下，例如图片的名称是&lt;code&gt;hello.jpg&lt;/code&gt;；最后我们在博文中引用这张图片时这样书写：&lt;code&gt;![](hello-world/hello.jpg)&lt;/code&gt;，但运行网站后发现还是无法正常显示图片，于是又经过查询发现正确引用路径应为&lt;code&gt;![](hello.jpg)&lt;/code&gt;。如果熟悉 Markdown 语法，我们会发现这个引用路径有反常规。&lt;/p&gt;
+&lt;p&gt;这时，我们会有个疑问：为什么在引用图片的时候不需要加入图片所在文件夹的路径呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
+    
+      <category term="插件" scheme="http://zazdream.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博文书写之Markdown的基本语法和注意事项</title>
+    <link href="http://zazdream.com/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>http://zazdream.com/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
+    <published>2020-02-21T05:53:36.000Z</published>
+    <updated>2020-02-21T10:13:09.448Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Markdown是什么？&quot;&gt;&lt;a href=&quot;#Markdown是什么？&quot; class=&quot;headerlink&quot; title=&quot;Markdown是什么？&quot;&gt;&lt;/a&gt;&lt;strong&gt;Markdown是什么？&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Markdown是一种纯文本标记语言。Markdown 易于阅读，方便创作web文档，利于各平台无缝分发。Markdown 语法灵感最大的来源还是纯文本 email 的格式，完全由标点符号标签组成的纯文本。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://zazdream.com/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客主题之Icarus的设置与美化（进阶）</title>
