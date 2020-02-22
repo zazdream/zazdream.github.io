@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<script src="/js/src/click.js"></script>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Hexo博客主题之Icarus的图片轮播效果 - zazdream</title>
+
+
+    <meta name="description" content="分享来自一位大佬网站首页的图片轮播效果实现步骤第一步：按照路径打开themes&#x2F;hexo-theme-icarus-master&#x2F;layout&#x2F;index.ejs，修改index.ejs如下： 1234567891011&#x2F;&#x2F;修改部分&lt;%- _css(&#39;css&#x2F;main_banner&#39;) %&gt;&lt;div id&#x3D;&#39;bann">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客主题之Icarus的图片轮播效果">
+<meta property="og:url" content="http://zazdream.com/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/index.html">
+<meta property="og:site_name" content="zazdream">
+<meta property="og:description" content="分享来自一位大佬网站首页的图片轮播效果实现步骤第一步：按照路径打开themes&#x2F;hexo-theme-icarus-master&#x2F;layout&#x2F;index.ejs，修改index.ejs如下： 1234567891011&#x2F;&#x2F;修改部分&lt;%- _css(&#39;css&#x2F;main_banner&#39;) %&gt;&lt;div id&#x3D;&#39;bann">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zazdream.com/images/og_image.png">
+<meta property="article:published_time" content="2020-02-22T02:25:13.000Z">
+<meta property="article:modified_time" content="2020-02-22T03:13:20.483Z">
+<meta property="article:author" content="张之卿">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Icarus">
+<meta property="article:tag" content="图片轮播">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://zazdream.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/atom.xml" title="zazdream" type="application/atom+xml">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Hexo博客主题之Icarus的图片轮播效果" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">首页</a>
+                
+                <a class="navbar-item"
+                href="/archives">归档</a>
+                
+                <a class="navbar-item"
+                href="/categories">分类</a>
+                
+                <a class="navbar-item"
+                href="/photo">相册</a>
+                
+                <a class="navbar-item"
+                href="/music">音乐</a>
+                
+                <a class="navbar-item"
+                href="/movie">电影</a>
+                
+                <a class="navbar-item"
+                href="/game">游戏</a>
+                
+                <a class="navbar-item"
+                href="/404">公益</a>
+                
+                <a class="navbar-item"
+                href="/about">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-22T02:25:13.000Z">2020-02-22</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 分钟 读完 (大约 1068 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    本站总访问量<span id="busuanzi_value_page_pv">0</span>次 | 
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Hexo博客主题之Icarus的图片轮播效果
+            
+        </h1>
+        <div class="content">
+            <h3 id="分享来自一位大佬网站首页的图片轮播效果"><a href="#分享来自一位大佬网站首页的图片轮播效果" class="headerlink" title="分享来自一位大佬网站首页的图片轮播效果"></a><strong>分享来自一位大佬网站首页的图片轮播效果</strong></h3><h3 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a><strong>实现步骤</strong></h3><p><code>第一步</code>：按照路径打开<code>themes/hexo-theme-icarus-master/layout/index.ejs</code>，修改<code>index.ejs</code>如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">&lt;%- _css(&#39;css&#x2F;main_banner&#39;) %&gt;</span><br><span class="line">&lt;div id&#x3D;&#39;banner&#39; class&#x3D;&#39;card&#39;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;%- _js(&#39;js&#x2F;main_banner&#39;, true) %&gt;</span><br><span class="line">&#x2F;&#x2F;修改部分</span><br><span class="line">&lt;% page.posts.each(function(post)&#123; %&gt;</span><br><span class="line">    &lt;%- _partial(&#39;common&#x2F;article&#39;, &#123; post, index: true &#125;) %&gt;</span><br><span class="line">&lt;% &#125;); %&gt;</span><br><span class="line">&lt;% if (page.total &gt; 1) &#123; %&gt;</span><br><span class="line">    &lt;%- _partial(&#39;common&#x2F;paginator&#39;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p><code>第二步</code>：按照路径打开<code>themes/hexo-theme-icarus-master/source/css</code>，在<code>css</code>文件夹内新建文件 <code>main_banner.css</code>内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* 公共样式 *&#x2F;</span><br><span class="line">#banner &#123;</span><br><span class="line">    margin-bottom: 1rem;</span><br><span class="line">&#125;</span><br><span class="line">#banner .pull-left&#123;</span><br><span class="line">    float: left!important;</span><br><span class="line">&#125;</span><br><span class="line">#banner .pull-right&#123;</span><br><span class="line">    float: right!important;</span><br><span class="line">&#125;</span><br><span class="line">#banner .clearfix:after &#123;</span><br><span class="line">    visibility: hidden;</span><br><span class="line">    display: block;</span><br><span class="line">    font-size: 0;</span><br><span class="line">    content: &quot; &quot;;</span><br><span class="line">    clear: both;</span><br><span class="line">    height: 0;</span><br><span class="line">&#125;</span><br><span class="line">#banner .clearfix &#123; display: inline-block; &#125;</span><br><span class="line">&#x2F;* start commented backslash hack \*&#x2F;</span><br><span class="line">* html .clearfix &#123; height: 1%; &#125;</span><br><span class="line">#banner .clearfix &#123; display: block; &#125;</span><br><span class="line">&#x2F;* close commented backslash hack *&#x2F;</span><br><span class="line">#banner ul,li&#123;</span><br><span class="line">    margin:0;</span><br><span class="line">    padding:0;</span><br><span class="line">    list-style-type: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 轮播图插件样式 *&#x2F;</span><br><span class="line">#banner .carousel-box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width:100%;</span><br><span class="line">&#125;</span><br><span class="line">#banner .transverse-box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width:66.7%;</span><br><span class="line">&#125;</span><br><span class="line">#banner .img-item&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top:0;</span><br><span class="line">    left:0;</span><br><span class="line">    z-index: 0;</span><br><span class="line">&#125;</span><br><span class="line">#banner .vertical-box&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width:33.3%;</span><br><span class="line">&#125;</span><br><span class="line">#banner .vertical-box ul&#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">#banner .img-item&#123;</span><br><span class="line">    transition: width 1s;</span><br><span class="line">&#125;</span><br><span class="line">#banner .img-item img&#123;</span><br><span class="line">    width:100%;</span><br><span class="line">    height:100%;</span><br><span class="line">&#125;</span><br><span class="line">#banner .vertical-box ul li&#123;</span><br><span class="line">    font-size: 0;</span><br><span class="line">&#125;</span><br><span class="line">#banner .vertical-box ul li img&#123;</span><br><span class="line">    width:100%;</span><br><span class="line">    height:100%;</span><br><span class="line">&#125;</span><br><span class="line">#banner .left-arrow&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top:50%;</span><br><span class="line">    left:0px;</span><br><span class="line">    color:#fff;</span><br><span class="line">    margin-top:-35px;</span><br><span class="line">    font-size: 50px;</span><br><span class="line">    font-weight: 200;</span><br><span class="line">    text-align: center;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    width:50px;</span><br><span class="line">    height:70px;</span><br><span class="line">    background:rgba(0,0,0,0.6);</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    z-index: 99;</span><br><span class="line">&#125;</span><br><span class="line">#banner .right-arrow&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top:50%;</span><br><span class="line">    right:0px;</span><br><span class="line">    color:#fff;</span><br><span class="line">    margin-top:-35px;</span><br><span class="line">    font-size: 50px;</span><br><span class="line">    font-weight: 200;</span><br><span class="line">    text-align: center;</span><br><span class="line">    line-height: 100px;</span><br><span class="line">    width:50px;</span><br><span class="line">    height:70px;</span><br><span class="line">    background:rgba(0,0,0,0.6);</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    z-index: 99;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>第三步</code>：按照路径打开<code>themes/hexo-theme-icarus-master/source/js</code>，在<code>js</code>文件夹内新建文件<code>main_banner.js</code>内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line">var Carousel &#x3D; function () &#123;</span><br><span class="line">&#125;;</span><br><span class="line">Carousel.prototype &#x3D; &#123;</span><br><span class="line">    &#x2F;&#x2F;容器选择器</span><br><span class="line">    container:&quot;&quot;,</span><br><span class="line">    &#x2F;&#x2F;图片地址数组</span><br><span class="line">    datas:null,</span><br><span class="line">    autoplaySpeed:null,</span><br><span class="line">    autoplay:false,</span><br><span class="line">    &#x2F;&#x2F; 初始化</span><br><span class="line">    init:function(options)&#123;</span><br><span class="line">        this.container &#x3D; options.container;</span><br><span class="line">        this.datas &#x3D; options.datas;</span><br><span class="line">        this.autoplaySpeed &#x3D; options.autoplaySpeed;</span><br><span class="line">        this.autoplay &#x3D; options.autoplay;</span><br><span class="line">        $(this.container).html(&quot;&quot;);</span><br><span class="line">        this.createCarousel(options);</span><br><span class="line">        this.arrowHover();</span><br><span class="line">        this.tabImg();</span><br><span class="line">        this.setZindex();</span><br><span class="line">        &#x2F;&#x2F;判断是否需要自动播放</span><br><span class="line">        if(options.autoplay || this.autoplay &#x3D;&#x3D; true)&#123;</span><br><span class="line">            this.autoPlay(this.autoplaySpeed);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    createCarousel:function(options)&#123;</span><br><span class="line">        this.createDOM(this.container,options);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 生成DOM</span><br><span class="line">    createDOM:function(container,options)&#123;</span><br><span class="line">        var html &#x3D; &quot;&quot;;</span><br><span class="line">        html &#x3D; &quot;&lt;div class&#x3D;&#39;carousel-box clearfix&#39;&gt;&quot;+</span><br><span class="line">                    &quot;&lt;div class&#x3D;&#39;transverse-box pull-left&#39;&gt;&quot;+</span><br><span class="line">                    &quot;&lt;&#x2F;div&gt;&quot;+</span><br><span class="line">                    &quot;&lt;div class&#x3D;&#39;vertical-box pull-right&#39;&gt;&quot;+</span><br><span class="line">                        &quot;&lt;ul&gt;&quot;+</span><br><span class="line">                        &quot;&lt;&#x2F;ul&gt;&quot;+</span><br><span class="line">                    &quot;&lt;&#x2F;div&gt;&quot;+</span><br><span class="line">                    &quot;&lt;span class&#x3D;&#39;left-arrow&#39;&gt;‹&lt;&#x2F;span&gt;&quot;+</span><br><span class="line">                    &quot;&lt;span class&#x3D;&#39;right-arrow&#39;&gt;›&lt;&#x2F;span&gt;&quot;+         </span><br><span class="line">                &quot;&lt;&#x2F;div&gt;&quot;;</span><br><span class="line">        $(container).html(html);</span><br><span class="line">        var imgLength &#x3D; options.datas.length;</span><br><span class="line">        for(var i &#x3D; 0;i&lt;imgLength;i++)&#123;</span><br><span class="line">            $(&quot;.transverse-box&quot;).append(&quot;&lt;div class&#x3D;&#39;img-item&#39;&gt;&lt;a href&#x3D;&#39;&quot; + options.datas[i].url + &quot;&#39; target&#x3D;&#39;_blank&#39;&gt;&lt;img src&#x3D;&#39;&quot; </span><br><span class="line">                + options.datas[i].img +&quot;&#39; url&#x3D;&#39;&quot; + options.datas[i].url + &quot;&#39; alt&#x3D;&#39;&quot; + options.datas[i].alt + &quot;&#39;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;&quot;);</span><br><span class="line">        &#125;;</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).append(&quot;&lt;li&gt;&lt;a href&#x3D;&#39;&quot; + options.datas[1].url + &quot;&#39; target&#x3D;&#39;_blank&#39;&gt;&lt;img src&#x3D;&#39;&quot;+options.datas[1].img +&quot;&#39; alt&#x3D;&#39;&quot; + options.datas[1].alt + &quot;&#39;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&quot;);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).append(&quot;&lt;li&gt;&lt;a href&#x3D;&#39;&quot; + options.datas[2].url + &quot;&#39; target&#x3D;&#39;_blank&#39;&gt;&lt;img src&#x3D;&#39;&quot;+options.datas[2].img +&quot;&#39; alt&#x3D;&#39;&quot; + options.datas[2].alt + &quot;&#39;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&quot;);</span><br><span class="line">    &#125;,</span><br><span class="line">    arrowHover:function()&#123;</span><br><span class="line">        $(&quot;.carousel-box&quot;).hover(function()&#123;</span><br><span class="line">            $(&quot;.left-arrow,.right-arrow&quot;).css(&quot;display&quot;,&quot;flex&quot;);</span><br><span class="line">        &#125;,function()&#123;</span><br><span class="line">            $(&quot;.left-arrow,.right-arrow&quot;).css(&quot;display&quot;,&quot;none&quot;);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 点击左右箭头触发翻页</span><br><span class="line">    tabImg:function()&#123;</span><br><span class="line">        var obj &#x3D; this;</span><br><span class="line">        $(&quot;.left-arrow&quot;).on(&quot;click&quot;,function()&#123;</span><br><span class="line">           obj.changeZindex_add();</span><br><span class="line">        &#125;)</span><br><span class="line">        $(&quot;.right-arrow&quot;).on(&quot;click&quot;,function()&#123;</span><br><span class="line">            obj.changeZindex_sub();</span><br><span class="line">         &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 设置初始zindex</span><br><span class="line">    setZindex:function()&#123;</span><br><span class="line">        &#x2F;&#x2F; 左侧横向TAB</span><br><span class="line">        var imgNum &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).length;</span><br><span class="line">        </span><br><span class="line">        for(var i &#x3D; 10000;i&lt;imgNum;i++)&#123;</span><br><span class="line">            $(&quot;.img-item&quot;).eq(i).css(&#123;</span><br><span class="line">                &quot;zIndex&quot;:i</span><br><span class="line">            &#125;);</span><br><span class="line">            $(&quot;.img-item&quot;).eq(i).attr(&quot;Zindex&quot;,i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F;前翻</span><br><span class="line">    changeZindex_add:function()&#123;</span><br><span class="line">        var imgNum &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).length;</span><br><span class="line">        var lastZindex &#x3D;   $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).attr(&quot;zindex&quot;);</span><br><span class="line">        var firstImg &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(0).find(&quot;img&quot;);</span><br><span class="line">        var firstImgSrc &#x3D;  firstImg.attr(&quot;src&quot;);</span><br><span class="line">        var firstImgAlt &#x3D;  firstImg.attr(&quot;alt&quot;);</span><br><span class="line">        var firstImgUrl &#x3D;  firstImg.attr(&quot;url&quot;);</span><br><span class="line">        var l1Img &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).find(&quot;img&quot;);</span><br><span class="line">        var lastImgSrc &#x3D;  l1Img.attr(&quot;src&quot;);</span><br><span class="line">        var lastImgUrl &#x3D; l1Img.attr(&quot;url&quot;);</span><br><span class="line">        var l2Img &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-2).find(&quot;img&quot;);</span><br><span class="line">        var last2ImgSrc &#x3D; l2Img.attr(&quot;src&quot;);</span><br><span class="line">        var last2ImgUrl &#x3D; l2Img.attr(&quot;url&quot;);</span><br><span class="line">        $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(0).remove();</span><br><span class="line">        $(&quot;.transverse-box&quot;).append(&quot;&lt;div class&#x3D;&#39;img-item&#39; zindex&#x3D;&#39;&quot;+(parseInt(lastZindex)+1)+&quot;&#39;&gt;&lt;a href&#x3D;&#39;&quot; + firstImgUrl </span><br><span class="line">            + &quot;&#39; target&#x3D;&#39;_blank&#39;&gt;&lt;img src&#x3D;&#39;&quot;+firstImgSrc+&quot;&#39; alt&#x3D;&#39;&quot; + firstImgAlt + &quot;&#39; url&#x3D;&#39;&quot; + firstImgUrl + &quot;&#39;&gt;&lt;&#x2F;a&gt;&lt;div&gt;&quot;);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(0).find(&quot;img&quot;).attr(&quot;src&quot;,lastImgSrc);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(0).find(&quot;a&quot;).attr(&quot;href&quot;,lastImgUrl);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(1).find(&quot;img&quot;).attr(&quot;src&quot;,last2ImgSrc);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(1).find(&quot;a&quot;).attr(&quot;href&quot;,last2ImgUrl);</span><br><span class="line">        $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).css(&#123;</span><br><span class="line">            &quot;zIndex&quot;:parseInt(lastZindex)+1,</span><br><span class="line">            &quot;opacity&quot;:0</span><br><span class="line">        &#125;,500);    </span><br><span class="line">        $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).animate(&#123;</span><br><span class="line">            &quot;opacity&quot;:1</span><br><span class="line">        &#125;,500);</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 后翻</span><br><span class="line">    changeZindex_sub:function()&#123;</span><br><span class="line">        var imgNum &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).length;</span><br><span class="line">        var lastZindex &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).attr(&quot;zindex&quot;);</span><br><span class="line">        var firstZindex &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(0).attr(&quot;zindex&quot;);</span><br><span class="line">        var lastImg &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).find(&quot;img&quot;);</span><br><span class="line">        var lastImgSrc &#x3D; lastImg.attr(&quot;src&quot;);</span><br><span class="line">        var lastImgAlt &#x3D; lastImg.attr(&quot;alt&quot;);</span><br><span class="line">        var lastImgUrl &#x3D; lastImg.attr(&quot;url&quot;);</span><br><span class="line">        var f1Img &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(0).find(&quot;img&quot;);</span><br><span class="line">        var firstImgSrc &#x3D; f1Img.attr(&quot;src&quot;);</span><br><span class="line">        var firstImgUrl &#x3D; f1Img.attr(&quot;url&quot;);</span><br><span class="line">        var f2Img &#x3D; $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(1).find(&quot;img&quot;);</span><br><span class="line">        var first2ImgSrc &#x3D; f2Img.attr(&quot;src&quot;);</span><br><span class="line">        var first2ImgUrl &#x3D; f2Img.attr(&quot;url&quot;);</span><br><span class="line">        $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).remove();</span><br><span class="line">        $(&quot;.transverse-box&quot;).prepend(&quot;&lt;div class&#x3D;&#39;img-item&#39; zindex&#x3D;&#39;&quot;+(parseInt(firstZindex)-1)+&quot;&#39;&gt;&lt;a href&#x3D;&#39;&quot; + lastImgUrl </span><br><span class="line">            + &quot;&#39; target&#x3D;&#39;_blank&#39;&gt;&lt;img src&#x3D;&#39;&quot;+lastImgSrc+&quot;&#39; alt&#x3D;&#39;&quot; + lastImgAlt + &quot;&#39; url&#x3D;&#39;&quot; + lastImgUrl + &quot;&#39;&gt;&lt;&#x2F;a&gt;&lt;div&gt;&quot;);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(0).find(&quot;img&quot;).attr(&quot;src&quot;,firstImgSrc);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(0).find(&quot;a&quot;).attr(&quot;href&quot;,firstImgUrl);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(1).find(&quot;img&quot;).attr(&quot;src&quot;,first2ImgSrc);</span><br><span class="line">        $(&quot;.vertical-box ul&quot;).find(&quot;li&quot;).eq(1).find(&quot;a&quot;).attr(&quot;href&quot;,first2ImgUrl);</span><br><span class="line">        $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(0).css(&#123;</span><br><span class="line">            &quot;zIndex&quot;:parseInt(firstZindex)-1</span><br><span class="line">        &#125;).siblings().css(&quot;opacity&quot;,&quot;0&quot;);</span><br><span class="line">        $(&quot;.transverse-box&quot;).find(&quot;.img-item&quot;).eq(length-1).animate(&#123;</span><br><span class="line">            &quot;opacity&quot;:1</span><br><span class="line">        &#125;); </span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 自动播放</span><br><span class="line">    autoPlay:function(x)&#123;</span><br><span class="line">        var obj &#x3D; this;</span><br><span class="line">        this.changeZindex_add();</span><br><span class="line">        setTimeout(function()&#123;obj.autoPlay(x)&#125;,x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    $.getJSON(&quot;.&#x2F;json-data&#x2F;main-banner.json&quot;, function (data) &#123;</span><br><span class="line">        var banner &#x3D; new Carousel();</span><br><span class="line">        &#x2F;&#x2F;$.getJSON路径必须正确，图片地址数组，不要少于三张</span><br><span class="line">        var imgSrcDate &#x3D; data;</span><br><span class="line">        banner.init(&#123;</span><br><span class="line">            container:&quot;#banner&quot;,</span><br><span class="line">            datas:imgSrcDate,</span><br><span class="line">            autoplaySpeed:8000,</span><br><span class="line">            autoplay: true</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><code>第四步</code>：这里需要注意的是，第三步<code>main_banner.js</code>中的最后一块内容 <code>$.getJSON()</code>的<code>main-banner.json</code>文件路径必须填写正确。以我的博客为例，我的<code>main-banner.json</code>文件放在博客根目录的<code>source/json-data</code>目录下，文件内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;img&quot; : &quot;&#x2F;photo&#x2F;index&#x2F;lunbo&#x2F;005.jpg&quot;, </span><br><span class="line">&#x2F;&#x2F;图片路径是相对于根目录source来说的</span><br><span class="line">        &quot;url&quot; : &quot;&quot;,</span><br><span class="line">&#x2F;&#x2F;点击图片后的跳转链接</span><br><span class="line">        &quot;alt&quot; : &quot;&quot;</span><br><span class="line">&#x2F;&#x2F;图片提示文字</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;img&quot; : &quot;&#x2F;photo&#x2F;index&#x2F;lunbo&#x2F;007.jpg&quot;, </span><br><span class="line">        &quot;url&quot; : &quot;&quot;,</span><br><span class="line">        &quot;alt&quot; : &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;img&quot; : &quot;&#x2F;photo&#x2F;index&#x2F;lunbo&#x2F;008.jpg&quot;, </span><br><span class="line">        &quot;url&quot; : &quot; &quot;,</span><br><span class="line">        &quot;alt&quot; : &quot; &quot;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p><code>第五步</code>：通过Git控制台，依次键入命令<code>hexo clean</code>-&gt;<code>hexo g</code>-&gt;<code>hexo server</code>，打开博客主页即可。</p>
+<p>转载源自：<a href="https://dp2px.com/2019/08/13/hexo-carousel/">DP2PX的个人博文</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="has-link-grey -link" href="/tags/Icarus/" rel="tag">Icarus</a>, <a class="has-link-grey -link" href="/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/" rel="tag">图片轮播</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/photo/index/pay/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/photo/index/pay/wechat.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">博客网站的发布</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+                <span class="level-item">Hexo中常用插件的安装与使用</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="张之卿">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        张之卿
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        为了那个梦想
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>安徽-桐城</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            11
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            3
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            11
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zazdream" target="_blank" rel="noopener">
+                关注我</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/zazdream">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="E-mail" href="mailto:zazdream@163.com">
+                
+                <i class="fab fa-envira"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Weibo" href="https://weibo.com/u/5013594041">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            相关链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://me.csdn.net/weixin_42146857" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">我的CSDN首页</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">me.csdn.net</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://space.bilibili.com/29187794" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">我的B站首页</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">space.bilibili.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/">
+            <span class="level-start">
+                <span class="level-item">专业知识分享</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">
+            <span class="level-start">
+                <span class="level-item">博客网站的搭建</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">9</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E9%9A%8F%E7%AC%94/">
+            <span class="level-start">
+                <span class="level-item">随笔</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/CDN%E5%8A%A0%E9%80%9F/" style="font-size: 10px;">CDN加速</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Icarus/" style="font-size: 15px;">Icarus</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/%E5%88%9D%E7%AF%87/" style="font-size: 10px;">初篇</a> <a href="/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/" style="font-size: 10px;">图片轮播</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">插件</a> <a href="/tags/%E8%AF%97%E8%AF%8D/" style="font-size: 10px;">诗词</a>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow  ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article1.jpg" alt="博客网站的发布">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-22T03:41:43.000Z">2020-02-22</time></div>
+                    <a href="/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/" class="title has-link-black-ter is-size-6 has-text-weight-normal">博客网站的发布</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article2.jpg" alt="Hexo博客主题之Icarus的图片轮播效果">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-22T02:25:13.000Z">2020-02-22</time></div>
+                    <a href="/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo博客主题之Icarus的图片轮播效果</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="Hexo中常用插件的安装与使用">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-21T09:30:21.000Z">2020-02-21</time></div>
+                    <a href="/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo中常用插件的安装与使用</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="博文书写之Markdown的基本语法和注意事项">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-21T05:53:36.000Z">2020-02-21</time></div>
+                    <a href="/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="title has-link-black-ter is-size-6 has-text-weight-normal">博文书写之Markdown的基本语法和注意事项</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="Hexo博客主题之Icarus的设置与美化（进阶）">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-18T09:01:19.000Z">2020-02-18</time></div>
+                    <a href="/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo博客主题之Icarus的设置与美化（进阶）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">博客网站的搭建</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">11</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CDN%E5%8A%A0%E9%80%9F/">
+                        <span class="tag">CDN加速</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Git/">
+                        <span class="tag">Git</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Icarus/">
+                        <span class="tag">Icarus</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Markdown/">
+                        <span class="tag">Markdown</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%88%9D%E7%AF%87/">
+                        <span class="tag">初篇</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/">
+                        <span class="tag">图片轮播</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%9F%9F%E5%90%8D/">
+                        <span class="tag">域名</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%8F%92%E4%BB%B6/">
+                        <span class="tag">插件</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%AF%97%E8%AF%8D/">
+                        <span class="tag">诗词</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Hexo博客主题之Icarus的图片轮播效果" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 张之卿&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                <br>
+                
+                </p>
+            </div>
+            <div class="number+time">
+                <div style="text-align:center">
+                    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("02/09/2020 12:00:00");//此处修改你的建站时间或者网站上线时间 
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+                                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                    <br>
+                    <span id="busuanzi_container_site_uv">
+                        本站总访问量<span id="busuanzi_value_site_pv">0</span>次 | 
+                    </span>
+                    <span id="busuanzi_container_site_uv">
+                        您是第<span id="busuanzi_value_site_uv">0</span>个小伙伴
+                    </span>
+                </div> 
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://zazdream.com',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+    <!-- 雪花特效 -->
+    <script type="text/javascript">
+        var windowWidth = $(window).width();
+        if (windowWidth > 480) {
+          document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+        }
+    </script>
+</body>
+</html>

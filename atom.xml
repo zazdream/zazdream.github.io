@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zazdream.com/"/>
-  <updated>2020-02-21T11:49:51.681Z</updated>
+  <updated>2020-02-22T08:39:32.765Z</updated>
   <id>http://zazdream.com/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>博客网站的发布</title>
+    <link href="http://zazdream.com/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/"/>
+    <id>http://zazdream.com/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/</id>
+    <published>2020-02-22T03:41:43.000Z</published>
+    <updated>2020-02-22T08:39:32.765Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;域名的注册&quot;&gt;&lt;a href=&quot;#域名的注册&quot; class=&quot;headerlink&quot; title=&quot;域名的注册&quot;&gt;&lt;/a&gt;&lt;strong&gt;域名的注册&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;选择域名注册商的因素有哪些？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;域名注册商有很多，国内的万网、百度云、腾讯云，国外的GoDaddy、 Namesilo等等。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;考虑因素之一&lt;/code&gt;：备案。&lt;/p&gt;
+&lt;p&gt;国内域名注册后需要备案，因为政策因素也可能随时被停用，国外域名注册后无需备案。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;考虑因素之二&lt;/code&gt;：控制权与转移权&lt;/p&gt;
+&lt;p&gt;因为没有国内的政策限制，国外的域名注册商通常会给予用户域名的完全控制权与转移权。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
+    
+      <category term="域名" scheme="http://zazdream.com/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+      <category term="CDN加速" scheme="http://zazdream.com/tags/CDN%E5%8A%A0%E9%80%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客主题之Icarus的图片轮播效果</title>
+    <link href="http://zazdream.com/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/"/>
+    <id>http://zazdream.com/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/</id>
+    <published>2020-02-22T02:25:13.000Z</published>
+    <updated>2020-02-22T03:13:20.483Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;分享来自一位大佬网站首页的图片轮播效果&quot;&gt;&lt;a href=&quot;#分享来自一位大佬网站首页的图片轮播效果&quot; class=&quot;headerlink&quot; title=&quot;分享来自一位大佬网站首页的图片轮播效果&quot;&gt;&lt;/a&gt;&lt;strong&gt;分享来自一位大佬网站首页的图片轮播效果&lt;/strong&gt;&lt;/h3&gt;&lt;h3 id=&quot;实现步骤&quot;&gt;&lt;a href=&quot;#实现步骤&quot; class=&quot;headerlink&quot; title=&quot;实现步骤&quot;&gt;&lt;/a&gt;&lt;strong&gt;实现步骤&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;第一步&lt;/code&gt;：按照路径打开&lt;code&gt;themes/hexo-theme-icarus-master/layout/index.ejs&lt;/code&gt;，修改&lt;code&gt;index.ejs&lt;/code&gt;如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x2F;&amp;#x2F;修改部分&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;%- _css(&amp;#39;css&amp;#x2F;main_banner&amp;#39;) %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div id&amp;#x3D;&amp;#39;banner&amp;#39; class&amp;#x3D;&amp;#39;card&amp;#39;&amp;gt;&amp;lt;&amp;#x2F;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;%- _js(&amp;#39;js&amp;#x2F;main_banner&amp;#39;, true) %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x2F;&amp;#x2F;修改部分&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;% page.posts.each(function(post)&amp;#123; %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;%- _partial(&amp;#39;common&amp;#x2F;article&amp;#39;, &amp;#123; post, index: true &amp;#125;) %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;% &amp;#125;); %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;% if (page.total &amp;gt; 1) &amp;#123; %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;%- _partial(&amp;#39;common&amp;#x2F;paginator&amp;#39;) %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;% &amp;#125; %&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="博客网站的搭建" scheme="http://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="Hexo" scheme="http://zazdream.com/tags/Hexo/"/>
+    
+      <category term="Icarus" scheme="http://zazdream.com/tags/Icarus/"/>
+    
+      <category term="图片轮播" scheme="http://zazdream.com/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo中常用插件的安装与使用</title>
     <link href="http://zazdream.com/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
     <id>http://zazdream.com/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
     <published>2020-02-21T09:30:21.000Z</published>
-    <updated>2020-02-21T11:49:51.681Z</updated>
+    <updated>2020-02-22T03:16:56.987Z</updated>
     
     <summary type="html">
     
@@ -46,7 +102,7 @@
     <link href="http://zazdream.com/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
     <id>http://zazdream.com/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
     <published>2020-02-21T05:53:36.000Z</published>
-    <updated>2020-02-21T10:13:09.448Z</updated>
+    <updated>2020-02-22T03:10:35.680Z</updated>
     
     <summary type="html">
     
@@ -69,7 +125,7 @@
     <link href="http://zazdream.com/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/"/>
     <id>http://zazdream.com/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/</id>
     <published>2020-02-18T09:01:19.000Z</published>
-    <updated>2020-02-18T11:24:08.597Z</updated>
+    <updated>2020-02-22T03:12:00.438Z</updated>
     
     <summary type="html">
     
@@ -120,7 +176,7 @@
     <link href="http://zazdream.com/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
     <id>http://zazdream.com/2020/02/17/Git%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
     <published>2020-02-17T05:44:20.000Z</published>
-    <updated>2020-02-17T12:07:37.762Z</updated>
+    <updated>2020-02-22T03:12:08.145Z</updated>
     
     <summary type="html">
     
