@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zazdream.com/"/>
-  <updated>2020-02-22T09:18:46.480Z</updated>
+  <updated>2020-02-23T13:57:16.348Z</updated>
   <id>http://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>交换机的基本配置</title>
+    <link href="http://zazdream.com/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/"/>
+    <id>http://zazdream.com/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</id>
+    <published>2020-02-23T05:18:18.000Z</published>
+    <updated>2020-02-23T13:57:16.348Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;学习资源&quot;&gt;&lt;a href=&quot;#学习资源&quot; class=&quot;headerlink&quot; title=&quot;学习资源&quot;&gt;&lt;/a&gt;&lt;strong&gt;学习资源&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1_i0awBa2q1asnSiGsQHi1w&quot;&gt;点击获取&lt;code&gt;Cisco Packet Tracer 6.0&lt;/code&gt;，提取码为&lt;code&gt;gxi4&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://pan.baidu.com/s/1Td_8zLCizfoxt4Pedq4h3w&quot;&gt;点击获取&lt;code&gt;基本交换机配置.pka&lt;/code&gt;，提取码为&lt;code&gt;lpoy&lt;/code&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;操作环境&quot;&gt;&lt;a href=&quot;#操作环境&quot; class=&quot;headerlink&quot; title=&quot;操作环境&quot;&gt;&lt;/a&gt;&lt;strong&gt;操作环境&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;操作系统：Windows10&lt;/li&gt;
+&lt;li&gt;操作软件：Cisco Packet Tracer 6.0&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="网络工程专业学习" scheme="http://zazdream.com/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="网络工程" scheme="http://zazdream.com/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/"/>
+    
+      <category term="交换机" scheme="http://zazdream.com/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>博客网站的发布</title>

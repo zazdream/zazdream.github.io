@@ -1,6 +1,371 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>交换机的基本配置</title>
+    <url>/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h3 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a><strong>学习资源</strong></h3><ul>
+<li><p><a href="https://pan.baidu.com/s/1_i0awBa2q1asnSiGsQHi1w">点击获取<code>Cisco Packet Tracer 6.0</code>，提取码为<code>gxi4</code></a></p>
+</li>
+<li><p><a href="https://pan.baidu.com/s/1Td_8zLCizfoxt4Pedq4h3w">点击获取<code>基本交换机配置.pka</code>，提取码为<code>lpoy</code></a> </p>
+</li>
+</ul>
+<h3 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a><strong>操作环境</strong></h3><ul>
+<li>操作系统：Windows10</li>
+<li>操作软件：Cisco Packet Tracer 6.0</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a><strong>网络拓扑图</strong></h3><p><img src="/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/001.jpg" alt></p>
+<h3 id="地址表"><a href="#地址表" class="headerlink" title="地址表"></a><strong>地址表</strong></h3><table>
+<thead>
+<tr>
+<th align="center">设备</th>
+<th align="center">接口</th>
+<th align="center">IP地址</th>
+<th align="center">子网掩码</th>
+<th align="center">默认网关</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PC1</td>
+<td align="center">网卡</td>
+<td align="center">172.17.99.21</td>
+<td align="center">255.255.255.0</td>
+<td align="center">172.17.99.11</td>
+</tr>
+<tr>
+<td align="center">PC2</td>
+<td align="center">网卡</td>
+<td align="center">172.17.99.22</td>
+<td align="center">255.255.255.0</td>
+<td align="center">172.17.99.11</td>
+</tr>
+<tr>
+<td align="center">S1</td>
+<td align="center">VLAN99</td>
+<td align="center">172.17.99.11</td>
+<td align="center">255.255.255.0</td>
+<td align="center">172.17.99.1</td>
+</tr>
+</tbody></table>
+<h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a><strong>学习目标</strong></h3><ul>
+<li>清除交换机的现有配置</li>
+<li>检验默认交换机配置</li>
+<li>创建基本交换机配置</li>
+<li>管理 MAC 地址表</li>
+<li>配置端口安全性</li>
+</ul>
+<h3 id="学习说明"><a href="#学习说明" class="headerlink" title="学习说明"></a><strong>学习说明</strong></h3><p>本次学习中，我们将检查并配置一台独立式 LAN 交换机。虽然交换机在出厂默认状态下能够执行基本功能，但为了保证 LAN 的安全并优化 LAN，网络管理员应当修改几个参数。本次学习将向我们介绍交换机配置的基本知识。</p>
+<h3 id="学习过程"><a href="#学习过程" class="headerlink" title="学习过程"></a><strong>学习过程</strong></h3><p><strong>任务 1：清除交换机的现有配置</strong></p>
+<p>（一）步骤 1. 键入 <code>enable</code> 命令进入特权执行模式。</p>
+<p><code>操作说明</code>：单击交换机 S1，进入图形配置界面，然后单击 CLI 选项卡，进入控制台，回车结束以前的操作，发出 <code>enable</code> 命令以进入特权执行模式。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch&gt;enable</span><br><span class="line">Switch#</span><br></pre></td></tr></table></figure>
+
+<p>（二）步骤 2. 删除 VLAN 数据库信息文件。</p>
+<p><code>操作说明</code>：VLAN 数据库信息与配置文件分开存储，以 vlan.dat 文件名存储在闪存中。要删除 VLAN 文件，请发出命令<code>delete flash:vlan.dat</code>。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#delete flash:vlan.dat </span><br><span class="line">Delete filename [vlan.dat]? [Enter]</span><br><span class="line">Delete flash:vlan.dat? [confirm] [Enter]</span><br></pre></td></tr></table></figure>
+
+<p>（三）步骤 3. 从 NVRAM 中删除交换机启动配置文件。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#erase startup-config </span><br><span class="line">Erasing the nvram filesystem will remove all configuration files! Continue? [confirm] [Enter]</span><br><span class="line">[OK]</span><br><span class="line">Erase of nvram: complete</span><br></pre></td></tr></table></figure>
+
+<p>（四）步骤 4. 确认 VLAN 信息已删除。</p>
+<p><code>操作说明</code>：使用 <code>show vlan</code> 命令检查是否确实删除了 VLAN 配置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show vlan</span><br><span class="line"></span><br><span class="line">VLAN Name                             Status    Ports</span><br><span class="line">---- -------------------------------- --------- -------------------------------</span><br><span class="line">1    default                          active    Fa0&#x2F;1, Fa0&#x2F;2, Fa0&#x2F;3, Fa0&#x2F;4</span><br><span class="line">                                                Fa0&#x2F;5, Fa0&#x2F;6, Fa0&#x2F;7, Fa0&#x2F;8</span><br><span class="line">                                                Fa0&#x2F;9, Fa0&#x2F;10, Fa0&#x2F;11, Fa0&#x2F;12</span><br><span class="line">                                                Fa0&#x2F;13, Fa0&#x2F;14, Fa0&#x2F;15, Fa0&#x2F;16</span><br><span class="line">                                                Fa0&#x2F;17, Fa0&#x2F;18, Fa0&#x2F;19, Fa0&#x2F;20</span><br><span class="line">                                                Fa0&#x2F;21, Fa0&#x2F;22, Fa0&#x2F;23, Fa0&#x2F;24</span><br><span class="line">                                                Gig1&#x2F;1, Gig1&#x2F;2</span><br><span class="line">10   VLAN10                           active    </span><br><span class="line">30   VLAN30                           active    </span><br><span class="line">1002 fddi-default                     act&#x2F;unsup </span><br><span class="line">1003 token-ring-default               act&#x2F;unsup </span><br><span class="line">1004 fddinet-default                  act&#x2F;unsup </span><br><span class="line">1005 trnet-default                    act&#x2F;unsup </span><br><span class="line"></span><br><span class="line">VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2</span><br><span class="line">---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------</span><br><span class="line">1    enet  100001     1500  -      -      -        -    -        0      0</span><br><span class="line">10   enet  100010     1500  -      -      -        -    -        0      0</span><br><span class="line">30   enet  100030     1500  -      -      -        -    -        0      0</span><br><span class="line">1002 fddi  101002     1500  -      -      -        -    -        0      0   </span><br><span class="line">1003 tr    101003     1500  -      -      -        -    -        0      0   </span><br><span class="line">1004 fdnet 101004     1500  -      -      -        ieee -        0      0   </span><br><span class="line">1005 trnet 101005     1500  -      -      -        ibm  -        0      0   </span><br><span class="line"></span><br><span class="line">Remote SPAN VLANs</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Primary Secondary Type              Ports</span><br><span class="line">------- --------- ----------------- ------------------------------------------</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：发现VLAN 信息仍在交换机上，执行下一步骤予以清除。</p>
+<p>（五）步骤 5. 重新加载交换机。</p>
+<p><code>操作说明</code>：在特权执行模式提示符下，输入 <code>reload</code> 命令开始这一过程。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#reload</span><br><span class="line">Proceed with reload? [confirm] [enter]</span><br><span class="line"></span><br><span class="line">%SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.</span><br><span class="line"></span><br><span class="line">&lt;省略部分输出&gt;</span><br><span class="line"></span><br><span class="line">Press RETURN to get started! [Enter]</span><br><span class="line"></span><br><span class="line">Switch&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>任务 2：检验默认交换机配置</strong></p>
+<p>（一）步骤 1. 进入特权模式。</p>
+<p><code>操作说明</code>：特权模式下，我们可以使用全部交换机命令。不过，由于许多特权命令会配置操作参数，因此应使用口令对特权访问加以保护，防止未授权使用。特权命令集不仅包括用户执行模式所包含的那些命令，还包括 configure 命令，通过该命令可以访问其余命令模式。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch&gt;enable</span><br><span class="line">Switch#</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：请注意特权执行模式下配置中提示符的变化。</p>
+<p>（二）步骤 2. 检查当前交换机配置。</p>
+<p>（1）发出 <code>show running-config</code> 命令，检查当前的运行配置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch&gt;enable</span><br><span class="line">Switch#show running-config</span><br><span class="line">Building configuration...</span><br><span class="line"></span><br><span class="line">Current configuration : 1037 bytes</span><br><span class="line">!</span><br><span class="line">version 12.2</span><br><span class="line">no service timestamps log datetime msec</span><br><span class="line">no service timestamps debug datetime msec</span><br><span class="line">no service password-encryption</span><br><span class="line">!</span><br><span class="line">hostname Switch</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">spanning-tree mode pvst</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;1  &#x2F;&#x2F;快速以太网接口</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;2</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;3</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;4</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;5</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;6</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;7</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;8</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;9</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;10</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;11</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;12</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;13</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;14</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;15</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;16</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;17</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;18</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;19</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;20</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;21</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;22</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;23</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;24</span><br><span class="line">!</span><br><span class="line">interface GigabitEthernet1&#x2F;1  &#x2F;&#x2F;千兆以太网接口</span><br><span class="line">!</span><br><span class="line">interface GigabitEthernet1&#x2F;2</span><br><span class="line">!</span><br><span class="line">interface Vlan1</span><br><span class="line"> no ip address</span><br><span class="line"> shutdown</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">line con 0</span><br><span class="line">!</span><br><span class="line">line vty 0 4</span><br><span class="line"> login</span><br><span class="line">line vty 5 15</span><br><span class="line"> login</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>该交换机有多少个快速以太网接口？<br>答：24个</li>
+<li>该交换机有多少个千兆以太网接口？<br>答：2个</li>
+<li>该交换机中显示的 vty 线路值范围是什么？<br>答：0-15</li>
+</ul>
+<p>（2）发出 <code>show startup-config</code> 命令，检查当前 NVRAM 的内容。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show startup-config</span><br><span class="line">startup-config is not present</span><br></pre></td></tr></table></figure>
+
+<p>（3）发出 <code>show interface vlan1</code> 命令，检查虚拟接口 VLAN1 的特征。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show interface vlan1</span><br><span class="line">Vlan1 is administratively down, line protocol is down</span><br><span class="line">  Hardware is CPU Interface, address is 0060.47ac.1eb8 (bia 0060.47ac.1eb8)</span><br><span class="line">  MTU 1500 bytes, BW 100000 Kbit, DLY 1000000 usec,</span><br><span class="line">     reliability 255&#x2F;255, txload 1&#x2F;255, rxload 1&#x2F;255</span><br><span class="line">  Encapsulation ARPA, loopback not set</span><br><span class="line">  ARP type: ARPA, ARP Timeout 04:00:00</span><br><span class="line">  Last input 21:40:21, output never, output hang never</span><br><span class="line">  Last clearing of &quot;show interface&quot; counters never</span><br><span class="line">  Input queue: 0&#x2F;75&#x2F;0&#x2F;0 (size&#x2F;max&#x2F;drops&#x2F;flushes); Total output drops: 0</span><br><span class="line">  Queueing strategy: fifo</span><br><span class="line">  Output queue: 0&#x2F;40 (size&#x2F;max)</span><br><span class="line">  5 minute input rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">  5 minute output rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">     1682 packets input, 530955 bytes, 0 no buffer</span><br><span class="line">     Received 0 broadcasts (0 IP multicast)</span><br><span class="line">     0 runts, 0 giants, 0 throttles</span><br><span class="line">     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored</span><br><span class="line">     563859 packets output, 0 bytes, 0 underruns</span><br><span class="line">     0 output errors, 23 interface resets</span><br><span class="line">     0 output buffer failures, 0 output buffers swapped out</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>该交换机上设置了 IP 地址吗？<br>答：没有</li>
+<li>该虚拟交换机接口的 MAC 地址是什么？<br>答：0060.47ac.1eb8</li>
+<li>此接口打开了吗？<br>答：没有</li>
+</ul>
+<p>（4）现在使用 <code>show ip interface vlan1</code> 命令查看该接口的 IP 属性。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show ip interface vlan1</span><br><span class="line">Vlan1 is administratively down, line protocol is down</span><br><span class="line">  Internet protocol processing disabled</span><br></pre></td></tr></table></figure>
+
+<p>（三）步骤 3. 显示 Cisco IOS 信息。</p>
+<p><code>操作说明</code>：使用 <code>show version</code> 命令显示 Cisco IOS 信息。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show version</span><br><span class="line">Cisco IOS Software, C2960 Software (C2960-LANBASE-M), Version 12.2(25)FX, RELEASE SOFTWARE (fc1)</span><br><span class="line">Copyright (c) 1986-2005 by Cisco Systems, Inc.</span><br><span class="line">Compiled Wed 12-Oct-05 22:05 by pt_team</span><br><span class="line"></span><br><span class="line">ROM: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(25r)FX, RELEASE SOFTWARE (fc4)</span><br><span class="line"></span><br><span class="line">System returned to ROM by power-on</span><br><span class="line"></span><br><span class="line">Cisco WS-C2960-24TT (RC32300) processor (revision C0) with 21039K bytes of memory.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">24 FastEthernet&#x2F;IEEE 802.3 interface(s)</span><br><span class="line">2 Gigabit Ethernet&#x2F;IEEE 802.3 interface(s)</span><br><span class="line"></span><br><span class="line">32768K bytes of flash-simulated non-volatile configuration memory.</span><br><span class="line">Base ethernet MAC Address       : 0060.47AC.1EB8</span><br><span class="line">Motherboard assembly number     : 73-9832-06</span><br><span class="line">Power supply part number        : 341-0097-02</span><br><span class="line">Motherboard serial number       : FOC103248MJ</span><br><span class="line">Power supply serial number      : DCA102133JA</span><br><span class="line">Model revision number           : B0</span><br><span class="line">Motherboard revision number     : C0</span><br><span class="line">Model number                    : WS-C2960-24TT</span><br><span class="line">System serial number            : FOC1033Z1EY</span><br><span class="line">Top Assembly Part Number        : 800-26671-02</span><br><span class="line">Top Assembly Revision Number    : B0</span><br><span class="line">Version ID                      : V02</span><br><span class="line">CLEI Code Number                : COM3K00BRA</span><br><span class="line">Hardware Board Revision Number  : 0x01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Switch   Ports  Model              SW Version              SW Image</span><br><span class="line">------   -----  -----              ----------              ----------</span><br><span class="line">*    1   26     WS-C2960-24TT      12.2                    C2960-LANBASE-M</span><br><span class="line"></span><br><span class="line">Configuration register is 0xF</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>交换机运行的 Cisco IOS 版本是什么？<br>答：版本12.2(25)FX</li>
+<li>系统映像文件名是什么？<br>答：C2960-LANBASE-M</li>
+<li>此交换机的基本 MAC 地址是什么？<br>答：0060.47AC.1EB8</li>
+</ul>
+<p>（四）步骤 4. 检查快速以太网接口。</p>
+<p><code>操作说明</code>：使用 <code>show interface fastethernet 0/18</code> 命令检查 PC1 所用快速以太网接口的默认属性。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show interface fastethernet 0&#x2F;18</span><br><span class="line">FastEthernet0&#x2F;18 is up, line protocol is up (connected)</span><br><span class="line">  Hardware is Lance, address is 0060.5c36.4412 (bia 0060.5c36.4412)</span><br><span class="line"> BW 100000 Kbit, DLY 1000 usec,</span><br><span class="line">     reliability 255&#x2F;255, txload 1&#x2F;255, rxload 1&#x2F;255</span><br><span class="line">  Encapsulation ARPA, loopback not set</span><br><span class="line">  Keepalive set (10 sec)</span><br><span class="line">  Full-duplex, 100Mb&#x2F;s</span><br><span class="line">  input flow-control is off, output flow-control is off</span><br><span class="line">  ARP type: ARPA, ARP Timeout 04:00:00</span><br><span class="line">  Last input 00:00:08, output 00:00:05, output hang never</span><br><span class="line">  Last clearing of &quot;show interface&quot; counters never</span><br><span class="line">  Input queue: 0&#x2F;75&#x2F;0&#x2F;0 (size&#x2F;max&#x2F;drops&#x2F;flushes); Total output drops: 0</span><br><span class="line">  Queueing strategy: fifo</span><br><span class="line">  Output queue :0&#x2F;40 (size&#x2F;max)</span><br><span class="line">  5 minute input rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">  5 minute output rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">     956 packets input, 193351 bytes, 0 no buffer</span><br><span class="line">     Received 956 broadcasts, 0 runts, 0 giants, 0 throttles</span><br><span class="line">     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort</span><br><span class="line">     0 watchdog, 0 multicast, 0 pause input</span><br><span class="line">     0 input packets with dribble condition detected</span><br><span class="line">     2357 packets output, 263570 bytes, 0 underruns</span><br><span class="line">     0 output errors, 0 collisions, 10 interface resets</span><br><span class="line">     0 babbles, 0 late collision, 0 deferred</span><br><span class="line">     0 lost carrier, 0 no carrier</span><br><span class="line">     0 output buffer failures, 0 output buffers swapped out</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>该接口是打开还是关闭？<br>答：打开</li>
+<li>什么事件会打开接口？<br>答：no shutdown</li>
+<li>该接口的 MAC 地址是什么？<br>答：0060.5c36.4412</li>
+<li>该接口的速率和双工设置是什么？<br>答：双工设置为：Full-duplex，速率为：100Mb/s</li>
+</ul>
+<p>（五）步骤 5. 检查 VLAN 信息。</p>
+<p><code>操作说明</code>：使用 show vlan 命令检查交换机的默认 VLAN 配置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show vlan</span><br><span class="line"></span><br><span class="line">VLAN Name                             Status    Ports</span><br><span class="line">---- -------------------------------- --------- -------------------------------</span><br><span class="line">1    default                          active    Fa0&#x2F;1, Fa0&#x2F;2, Fa0&#x2F;3, Fa0&#x2F;4</span><br><span class="line">                                                Fa0&#x2F;5, Fa0&#x2F;6, Fa0&#x2F;7, Fa0&#x2F;8</span><br><span class="line">                                                Fa0&#x2F;9, Fa0&#x2F;10, Fa0&#x2F;11, Fa0&#x2F;12</span><br><span class="line">                                                Fa0&#x2F;13, Fa0&#x2F;14, Fa0&#x2F;15, Fa0&#x2F;16</span><br><span class="line">                                                Fa0&#x2F;17, Fa0&#x2F;18, Fa0&#x2F;19, Fa0&#x2F;20</span><br><span class="line">                                                Fa0&#x2F;21, Fa0&#x2F;22, Fa0&#x2F;23, Fa0&#x2F;24</span><br><span class="line">                                                Gig1&#x2F;1, Gig1&#x2F;2</span><br><span class="line">1002 fddi-default                     act&#x2F;unsup </span><br><span class="line">1003 token-ring-default               act&#x2F;unsup </span><br><span class="line">1004 fddinet-default                  act&#x2F;unsup </span><br><span class="line">1005 trnet-default                    act&#x2F;unsup </span><br><span class="line"></span><br><span class="line">VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2</span><br><span class="line">---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------</span><br><span class="line">1    enet  100001     1500  -      -      -        -    -        0      0</span><br><span class="line">1002 fddi  101002     1500  -      -      -        -    -        0      0   </span><br><span class="line">1003 tr    101003     1500  -      -      -        -    -        0      0   </span><br><span class="line">1004 fdnet 101004     1500  -      -      -        ieee -        0      0   </span><br><span class="line">1005 trnet 101005     1500  -      -      -        ibm  -        0      0   </span><br><span class="line"></span><br><span class="line">Remote SPAN VLANs</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Primary Secondary Type              Ports</span><br><span class="line">------- --------- ----------------- ------------------------------------------</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>VLAN 1 的名称是什么？<br>答：默认，没有设置</li>
+<li>此 VLAN 中有哪些端口？<br>答： Fa0/1-24，Gig1/1-2</li>
+<li>VLAN 1 是活动的吗？<br>答：是的</li>
+<li>什么类型的 VLAN 是默认 VLAN？<br>答：vlan 1、vlan 1002-1005是默认VLAN</li>
+</ul>
+<p>（六）步骤 6. 检查闪存。</p>
+<p><code>操作说明</code>：检查闪存的命令有两个：<code>dir flash:</code> 和 <code>show flash</code>。 发出其中任一命令检查闪存目录中的内容。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#show flash</span><br><span class="line">Directory of flash:&#x2F;</span><br><span class="line"></span><br><span class="line">    1  -rw-     4414921          &lt;no date&gt;  c2960-lanbase-mz.122-25.FX.bin</span><br><span class="line"></span><br><span class="line">32514048 bytes total (28099127 bytes free)</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>发现了哪些文件或目录？如果是文件，则文件名的最后是扩展名，例如 .bin。目录没有扩展名。<br>答：发现了c2960-lanbase-mz.122-25.FX.bin这个文件</li>
+<li>Cisco IOS 映像文件的名称是什么？<br>答：c2960-lanbase-mz.122-25.FX.bin</li>
+</ul>
+<p>（七）步骤 7. 检查并保存启动配置文件。</p>
+<p>（1）早在步骤 2 中，我们已看到启动配置文件不存在。更改交换机的某项配置，然后保存配置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#configure terminal</span><br><span class="line">Enter configuration commands, one per line.  End with CNTL&#x2F;Z.</span><br><span class="line">Switch(config)#hostname S1</span><br><span class="line">S1(config)#exit</span><br><span class="line">S1#</span><br></pre></td></tr></table></figure>
+
+<p>（2）要把运行配置文件的内容保存到非易失性 RAM (NVRAM)，请发出命令 <code>copy running-config startup-config</code>。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Switch#copy running-config startup-config </span><br><span class="line">Destination filename [startup-config]? [enter]</span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：现在显示 NVRAM 的内容，发现当前配置已写入 NVRAM。</p>
+<p><strong>任务 3：创建基本交换机配置</strong></p>
+<p>（一）步骤 1. 为交换机指定名称。</p>
+<p><code>操作说明</code>：进入全局配置模式。利用配置模式，我们可以管理交换机。输入配置命令，每行一条。请注意命令行提示符的变化反应了当前的提示符和交换机名称。在前一学习任务的最后步骤中，我们配置了主机名。下面是对所用命令的回顾。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#configure terminal</span><br><span class="line">S1(config)#hostname S1</span><br><span class="line">S1(config)#exit</span><br></pre></td></tr></table></figure>
+
+<p>（二）步骤 2. 设置访问口令。</p>
+<p><code>操作说明</code>：进入控制台线路配置模式。将登录口令设置为 cisco。另外，使用口令 cisco 配置 vty 线路 0 到 15。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#configure terminal</span><br><span class="line">S1(config)#line console 0 </span><br><span class="line">S1(config-line)#password cisco</span><br><span class="line">S1(config-line)#login</span><br><span class="line">S1(config-line)#line vty 0 15</span><br><span class="line">S1(config-line)#password cisco</span><br><span class="line">S1(config-line)#login</span><br><span class="line">S1(config-line)#exit</span><br></pre></td></tr></table></figure>
+
+<p>（三）步骤 3. 设置命令模式口令。</p>
+<p><code>操作说明</code>：将使能加密口令设置为 class。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config)#enable secret class</span><br></pre></td></tr></table></figure>
+
+<p>（四）步骤 4. 配置交换机的第 3 层地址。</p>
+<p><code>操作说明</code>：在内部虚拟接口 VLAN 99 上将交换机的 IP 地址设置为 172.17.99.11，子网掩码为 255.255.255.0。首先必须在交换机上创建 VLAN，然后才能分配地址。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config)#vlan 99</span><br><span class="line">S1(config-vlan)#exit</span><br><span class="line">S1(config)#interface vlan99</span><br><span class="line">S1(config-if)#ip address 172.17.99.11 255.255.255.0</span><br><span class="line">S1(config-if)#no shutdown</span><br><span class="line">S1(config-if)#exit</span><br></pre></td></tr></table></figure>
+
+<p>（五）步骤 5. 为交换机 VLAN 分配端口。</p>
+<p><code>操作说明</code>：将 Fastethernet 0/1、0/8 和 0/18 端口分配给 VLAN 99。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config)#interface fa0&#x2F;1</span><br><span class="line">S1(config-if)#switchport access vlan 99</span><br><span class="line">S1(config-if)#exit</span><br><span class="line">S1(config)#interface fa0&#x2F;8</span><br><span class="line">S1(config-if)#switchport access vlan 99</span><br><span class="line">S1(config-if)#exit</span><br><span class="line">S1(config)#interface fa0&#x2F;18</span><br><span class="line">S1(config-if)#switchport access vlan 99</span><br><span class="line">S1(config-if)#exit</span><br></pre></td></tr></table></figure>
+
+<p>（六）步骤 6. 设置交换机默认网关。</p>
+<p><code>操作说明</code>：S1 为第 2 层交换机，因此它根据第 2 层报头做出转发决策。如果多个网络连到一台交换机，则需要明确交换机如何转发内部工作帧，因为路径必须在第 3 层确定。这就需要指定默认网关地址，它指向路由器或第 3 层交换机。虽然本次学习没有包括外部 IP 网关，但可以假设我们最终会把 LAN 连接到路由器进行外部访问。假设路由器上的 LAN 接口为 172.17.99.1，据此为交换机设置默认网关。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config)#ip default-gateway 172.17.99.1</span><br><span class="line">S1(config)#exit</span><br></pre></td></tr></table></figure>
+
+<p>（七）步骤 7. 检验管理 LAN 设置。</p>
+<p><code>操作说明</code>：使用 <code>show interface vlan 99</code> 命令检验 VLAN 99 上的接口设置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show interface vlan 99</span><br><span class="line">Vlan99 is up, line protocol is down</span><br><span class="line">  Hardware is CPU Interface, address is 0060.47ac.1eb8 (bia 0060.47ac.1eb8)</span><br><span class="line">  Internet address is 172.17.99.11&#x2F;24</span><br><span class="line">  MTU 1500 bytes, BW 100000 Kbit, DLY 1000000 usec,</span><br><span class="line">&#x2F;&#x2F;MTU （该接口的最大传输单元）, BW （该接口的带宽）, DLY (该接口的延迟，以微秒计)</span><br><span class="line">     reliability 255&#x2F;255, txload 1&#x2F;255, rxload 1&#x2F;255</span><br><span class="line">  Encapsulation ARPA, loopback not set</span><br><span class="line">  ARP type: ARPA, ARP Timeout 04:00:00</span><br><span class="line">  Last input 21:40:21, output never, output hang never</span><br><span class="line">  Last clearing of &quot;show interface&quot; counters never</span><br><span class="line">  Input queue: 0&#x2F;75&#x2F;0&#x2F;0 (size&#x2F;max&#x2F;drops&#x2F;flushes); Total output drops: 0</span><br><span class="line">  Queueing strategy: fifo  &#x2F;&#x2F;排队策略</span><br><span class="line">  Output queue: 0&#x2F;40 (size&#x2F;max)</span><br><span class="line">  5 minute input rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">  5 minute output rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">     1682 packets input, 530955 bytes, 0 no buffer</span><br><span class="line">     Received 0 broadcasts (0 IP multicast)</span><br><span class="line">     0 runts, 0 giants, 0 throttles</span><br><span class="line">     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored</span><br><span class="line">     563859 packets output, 0 bytes, 0 underruns</span><br><span class="line">     0 output errors, 23 interface resets</span><br><span class="line">     0 output buffer failures, 0 output buffers swapped out</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>此接口的带宽是多少？<br>答： 带宽是100000 Kbit</li>
+<li>排队策略是什么？<br>答： fifo</li>
+</ul>
+<p>（八）步骤 8. 配置 PC1 的 IP 地址和默认网关。</p>
+<p><code>操作说明</code>：将 PC1 的 IP 地址设置为 172.17.99.21，子网掩码设置为 255.255.255.0。配置默认网关为 172.17.99.11。单击 PC1 -&gt; Desktop（桌面）选项卡 -&gt; IP 配置，输入上述编址参数。</p>
+<p><img src="/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/002.jpg" alt></p>
+<p>（九）步骤 9. 检验连通性。</p>
+<p><code>操作说明</code>：要检验主机和交换机的配置是否正确，请从 PC1 ping 交换机。如果 ping 不成功，请排除交换机和主机的配置故障。请注意，可能需要尝试好几次才能 ping 成功。</p>
+<p><img src="/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/003.jpg" alt></p>
+<p><code>备注</code>：如果出现ping不通的情况，请做以下排查：（1）请尝试多ping几次；（2）在步骤5中我们已经将交换机的Fastethernet 0/1、0/8 和 0/18 端口分配给 VLAN 99，所以主机PC1连接交换机的端口必须是其中之一，因为他们要在相同vlan间才能实现通讯，这个知识点以后会深入学习。我们为其更换正确的端口后需要稍等一会，等待建立链接完成，再次尝试从主机ping交换机。</p>
+<p>（十）步骤 10. 配置快速以太网接口的端口速率和双工设置。</p>
+<p>（1）配置 FastEthernet 0/18 的双工和速率设置。完成后使用 end 命令返回特权执行模式。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#configure terminal</span><br><span class="line">S1(config)#interface fastethernet 0&#x2F;18</span><br><span class="line">S1(config-if)#speed 100 </span><br><span class="line">S1(config-if)#duplex full</span><br><span class="line">S1(config-if)#end</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：交换机以太网接口的默认设置是自动检测，因此它会自动采用最佳设置。只有当一个端口必须以某一速率和双工模式运作时，才需要手动设置双工模式和速率。手动配置端口可能会导致双工不匹配，从而显著降低性能。</p>
+<p>（2）请注意 PC1 与 S1 之间的链路是如何关闭的，删除 speed 100 和 duplex full 命令，现在使用 <code>show interface fa0/18</code> 命令检验快速以太网接口的设置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show interface fa0&#x2F;18</span><br><span class="line">FastEthernet0&#x2F;18 is up, line protocol is up (connected)</span><br><span class="line">  Hardware is Lance, address is 0060.5c36.4412 (bia 0060.5c36.4412)</span><br><span class="line"> BW 100000 Kbit, DLY 1000 usec,</span><br><span class="line">     reliability 255&#x2F;255, txload 1&#x2F;255, rxload 1&#x2F;255</span><br><span class="line">  Encapsulation ARPA, loopback not set</span><br><span class="line">  Keepalive set (10 sec)</span><br><span class="line">  Full-duplex, 100Mb&#x2F;s</span><br><span class="line">  input flow-control is off, output flow-control is off</span><br><span class="line">  ARP type: ARPA, ARP Timeout 04:00:00</span><br><span class="line">  Last input 00:00:08, output 00:00:05, output hang never</span><br><span class="line">  Last clearing of &quot;show interface&quot; counters never</span><br><span class="line">  Input queue: 0&#x2F;75&#x2F;0&#x2F;0 (size&#x2F;max&#x2F;drops&#x2F;flushes); Total output drops: 0</span><br><span class="line">  Queueing strategy: fifo</span><br><span class="line">  Output queue :0&#x2F;40 (size&#x2F;max)</span><br><span class="line">  5 minute input rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">  5 minute output rate 0 bits&#x2F;sec, 0 packets&#x2F;sec</span><br><span class="line">     956 packets input, 193351 bytes, 0 no buffer</span><br><span class="line">     Received 956 broadcasts, 0 runts, 0 giants, 0 throttles</span><br><span class="line">     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort</span><br><span class="line">     0 watchdog, 0 multicast, 0 pause input</span><br><span class="line">     0 input packets with dribble condition detected</span><br><span class="line">     2357 packets output, 263570 bytes, 0 underruns</span><br><span class="line">     0 output errors, 0 collisions, 10 interface resets</span><br><span class="line">     0 babbles, 0 late collision, 0 deferred</span><br><span class="line">     0 lost carrier, 0 no carrier</span><br><span class="line">     0 output buffer failures, 0 output buffers swapped out</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：删除 speed 100 和 duplex full 命令的步骤：其他步骤和添加相同，只要在相应命令前加上<code>no</code>即可。</p>
+<p>（十一）步骤 11. 保存配置。</p>
+<p><code>操作说明</code>：我们已经完成交换机的基本配置。现在将运行配置文件备份到 NVRAM，确保所做的变更不会因系统重启或断电而丢失。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#copy running-config startup-config </span><br><span class="line"></span><br><span class="line">Destination filename [startup-config]?[Enter]</span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
+
+<p>（十二）步骤 12. 检查启动配置文件。</p>
+<p><code>操作说明</code>：要查看 NVRAM 中存储的配置，请在特权执行（enable 模式）下发出 show startup-config 命令。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show startup-config</span><br><span class="line">Using 1309 bytes</span><br><span class="line">!</span><br><span class="line">version 12.2</span><br><span class="line">no service timestamps log datetime msec</span><br><span class="line">no service timestamps debug datetime msec</span><br><span class="line">no service password-encryption</span><br><span class="line">!</span><br><span class="line">hostname S1</span><br><span class="line">!</span><br><span class="line">enable secret 5 $1$mERr$9cTjUIEqNGurQiFU.ZeCi1</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">spanning-tree mode pvst</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;1</span><br><span class="line"> switchport access vlan 99</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;2</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;3</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;4</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;5</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;6</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;7</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;8</span><br><span class="line"> switchport access vlan 99</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;9</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;10</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;11</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;12</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;13</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;14</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;15</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;16</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;17</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;18</span><br><span class="line"> switchport access vlan 99</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;19</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;20</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;21</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;22</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;23</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;24</span><br><span class="line">!</span><br><span class="line">interface GigabitEthernet1&#x2F;1</span><br><span class="line">!</span><br><span class="line">interface GigabitEthernet1&#x2F;2</span><br><span class="line">!</span><br><span class="line">interface Vlan1</span><br><span class="line"> no ip address</span><br><span class="line"> shutdown</span><br><span class="line">!</span><br><span class="line">interface Vlan99</span><br><span class="line"> ip address 172.17.99.11 255.255.255.0</span><br><span class="line">!</span><br><span class="line">ip default-gateway 172.17.99.1</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">line con 0</span><br><span class="line"> password cisco</span><br><span class="line"> login</span><br><span class="line">!</span><br><span class="line">line vty 0 4</span><br><span class="line"> password cisco</span><br><span class="line"> login</span><br><span class="line">line vty 5 15</span><br><span class="line"> password cisco</span><br><span class="line"> login</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p><strong>任务 4：管理 MAC 地址表</strong></p>
+<p>（一）步骤 1. 记录主机的 MAC 地址。</p>
+<p><code>操作说明</code>：通过下列步骤确定并记录 PC 网络接口卡的第 2 层（物理）地址单击 PC-&gt;选择 Desktop（桌面）选项卡-&gt;单击 Command Prompt（命令提示符）-&gt;键入 ipconfig /all。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PC&gt;ipconfig &#x2F;all</span><br><span class="line"></span><br><span class="line">FastEthernet0 Connection:(default port)</span><br><span class="line">Physical Address................: 0002.16E8.C285</span><br><span class="line">Link-local IPv6 Address.........: FE80::202:16FF:FEE8:C285</span><br><span class="line">IP Address......................: 172.17.99.21</span><br><span class="line">Subnet Mask.....................: 255.255.255.0</span><br><span class="line">Default Gateway.................: 172.17.99.11</span><br><span class="line">DNS Servers.....................: 0.0.0.0</span><br><span class="line">DHCP Servers....................: 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<p>（二）步骤 2. 确定交换机已学习的 MAC 地址。</p>
+<p><code>操作说明</code>：在特权执行模式下使用 <code>show mac-address-table</code> 命令显示 MAC 地址。 如果没有显示 MAC 地址，请从 PC1 ping S1，然后再次检查。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show mac-address-table</span><br><span class="line">          Mac Address Table</span><br><span class="line">-------------------------------------------</span><br><span class="line"></span><br><span class="line">Vlan    Mac Address       Type        Ports</span><br><span class="line">----    -----------       --------    -----</span><br><span class="line"></span><br><span class="line">  99    0002.16e8.c285    DYNAMIC     Fa0&#x2F;18</span><br></pre></td></tr></table></figure>
+
+<p>（三）步骤 3. 清除 MAC 地址表。</p>
+<p><code>操作说明</code>：要删除现有 MAC 地址，请在特权执行模式下使用 <code>clear mac-address-table dynamic</code> 命令。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#clear mac-address-table dynamic</span><br></pre></td></tr></table></figure>
+
+<p>（四）步骤 4. 确认结果。</p>
+<p><code>操作说明</code>：确认 MAC 地址表已清除。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show mac-address-table</span><br><span class="line">          Mac Address Table</span><br><span class="line">-------------------------------------------</span><br><span class="line"></span><br><span class="line">Vlan    Mac Address       Type        Ports</span><br><span class="line">----    -----------       --------    -----</span><br></pre></td></tr></table></figure>
+
+<p>（五）步骤 5. 再次检查 MAC 地址表。</p>
+<p><code>操作说明</code>：在特权执行模式下再次查看 MAC 地址表。如果地址表没有变化，请从 PC1 ping S1，然后再次检查。</p>
+<p>（六）步骤 6. 设置静态 MAC 地址。</p>
+<p><code>操作说明</code>：要指定主机可以连接到哪些接口，一个方法是创建主机 MAC 地址与端口的静态映射表。使用本任务步骤 1 中为 PC1 记录的地址 0002.16E8.C285 设置快速以太网接口 0/18 的静态 MAC 地址。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config)#mac-address-table static 0002.16E8.C285 vlan 99 interface fastethernet 0&#x2F;18</span><br></pre></td></tr></table></figure>
+
+<p>（七）步骤 7. 确认结果。</p>
+<p><code>操作说明</code>：检查 MAC 地址表条目。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show mac-address-table</span><br><span class="line">          Mac Address Table</span><br><span class="line">-------------------------------------------</span><br><span class="line"></span><br><span class="line">Vlan    Mac Address       Type        Ports</span><br><span class="line">----    -----------       --------    -----</span><br><span class="line"></span><br><span class="line">  99    0002.16e8.c285    STATIC      Fa0&#x2F;18</span><br></pre></td></tr></table></figure>
+
+<p>（八）步骤 8. 删除静态 MAC 条目。</p>
+<p><code>操作说明</code>：进入配置模式，在命令串前加上 no 以删除静态 MAC。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config)#no mac-address-table static 0002.16E8.C285 vlan 99 interface fastethernet 0&#x2F;18</span><br></pre></td></tr></table></figure>
+
+<p>（九）步骤 9. 确认结果。</p>
+<p><code>操作说明</code>：使用 show mac-address-table static 命令确认静态 MAC 地址已被清除。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show mac-address-table</span><br><span class="line">          Mac Address Table</span><br><span class="line">-------------------------------------------</span><br><span class="line"></span><br><span class="line">Vlan    Mac Address       Type        Ports</span><br><span class="line">----    -----------       --------    -----</span><br></pre></td></tr></table></figure>
+
+<p><strong>任务 5：配置端口安全性</strong></p>
+<p>（一）步骤 1. 配置第二台主机。</p>
+<p><code>操作说明</code>：本任务需要第二台主机，将 PC2 的 IP 地址设置为 172.17.99.22，子网掩码为 255.255.255.0，默认网关为 172.17.99.11，暂时不要将此 PC 连接到交换机。</p>
+<p><img src="/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/004.jpg" alt></p>
+<p>（二）步骤 2. 检验连通性。</p>
+<p><code>操作说明</code>：从主机 ping 交换机的 VLAN 99 IP 地址，检验 PC1 和交换机的配置是否仍然正确。如果 ping 失败，请排除主机和交换机的配置故障。</p>
+<p>（三）步骤 3. 确定交换机已学习了哪些 MAC 地址。</p>
+<p><code>操作说明</code>：在特权执行模式下使用 <code>show mac-address-table</code> 命令显示已学习的 MAC 地址。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show mac-address-table</span><br><span class="line">          Mac Address Table</span><br><span class="line">-------------------------------------------</span><br><span class="line"></span><br><span class="line">Vlan    Mac Address       Type        Ports</span><br><span class="line">----    -----------       --------    -----</span><br><span class="line"></span><br><span class="line">  99    0002.16e8.c285    DYNAMIC     Fa0&#x2F;18</span><br></pre></td></tr></table></figure>
+
+<p>（四）步骤 4. 列出端口安全选项。</p>
+<p><code>操作说明</code>：研究用于在快速以太网接口 0/18 上设置端口安全的选项。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1# configure terminal</span><br><span class="line">S1(config)#interface fastethernet 0&#x2F;18</span><br><span class="line">S1(config-if)#switchport port-security ?</span><br><span class="line">  mac-address  Secure mac address</span><br><span class="line">  maximum      Max secure addresses</span><br><span class="line">  violation    Security violation mode</span><br><span class="line">  &lt;cr&gt;</span><br></pre></td></tr></table></figure>
+
+<p>（五）步骤 5. 在接入端口上配置端口安全性。</p>
+<p><code>操作说明</code>：配置交换机端口 FastEthernet 0/18 仅接受两台设备，动态学习这些设备的 MAC 地址，并在发生安全违规事件时关闭端口。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config-if)#switchport mode access</span><br><span class="line">S1(config-if)#switchport port-security</span><br><span class="line">S1(config-if)#switchport port-security maximum 2</span><br><span class="line">S1(config-if)#switchport port-security mac-address sticky</span><br><span class="line">S1(config-if)#switchport port-security violation shutdown</span><br><span class="line">S1(config-if)#exit</span><br></pre></td></tr></table></figure>
+
+<p>（六）步骤 6. 确认结果。</p>
+<p><code>操作说明</code>：使用 <code>show port-security interface fa0/18</code> 命令显示端口安全设置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show port-security interface fa0&#x2F;18</span><br><span class="line">Port Security              : Enabled</span><br><span class="line">Port Status                : Secure-up</span><br><span class="line">Violation Mode             : Shutdown</span><br><span class="line">Aging Time                 : 0 mins</span><br><span class="line">Aging Type                 : Absolute</span><br><span class="line">SecureStatic Address Aging : Disabled</span><br><span class="line">Maximum MAC Addresses      : 2</span><br><span class="line">Total MAC Addresses        : 0</span><br><span class="line">Configured MAC Addresses   : 0</span><br><span class="line">Sticky MAC Addresses       : 0</span><br><span class="line">Last Source Address:Vlan   : 0000.0000.0000:0</span><br><span class="line">Security Violation Count   : 0</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>FastEthernet 0/18 上允许多少安全地址？<br>答：只接受两台设备，即只允许两个安全地址</li>
+<li>此端口的安全操作是什么？<br>答：在发生违规时拦截来自无效主机的流量</li>
+</ul>
+<p>（七）步骤 7. 检查运行配置文件。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show running-config</span><br><span class="line">Building configuration...</span><br><span class="line"></span><br><span class="line">Current configuration : 1441 bytes</span><br><span class="line">!</span><br><span class="line">version 12.2</span><br><span class="line">no service timestamps log datetime msec</span><br><span class="line">no service timestamps debug datetime msec</span><br><span class="line">no service password-encryption</span><br><span class="line">!</span><br><span class="line">hostname S1</span><br><span class="line">!</span><br><span class="line">enable secret 5 $1$mERr$9cTjUIEqNGurQiFU.ZeCi1</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">spanning-tree mode pvst</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;1</span><br><span class="line"> switchport access vlan 99</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;2</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;3</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;4</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;5</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;6</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;7</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;8</span><br><span class="line"> switchport access vlan 99</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;9</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;10</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;11</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;12</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;13</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;14</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;15</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;16</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;17</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;18</span><br><span class="line"> switchport access vlan 99</span><br><span class="line"> switchport mode access</span><br><span class="line"> switchport port-security</span><br><span class="line"> switchport port-security maximum 2</span><br><span class="line"> switchport port-security mac-address sticky </span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;19</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;20</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;21</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;22</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;23</span><br><span class="line">!</span><br><span class="line">interface FastEthernet0&#x2F;24</span><br><span class="line">!</span><br><span class="line">interface GigabitEthernet1&#x2F;1</span><br><span class="line">!</span><br><span class="line">interface GigabitEthernet1&#x2F;2</span><br><span class="line">!</span><br><span class="line">interface Vlan1</span><br><span class="line"> no ip address</span><br><span class="line"> shutdown</span><br><span class="line">!</span><br><span class="line">interface Vlan99</span><br><span class="line"> ip address 172.17.99.11 255.255.255.0</span><br><span class="line">!</span><br><span class="line">ip default-gateway 172.17.99.1</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">line con 0</span><br><span class="line"> password cisco</span><br><span class="line"> login</span><br><span class="line">!</span><br><span class="line">line vty 0 4</span><br><span class="line"> password cisco</span><br><span class="line"> login</span><br><span class="line">line vty 5 15</span><br><span class="line"> password cisco</span><br><span class="line"> login</span><br><span class="line">!</span><br><span class="line">!</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>所列语句是否直接反映了运行配置安全的实施情况？<br>答：是的</li>
+</ul>
+<p>（八）步骤 8. 在端口上修改端口安全设置。</p>
+<p><code>操作说明</code>：在快速以太网接口 0/18 上，将端口安全最大 MAC 地址计数更改为 1。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1(config)#int f0&#x2F;18</span><br><span class="line">S1(config-if)#switchport port-security maximum 1</span><br></pre></td></tr></table></figure>
+
+<p>（九）步骤 9. 确认结果。</p>
+<p>（1）使用 <code>show port-security interface fa0/18</code> 命令显示端口安全设置。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show port-security interface fa0&#x2F;18</span><br><span class="line">Port Security              : Enabled</span><br><span class="line">Port Status                : Secure-up</span><br><span class="line">Violation Mode             : Shutdown</span><br><span class="line">Aging Time                 : 0 mins</span><br><span class="line">Aging Type                 : Absolute</span><br><span class="line">SecureStatic Address Aging : Disabled</span><br><span class="line">Maximum MAC Addresses      : 1</span><br><span class="line">Total MAC Addresses        : 0</span><br><span class="line">Configured MAC Addresses   : 0</span><br><span class="line">Sticky MAC Addresses       : 0</span><br><span class="line">Last Source Address:Vlan   : 0000.0000.0000:0</span><br><span class="line">Security Violation Count   : 0</span><br></pre></td></tr></table></figure>
+
+<p><code>学习小问</code>：</p>
+<ul>
+<li>端口安全设置是否已更改为步骤 8 中的配置？<br>答：已经更改</li>
+</ul>
+<p>（2）从 PC1 ping 交换机的 VLAN 99 地址，检验连通性并刷新 MAC 地址表。</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#show mac-address-table</span><br><span class="line">          Mac Address Table</span><br><span class="line">-------------------------------------------</span><br><span class="line"></span><br><span class="line">Vlan    Mac Address       Type        Ports</span><br><span class="line">----    -----------       --------    -----</span><br><span class="line"></span><br><span class="line">  99    0002.16e8.c285    STATIC      Fa0&#x2F;18</span><br></pre></td></tr></table></figure>
+
+<p>（十）步骤 10. 引入一台流氓主机。</p>
+<p>（1）断开连接到交换机快速以太网接口 0/18 的 PC。将分配有 IP 地址 172.17.99.22 的 PC2 连接到端口 FastEthernet 0/18。 从新主机 ping VLAN 99 地址 172.17.99.11。注：网络收敛可能需要一些时间。切换仿真模式和实时模式可加快收敛。</p>
+<p><img src="/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/005.jpg" alt></p>
+<p>（2）此时尝试从PC2 ping S1 时会发现无法啊ping通。</p>
+<p><img src="/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/006.jpg" alt></p>
+<p>（十一）步骤 11. 重新激活端口。</p>
+<p><code>操作说明</code>：只要流氓主机与 FastEthernet 0/18 相连，主机与交换机之间便不会有流量通过。流氓主机与交换机的连接，重新连接 PC1 与 FastEthernet 0/18，在交换机上输入下列命令以重新激活该端口：</p>
+<p><code>键入代码</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">S1#configure terminal</span><br><span class="line">S1(config)#interface fastethernet 0&#x2F;18</span><br><span class="line">S1(config-if)#no shutdown</span><br><span class="line">S1(config-if)#exit</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：如果发现无法重新开启该端口，请重新加载交换机即可，具体方法请查阅<code>任务1的步骤5</code>。</p>
+<p>（十二）步骤 12. 检验连通性。</p>
+<p><code>操作说明</code>：网络收敛后，PC1 可以再次 ping 通 S1。</p>
+<h3 id="学习总结"><a href="#学习总结" class="headerlink" title="学习总结"></a><strong>学习总结</strong></h3><p><strong>到此为止，有关交换机的基本配置我们已经初步掌握，加下来要做的就是反复练习，加油！</strong></p>
+]]></content>
+      <categories>
+        <category>网络工程专业学习</category>
+      </categories>
+      <tags>
+        <tag>网络工程</tag>
+        <tag>交换机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客网站的发布</title>
     <url>/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/</url>
     <content><![CDATA[<h3 id="域名的注册"><a href="#域名的注册" class="headerlink" title="域名的注册"></a><strong>域名的注册</strong></h3><p><strong>选择域名注册商的因素有哪些？</strong></p>
