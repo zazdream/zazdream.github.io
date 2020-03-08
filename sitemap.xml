@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zazdream.com/zaz/index.html</loc>
+    
+    <lastmod>2020-03-08T06:17:01.388Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zazdream.com/daily-attendance/index.html</loc>
     
     <lastmod>2020-03-07T07:48:20.183Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://zazdream.com/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2020-02-23T13:57:16.348Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zazdream.com/zaz/index.html</loc>
-    
-    <lastmod>2020-02-23T05:12:21.441Z</lastmod>
     
   </url>
   
