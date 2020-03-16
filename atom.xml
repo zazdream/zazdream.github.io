@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zazdream.com/"/>
-  <updated>2020-03-14T10:02:26.163Z</updated>
+  <updated>2020-03-16T15:39:19.782Z</updated>
   <id>https://zazdream.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python的安装与使用</title>
+    <link href="https://zazdream.com/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>https://zazdream.com/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-03-16T14:35:06.000Z</published>
+    <updated>2020-03-16T15:39:19.782Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Python的下载与安装&quot;&gt;&lt;a href=&quot;#Python的下载与安装&quot; class=&quot;headerlink&quot; title=&quot;Python的下载与安装&quot;&gt;&lt;/a&gt;&lt;strong&gt;Python的下载与安装&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;操作环境&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Windows 10&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;进入&lt;a href=&quot;https://www.python.org/&quot;&gt;Python官网&lt;/a&gt;，下载最新版Python.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python学习" scheme="https://zazdream.com/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Python" scheme="https://zazdream.com/tags/Python/"/>
+    
+      <category term="安装" scheme="https://zazdream.com/tags/%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>考研数学中的高中数学知识（三）</title>
     <link href="https://zazdream.com/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <id>https://zazdream.com/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/</id>
     <published>2020-03-14T09:29:54.000Z</published>
-    <updated>2020-03-14T10:02:26.163Z</updated>
+    <updated>2020-03-16T14:19:17.138Z</updated>
     
     <summary type="html">
     

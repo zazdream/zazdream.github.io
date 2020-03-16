@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python的安装与使用</title>
+    <url>/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="Python的下载与安装"><a href="#Python的下载与安装" class="headerlink" title="Python的下载与安装"></a><strong>Python的下载与安装</strong></h3><p><strong>操作环境</strong></p>
+<p><code>Windows 10</code></p>
+<p><strong>Python下载</strong></p>
+<p>进入<a href="https://www.python.org/">Python官网</a>，下载最新版Python.</p>
+<a id="more"></a>
+
+<p><img src="/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/001.jpg" alt></p>
+<p><img src="/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/002.jpg" alt></p>
+<p><img src="/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/003.jpg" alt></p>
+<p><code>备注</code>：建议使用迅雷下载，官网下载速度太慢。</p>
+<p><strong>Python安装</strong></p>
+<p>1、下载后，双击下载包，进入 Python 安装向导，安装非常简单，你只需要使用默认的设置一直点击”下一步”直到安装完成即可。</p>
+<p><code>备注</code>：在打开的安装界面，一定要记得把下方的<code>Add Python  3.8  to PATH</code>勾选上，这样就直接默认把用户变量添加上了，后续不用再添加。</p>
+<p>2、安装结束后，通过<code>win+R</code>打开<code>cmd</code>，在cmd中键入命令<code>python --version</code>，则可看到成功安装的Python版本。</p>
+<h3 id="Python编辑器的下载与安装"><a href="#Python编辑器的下载与安装" class="headerlink" title="Python编辑器的下载与安装"></a><strong>Python编辑器的下载与安装</strong></h3><p><strong>Python编辑器的推荐</strong></p>
+<p>在这里，推荐使用<code>PyCharm</code>，PyCharm 在大佬们经常推荐的python编辑器中，是好评率比较高的一个。而且可以跨平台，在macos和windows下面都可以用，这点比较好。是python现在最好用的编辑器，没有之一。</p>
+<p><strong>PyCharm的下载与安装</strong></p>
+<p>1、PyCharm的下载</p>
+<p>打开<a href="www.jetbrains.com/pycharm/">PyCharm官网</a>，请根据机器是64位还是32位来选择对应的PyCharm版本，下载对应机器的安装包。</p>
+<p><code>备注</code>：由于官网部分人员无法打开更无法下载，这里提供<a href="https://pan.baidu.com/s/1jIF5GZ8Ag6FkqrnqB5nN5A">社区版PyCharm2018.3.3</a>的百度云资源，<code>提取码：0zp0</code>，点击即可跳转到百度云进行下载。</p>
+<p>2、PyCharm的安装</p>
+<p>下载后，双击下载包，进入 PyCharm 安装向导，安装非常简单，这里需要注意两点：</p>
+<p>（1）选择安装目录时，Pycharm需要的内存较多，建议将其安装在其他本地磁盘，不建议放在系统盘。</p>
+<p>（2）在安装设置<code>Installation Options</code>界面，勾选要求如下图：</p>
+<p><img src="/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/004.jpg" alt></p>
+<ul>
+<li><p><code>create desktop shortcut</code>（创建桌面快捷方式），系统32位就勾选32-bit，系统64位就勾选64-bit</p>
+</li>
+<li><p><code>update path variable(restart needed)</code>更新路径变量(需要重新启动)，<code>add launchers dir to the path</code>（将启动器目录添加到路径中），上一个PyCharm版本没有的，所以不勾选</p>
+</li>
+<li><p><code>update context menu</code>（更新上下文菜单），<code>add open folder as project</code>（添加打开文件夹作为项目），上一个PyCharm版本没有的，所以不勾选</p>
+</li>
+<li><p><code>create associations</code> 创建关联，关联<code>.py</code>文件，双击都是以pycharm打开，需要勾选</p>
+</li>
+<li><p><code>Download and install JRE x86 by JetBrains</code>千万不要勾选！！！pycharm网站服务器在国外，下载速度很慢，如果勾选可能等一两个小时，没勾选安装很快完成</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>考研数学中的高中数学知识（三）</title>
     <url>/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/</url>
     <content><![CDATA[<h3 id="五、函数的基本特性"><a href="#五、函数的基本特性" class="headerlink" title="五、函数的基本特性"></a><strong>五、函数的基本特性</strong></h3><p><strong>6、一些总结性的结论</strong></p>
@@ -46,6 +95,48 @@
 <li>例题14</li>
 </ul>
 <p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/016.jpg" alt></p>
+<h3 id="八、排列（组合）数公式"><a href="#八、排列（组合）数公式" class="headerlink" title="八、排列（组合）数公式"></a><strong>八、排列（组合）数公式</strong></h3><p><strong>1、相关定义</strong></p>
+<ul>
+<li>排列数定义</li>
+</ul>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/017.jpg" alt></p>
+<ul>
+<li>组合数定义</li>
+</ul>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/018.jpg" alt></p>
+<p><strong>2、相关公式</strong></p>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/019.jpg" alt></p>
+<p><strong>3、理解</strong></p>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/020.jpg" alt></p>
+<h3 id="九、图形面积与体积"><a href="#九、图形面积与体积" class="headerlink" title="九、图形面积与体积"></a><strong>九、图形面积与体积</strong></h3><p><strong>1、扇形</strong></p>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/021.jpg" alt></p>
+<p><strong>2、柱体</strong></p>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/022.jpg" alt></p>
+<p><strong>3、理解</strong></p>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/023.jpg" alt></p>
+<p><strong>4、考研考点与例题</strong></p>
+<p><strong>（1）极坐标下平面图形的面积</strong></p>
+<ul>
+<li>定义</li>
+</ul>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/024.jpg" alt></p>
+<ul>
+<li>理解</li>
+</ul>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/025.jpg" alt></p>
+<ul>
+<li>拓展</li>
+</ul>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/026.jpg" alt></p>
+<p><strong>（2）极坐标下旋转体的体积</strong></p>
+<ul>
+<li>定义</li>
+</ul>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/027.jpg" alt></p>
+<ul>
+<li>理解</li>
+</ul>
+<p><img src="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/028.jpg" alt></p>
 ]]></content>
       <categories>
         <category>考研2021</category>
