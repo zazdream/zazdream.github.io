@@ -1,6 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python入门基础知识学习（一）</title>
+    <url>/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="Python是什么"><a href="#Python是什么" class="headerlink" title="Python是什么?"></a><strong>Python是什么?</strong></h3><p><code>Python</code>（英国发音：/ˈpaɪθən/ 美国发音：/ˈpaɪθɑːn/）, 是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年。</p>
+<p>Python是纯粹的自由软件， 源代码和解释器CPython遵循 GPL(GNU General Public License)协议 。Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。Python具有丰富和强大的库。它常被昵称为胶水语言，能够把用其他语言制作的各种模块（尤其是C/C++）很轻松地联结在一起。常见的一种应用情形是，使用Python快速生成程序的原型（有时甚至是程序的最终界面），然后对其中有特别要求的部分，用更合适的语言改写，比如3D游戏中的图形渲染模块，性能要求特别高，就可以用C/C++重写，而后封装为Python可以调用的扩展类库。需要注意的是在我们使用扩展类库时可能需要考虑平台问题，某些可能不提供跨平台的实现。</p>
+<p><code>备注</code>：想要了解更多关于Python的介绍，大家可以前往W3Cschool的<a href="https://www.w3cschool.cn/python/">Python编程入门教程</a>查看。</p>
+<a id="more"></a>
+
+<h3 id="初学者学习python2还是python3？"><a href="#初学者学习python2还是python3？" class="headerlink" title="初学者学习python2还是python3？"></a><strong>初学者学习python2还是python3？</strong></h3><p>在开始学习python的时候，我们都会遇到一个比较让人很头疼的问题：版本问题！是学习python2 还是学习 python3 ？这是非常让人纠结的！搜索一下我们便会发现python3 和 python2 是不兼容的，而且差异比较大，到底学习哪个版本呢？就以下几个方面我们来分析一下：</p>
+<p><strong>语法设计</strong></p>
+<p>当初设计 Python3 的目的是没有代码兼容的包袱的情况下改进 Python，所以python3有很大改进，比 Python2更容易理解，更加合理。</p>
+<p><strong>现状分析</strong></p>
+<ul>
+<li><p>PyPy，各大 Web 框架，科学计算包，Scrapy 等常用模块， 都已经很好的支持Python3。 但是还有部分比较陈旧的库已经无人维护， 也就没有支持最新的Python3，不过不用担心， 这些库往往是不常用的，或者说可以找到替代方案。</p>
+</li>
+<li><p>大部分的情况下可以直接写 2/3 兼容的代码，也有 six 这类的兼容层可用。</p>
+</li>
+<li><p>python2对旧库的支持要更多一些，至少在学界还是更流行的。</p>
+</li>
+</ul>
+<p><strong>选择理由</strong></p>
+<ul>
+<li><p>Python3 才是Python的未来</p>
+</li>
+<li><p>Python官方都建议指直接学习Python3</p>
+</li>
+<li><p>Python2 据说只维护到2020年</p>
+</li>
+</ul>
+<p><strong>总结</strong></p>
+<p>先学 Python2 还是 Python3 都不是问题，其实差别并不大， 主要的是下定决心学下去， 当我们学会了Python3， Python2代码开发完全没有问题！但是，我还是推荐直接学习Python3，毕竟它的语法更合理，更新。除非我们的外部环境只能允许我们使用Python2。</p>
+<p><code>以上仅代表我的个人观点!</code></p>
+<h3 id="Python学习资源推荐"><a href="#Python学习资源推荐" class="headerlink" title="Python学习资源推荐"></a><strong>Python学习资源推荐</strong></h3><p><strong>入门基础教学视频推荐</strong></p>
+<p>本人关于Python入门基础知识学习的系列博客都是基于B站的Python教学视频撰写，感兴趣的小伙伴们可以去看看，个人感觉讲得很不错，点击<a href="https://www.bilibili.com/video/av75855831?from=search&seid=12944208087680536242">Python教程2019版</a>即可跳转B站进行观看。</p>
+<p><strong>入门教程推荐</strong></p>
+<p>这里推荐W3Cschool的入门教程，内容非常详细，还有配套练习，大家可以点击<a href="https://www.w3cschool.cn/python3/">W3Cschool的Python板块</a>浏览。</p>
+<h3 id="开始Python的学习"><a href="#开始Python的学习" class="headerlink" title="开始Python的学习"></a><strong>开始Python的学习</strong></h3><p><strong>新建一个python的项目工程</strong></p>
+<ul>
+<li><p>1、打开<code>PyCharm</code></p>
+</li>
+<li><p>2、点击<code>File</code>-&gt;点击<code>New Project</code></p>
+</li>
+</ul>
+<p><img src="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/001.jpg" alt></p>
+<ul>
+<li>填写自己的Python项目名称及路径后，点击<code>Create</code></li>
+</ul>
+<p><img src="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/002.jpg" alt></p>
+<p><code>备注</code>：<code>Base interpreter</code>选项中需要选择Python3版本的解释器</p>
+<ul>
+<li>选中自己创建好的Python项目，右击选择<code>New</code>，并在出现的选项框中选择<code>Python File</code></li>
+</ul>
+<p><img src="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/003.jpg" alt></p>
+<ul>
+<li>填写python文件的名称，点击<code>OK</code></li>
+</ul>
+<p><img src="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/004.jpg" alt></p>
+<p><strong>第一个任务：画一个自己喜欢的形状</strong></p>
+<p>1、涉及的知识点</p>
+<p>Python两种输出值的方式: 表达式语句和 print() 函数。这里只介绍：<code>print()函数</code></p>
+<p>2、练习使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">print(&quot;张之卿&quot;)</span><br><span class="line">print(&#39;O----&#39;)</span><br><span class="line">print(&#39; ||||&#39;)</span><br><span class="line">print(&#39;*&#39; * 10)</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：搞清楚双引号或者单引号来定义字符串的区别——定义一个字符串单引号或者双引号都可以，但有时存在特殊情况，详细见后文。</p>
+<p>3、任务解决</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">print(&#39; --  --&#39;)</span><br><span class="line">print(&#39;| |__| |&#39;)</span><br><span class="line">print(&#39;|      |&#39;)</span><br><span class="line">print(&#39;|______|&#39;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>第二个任务：<code>We check in a patient named John Smith.He&#39;s 20 years old and is a new patient.</code>根据内容定义三个变量——<code>他的名字</code>、<code>他的年龄</code>、和另一个变量<code>他是否是新病人</code></strong></p>
+<p>1、涉及的知识点</p>
+<p>python基本数据类型如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>表示</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>整数，用来进行数学运算</td>
+</tr>
+<tr>
+<td>str</td>
+<td>字符串，存放少量数据</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>布尔值，用来判断True，False</td>
+</tr>
+<tr>
+<td>list</td>
+<td>列表，存放大量数据，[ ]表示</td>
+</tr>
+<tr>
+<td>tuple</td>
+<td>元组，只读列表，( ) 表示</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>字典，存放大量数据，{key:value}表示</td>
+</tr>
+<tr>
+<td>set</td>
+<td>集合，存放大量数据，不重复</td>
+</tr>
+</tbody></table>
+<p>这里只介绍三种基本数据类型：<code>int</code>，<code>bool</code>，<code>str</code></p>
+<p>2、使用练习</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">number &#x3D; 12</span><br><span class="line">number &#x3D; 20</span><br><span class="line">price &#x3D; 4.6</span><br><span class="line">name &#x3D; &#39;Zhang Zhiqing&#39;</span><br><span class="line">is_right &#x3D; True</span><br><span class="line">is_right &#x3D; False</span><br><span class="line"># python严格区分大小写</span><br><span class="line">print(number)</span><br><span class="line">print(price)</span><br><span class="line">print(name)</span><br><span class="line">print(is_right)</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：python语句是从上往下逐行运行的，一个变量可以多次赋值，但最终的值以最后一次赋值为准。</p>
+<p>3、任务解决</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">h_name &#x3D; &quot;John Smith&quot;</span><br><span class="line">h_age &#x3D; 20</span><br><span class="line">is_new_patient &#x3D; True</span><br></pre></td></tr></table></figure>
+
+<p><strong>第三个任务：Ask two questions:person’s name and favorite color.Then,print a message like “Zhang Zhiqing likes blue.”</strong></p>
+<p>1、涉及的知识点</p>
+<p>Python3.x 中 <code>input()</code> 函数接受一个标准输入数据，返回为 <code>string 类型</code>。</p>
+<p>2、使用练习</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">name &#x3D; input(&#39;What is your name? &#39;)</span><br><span class="line">print(&#39;Hello &#39; + name)</span><br></pre></td></tr></table></figure>
+
+<p>3、任务解决</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">name &#x3D; input(&#39;What is your name? &#39;)</span><br><span class="line">color &#x3D; input(&#39;What is your favorite color? &#39;)</span><br><span class="line">print(name + &#39; likes &#39; + color + &#39;.&#39;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>第四个任务：Ask a user their weight(in pounds),convert it to kilograms and print on the terminal.</strong></p>
+<p>1、涉及的知识点</p>
+<p>Python数据类型的<code>显示转换</code>，也称为数据类型的<code>强制类型转换</code>，是通过Python的内建函数来实现的类型转换。</p>
+<p>（1）<code>Python显式转换</code>的多种类型如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>表示</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int(x [,base])</td>
+<td>将x转换为一个十进制的整数</td>
+</tr>
+<tr>
+<td>long(x [,base])</td>
+<td>将x转换为一个十进制的长整数</td>
+</tr>
+<tr>
+<td>float(x)</td>
+<td>将x转换为一个浮点数</td>
+</tr>
+<tr>
+<td>str(object)</td>
+<td>转换为字符串</td>
+</tr>
+<tr>
+<td>repr(object)</td>
+<td>转换为表达式字符串</td>
+</tr>
+<tr>
+<td>eval(str)</td>
+<td>用来计算在字符串中的有效Python表达式,并返回一个对象</td>
+</tr>
+<tr>
+<td>tuple(seq)</td>
+<td>将序列seq转换为一个元组</td>
+</tr>
+<tr>
+<td>list(seq)</td>
+<td>将序列seq转换为一个列表</td>
+</tr>
+<tr>
+<td>chr(x)</td>
+<td>将一个整数转换为一个字符</td>
+</tr>
+<tr>
+<td>unichr(x)</td>
+<td>将一个整数转换为Unicode字符</td>
+</tr>
+<tr>
+<td>chr(x)</td>
+<td>将一个整数转换为一个字符</td>
+</tr>
+<tr>
+<td>ord(x)</td>
+<td>将一个字符转换为它的整数值</td>
+</tr>
+<tr>
+<td>hex(x)</td>
+<td>将一个整数转换为一个十六进制字符串</td>
+</tr>
+<tr>
+<td>oct(x)</td>
+<td>将一个整数转换为一个八进制字符串</td>
+</tr>
+</tbody></table>
+<p>（2）Python中bool类型转换：<code>bool()</code>，比较特殊</p>
+<p>在python中，以下数值会被认为是False，其他的值都认为是True：</p>
+<ul>
+<li>为0的数字，包括  <code>0，0.0</code></li>
+<li>空字符串，包括 <code>&#39;&#39;，&quot;&quot;</code></li>
+<li>表示空值的  <code>None</code></li>
+<li>空集合，包括 <code>()，[]，{}</code></li>
+</ul>
+<p><code>备注</code>：None是python中的一个特殊值，表示什么都没有，它和0、空字符、False、空集合都不一样；bool(‘False’)的结果是True，因为’False’是一个不为空的字符串，当被转换成bool类型之后，就得到True；bool(‘ ‘)的结果是True，一个空格不能算作空字符串，bool(‘’)才是False。</p>
+<p>此次练习中我们只介绍两种常用的强制类型转换：<code>int()</code>，<code>str()</code></p>
+<p>2、使用练习</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">birth_year &#x3D; input(&#39;Birth year: &#39;)</span><br><span class="line"># birth_year &#x3D; &#39;1997&#39; !&#x3D; 1997</span><br><span class="line"># 2019 - &#39;1997&#39; python不知道这是什么意思</span><br><span class="line">print(type(birth_year))</span><br><span class="line">age &#x3D; 2019 - int(birth_year)</span><br><span class="line">print(type(age))</span><br><span class="line">print(age)</span><br></pre></td></tr></table></figure>
+
+<p><code>备注</code>：type() 方法的语法：（1）<code>type(object)</code>（2）<code>type(name, bases, dict)</code>。<code>type()</code> 函数如果我们只有第一个参数则返回对象的类型，有三个参数则返回新的类型对象。具体用法及实例请参照：<a href="https://www.runoob.com/python/python-func-type.html">Python type() 函数</a></p>
+<p>3、任务解决</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">weight_lbs &#x3D; input(&#39;What is your weight in pounds? &#39;)</span><br><span class="line">weight_kg &#x3D; int(weight_lbs) * 0.45</span><br><span class="line">print(str(weight_kg) + &#39; kg &#39;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>单行字符串定义的特殊情况</strong></p>
+<p>1、使用练习</p>
+<p>（1）第一种情况：字符串中需要使用单引号时</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">course &#x3D; &quot;Python&#39;s Course for Beginners&quot;</span><br><span class="line">print(course)</span><br></pre></td></tr></table></figure>
+
+<p>（2）第一种情况：字符串中需要使用双引号时</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">course &#x3D; &#39;Python for &quot;Beginners&quot;&#39;</span><br><span class="line">print(course)</span><br></pre></td></tr></table></figure>
+
+<p>2、总结</p>
+<p>字符串中有需要用到单引号的地方，那么整个字符串就用双引号定义；<br>字符串中有需要用到双引号的地方，那么整个字符串就用单引号定义。</p>
+<p><strong>多行字符串如何定义</strong></p>
+<p>1、使用练习</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">course &#x3D; &#39;&#39;&#39;</span><br><span class="line">Hi John,</span><br><span class="line">    Here is our first email to you.</span><br><span class="line">                         Thank you,</span><br><span class="line">                  The support team.</span><br><span class="line">&#39;&#39;&#39;</span><br><span class="line">print(course)</span><br></pre></td></tr></table></figure>
+
+<p>2、总结</p>
+<p>使用三引号定义多行字符串，三引号既可以是三个单引号也可以是三个双引号。</p>
+<p><strong>Python 字符串的索引</strong></p>
+<p>字符串是字符的有序集合，可以通过其位置来获得具体的元素。在 python 中，字符串中的字符是通过索引来提取的，索引从 0 开始。</p>
+<p>python 可以取负值，表示从末尾提取，最后一个为 -1，倒数第二个为 -2，即程序认为可以从结束处反向计数。</p>
+<p>1、练习使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">course &#x3D; &#39;Python for Beginners.&#39;</span><br><span class="line"># 索引号   0123456789</span><br><span class="line">print(course[0])</span><br><span class="line">print(course[-1])</span><br><span class="line">print(course[0:3])</span><br><span class="line"># python解释器会返回从索引0一直到索引3，但不包括索引3的字符串。</span><br></pre></td></tr></table></figure>
+
+<p>2、几种情况</p>
+<p>（1）用户不提供结束索引：<code>print(course[0:])</code></p>
+<p>python解释器在用户不提供结束索引的情况下默认会返回从指定索引到末尾的字符串。</p>
+<p>（2）用户不提供开始索引：<code>print(course[:5])</code></p>
+<p>python解释器在用户不提供开始索引的情况下默认会返回从索引0到指定索引的字符串。</p>
+<p>（3）用户既不提供开始索引也不提供结束索引：<code>print(course[:])</code></p>
+<p>python解释器在用户不提供开始索引和结束索引的情况下默认会返回从索引0到末尾的所有字符串。</p>
+<p>（4）用户提供的结束索引为负数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">name &#x3D; &#39;Zhang Zhiqing&#39;</span><br><span class="line"># 索引号 0123456789</span><br><span class="line">print(name[1:-1])</span><br></pre></td></tr></table></figure>
+
+<p>python解释器会返回从索引1一直到倒数第1个索引，但不包括倒数第1个索引的字符串。</p>
+<p>3、利用这个语法，我们可以复制或克隆一个字符串</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">another &#x3D; course[:]</span><br><span class="line">print(another)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python格式化字符串<code>f-string</code></strong></p>
+<p>f-string，亦称为格式化字符串常量（formatted string literals），是Python3.6新引入的一种字符串格式化方法，该方法源于PEP 498 – Literal String Interpolation，主要目的是使格式化字符串的操作更加简便。f-string在形式上是以 f 或 F 修饰符引领的字符串（f’xxx’ 或 F’xxx’），以大括号 {} 标明被替换的字段。</p>
+<p>1、使用练习</p>
+<p>目标：输出<code>John [Smith] is a coder.</code></p>
+<p>（1）传统方法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">first &#x3D; &#39;John&#39;</span><br><span class="line">last &#x3D; &#39;Smith&#39;</span><br><span class="line">message &#x3D; first + &#39; [&#39; + last + &#39;] is a coder.&#39;</span><br><span class="line">print(message)</span><br></pre></td></tr></table></figure>
+
+<p>（2）使用格式化字符串<code>f-string</code>输出</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">first &#x3D; &#39;John&#39;</span><br><span class="line">last &#x3D; &#39;Smith&#39;</span><br><span class="line">msg &#x3D; f&#39;&#123;first&#125; [&#123;last&#125;] is a coder.&#39;</span><br><span class="line">print(msg)</span><br></pre></td></tr></table></figure>
+
+<p>2、总结</p>
+<p>格式化字符串常量，<code>f-string</code>用大括号<code>{}</code>表示被替换字段，其中直接填入替换内容。相比较传统的字符串输出，格式化字符串常量的输出方法使我们可以很容易看出最后的输出结果是怎样的。</p>
+<p><code>备注</code>：更多关于f-string的介绍和使用方法，请参照<a href="https://blog.csdn.net/sunxb10/article/details/81036693">sunxb10的博客</a></p>
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python的安装与使用</title>
     <url>/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="Python的下载与安装"><a href="#Python的下载与安装" class="headerlink" title="Python的下载与安装"></a><strong>Python的下载与安装</strong></h3><p><strong>操作环境</strong></p>
