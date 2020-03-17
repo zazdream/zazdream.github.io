@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zazdream.com/"/>
-  <updated>2020-03-17T05:22:17.941Z</updated>
+  <updated>2020-03-17T16:03:28.917Z</updated>
   <id>https://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python入门基础知识学习（二）</title>
+    <link href="https://zazdream.com/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://zazdream.com/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <published>2020-03-17T13:52:13.000Z</published>
+    <updated>2020-03-17T16:03:28.917Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Python内置函数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Python内置函数有很多，这里只介绍&lt;code&gt;print()&lt;/code&gt;和&lt;code&gt;len()&lt;/code&gt;，查看更多内置函数，请参照&lt;a href=&quot;https://www.cnblogs.com/pyyu/p/6702896.html&quot;&gt;python内置函数大全&lt;/a&gt;。Python内置函数是通用的函数，它们不属于字符串或数字或其他类型的对象。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python学习" scheme="https://zazdream.com/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Python" scheme="https://zazdream.com/tags/Python/"/>
+    
+      <category term="入门" scheme="https://zazdream.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Python入门基础知识学习（一）</title>
