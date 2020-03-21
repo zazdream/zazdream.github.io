@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zazdream.com/"/>
-  <updated>2020-03-21T11:17:46.235Z</updated>
+  <updated>2020-03-21T12:53:07.248Z</updated>
   <id>https://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python入门基础知识学习（三）</title>
+    <link href="https://zazdream.com/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>https://zazdream.com/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/</id>
+    <published>2020-03-21T11:20:08.000Z</published>
+    <updated>2020-03-21T12:53:07.248Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;if-statements&quot;&gt;&lt;a href=&quot;#if-statements&quot; class=&quot;headerlink&quot; title=&quot;if statements&quot;&gt;&lt;/a&gt;&lt;strong&gt;if statements&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;if语句在编程中是极其重要的，允许我们建立能够基于某种条件做出决策的程序。如果某些条件是真的我们会做一些事情，否则我们会做其他事情。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、涉及的知识点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。&lt;/p&gt;
+&lt;p&gt;（2）Python程序语言指定任何非0和非空（null）值为&lt;code&gt;True&lt;/code&gt;，0 或者 null为&lt;code&gt;False&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;（3）Python 编程中 if 语句用于控制程序的执行，基本形式为：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;if 判断条件：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    执行语句……&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;else：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    执行语句……&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code&gt;备注&lt;/code&gt;：其中”判断条件”成立时（非零），则执行后面的语句，而执行内容可以多行，以&lt;code&gt;缩进&lt;/code&gt;来区分表示同一范围。else 为可选语句，当需要在条件不成立时执行内容则可以执行相关语句。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python学习" scheme="https://zazdream.com/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Python" scheme="https://zazdream.com/tags/Python/"/>
+    
+      <category term="入门" scheme="https://zazdream.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>网络管理基础知识学习（一）</title>
@@ -517,27 +547,6 @@
     
     
       <category term="Hexo" scheme="https://zazdream.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随笔一</title>
-    <link href="https://zazdream.com/2020/02/09/suibi1/"/>
-    <id>https://zazdream.com/2020/02/09/suibi1/</id>
-    <published>2020-02-09T08:42:08.000Z</published>
-    <updated>2020-02-16T09:31:07.008Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情&quot;&gt;&lt;a href=&quot;#刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情&quot; class=&quot;headerlink&quot; title=&quot;刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情&quot;&gt;&lt;/a&gt;刘禹锡非常经典的一首诗：没有过不去的事情，只有过不去的心情&lt;/h2&gt;&lt;p&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;很多人喜欢苏轼，是因为他在风雨中还能那般从容淡定，高歌“一蓑烟雨任平生”。其实在唐朝也有一位诗人像苏轼那般豁达，他就是人称“诗豪”的刘禹锡。刘禹锡和苏轼有很多相似之处，都是前半生春风得意，后半生一路贬谪。人生不幸，诗词兴，他们的很多诗词都是在逆境中写就的。其中的乐观洒脱之情鼓舞了无数人。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="https://zazdream.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="诗词" scheme="https://zazdream.com/tags/%E8%AF%97%E8%AF%8D/"/>
     
   </entry>
   
