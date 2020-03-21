@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<script src="/js/src/click.js"></script>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+<meta name="baidu-site-verification" content="mgiBvKijZk" />
+<meta name="google-site-verification" content="woXC1vDQjGlHXcP7PzerdpoE1xoviQViOTBlTRS-B-k" />
+<meta name="360-site-verification" content="b5ad725b3ca818e0a357607f52135da5" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>网络管理基础知识学习（一） - zazdream</title>
+
+
+    <meta name="description" content="一、学习网络管理的目的 掌握计算机网络管理的理论知识和实用技术 熟悉网络管理标准和网络管理平台 具有一定的网络管理程序的开发设计能力 能利用网络工具分析网络中一些常见故障发生的原因并排除故障 具有一定的网络管理和网络维护能力。  二、第一课时 网络管理概论（一）网络管理的几个概念 1、提出几个问题  为什么要网络管理？ 网络管理的对象？ 网络管理的目标？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络管理基础知识学习（一）">
+<meta property="og:url" content="https://zazdream.com/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:site_name" content="zazdream">
+<meta property="og:description" content="一、学习网络管理的目的 掌握计算机网络管理的理论知识和实用技术 熟悉网络管理标准和网络管理平台 具有一定的网络管理程序的开发设计能力 能利用网络工具分析网络中一些常见故障发生的原因并排除故障 具有一定的网络管理和网络维护能力。  二、第一课时 网络管理概论（一）网络管理的几个概念 1、提出几个问题  为什么要网络管理？ 网络管理的对象？ 网络管理的目标？">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zazdream.com/images/og_image.png">
+<meta property="article:published_time" content="2020-03-21T09:50:58.000Z">
+<meta property="article:modified_time" content="2020-03-21T11:17:46.235Z">
+<meta property="article:author" content="张之卿">
+<meta property="article:tag" content="网络管理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zazdream.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/atom.xml" title="zazdream" type="application/atom+xml">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="网络管理基础知识学习（一）" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">首页</a>
+                
+                <a class="navbar-item"
+                href="/archives">归档</a>
+                
+                <a class="navbar-item"
+                href="/categories">分类</a>
+                
+                <a class="navbar-item"
+                href="/zaz">ZAZ</a>
+                
+                <a class="navbar-item"
+                href="/daily-attendance">每日打卡</a>
+                
+                <a class="navbar-item"
+                href="/postgraduate">考研2021</a>
+                
+                <a class="navbar-item"
+                href="/active-calendar">活动日历</a>
+                
+                <a class="navbar-item"
+                href="/photo">相册</a>
+                
+                <a class="navbar-item"
+                href="/music">音乐</a>
+                
+                <a class="navbar-item"
+                href="/movie">电影</a>
+                
+                <a class="navbar-item"
+                href="/game">游戏</a>
+                
+                <a class="navbar-item"
+                href="/404">公益</a>
+                
+                <a class="navbar-item"
+                href="/about">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-21T09:50:58.000Z">2020-03-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络管理基础知识</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 小时 读完 (大约 6911 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    本站总访问量<span id="busuanzi_value_page_pv">0</span>次 | 
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                网络管理基础知识学习（一）
+            
+        </h1>
+        <div class="content">
+            <h3 id="一、学习网络管理的目的"><a href="#一、学习网络管理的目的" class="headerlink" title="一、学习网络管理的目的"></a><strong>一、学习网络管理的目的</strong></h3><ul>
+<li>掌握计算机网络管理的理论知识和实用技术</li>
+<li>熟悉网络管理标准和网络管理平台</li>
+<li>具有一定的网络管理程序的开发设计能力</li>
+<li>能利用网络工具分析网络中一些常见故障发生的原因并排除故障</li>
+<li>具有一定的网络管理和网络维护能力。</li>
+</ul>
+<h3 id="二、第一课时-网络管理概论"><a href="#二、第一课时-网络管理概论" class="headerlink" title="二、第一课时 网络管理概论"></a><strong>二、第一课时 网络管理概论</strong></h3><p><strong>（一）网络管理的几个概念</strong></p>
+<p><strong>1、提出几个问题</strong></p>
+<ul>
+<li>为什么要网络管理？</li>
+<li>网络管理的对象？</li>
+<li>网络管理的目标？</li>
+</ul>
+<a id="more"></a>
+
+<p><strong>2、提出几个概念</strong></p>
+<ul>
+<li>网络管理概述</li>
+<li>网络管理的目标</li>
+<li>网络管理的对象</li>
+<li>网络管理的标准</li>
+</ul>
+<p><strong>3、网络管理的发展</strong></p>
+<p>（1）世界上第一个计算机网络—ARPANET</p>
+<p>（2）<code>原因</code>：随着网络的发展，规模增大、复杂性增加，以前的网络管理技术已不能适应网络的迅速发展。</p>
+<p>（3）早期网络管理</p>
+<ul>
+<li><p><code>定义</code>：</p>
+</li>
+<li><p>网络管理行为在发现故障或接到用户申告之后开始，技术人员到现场通过连接仪器、操作按钮来检测和改变传输装置、路由器、交换机等网络资源的状态。</p>
+</li>
+<li><p><code>特点</code>：</p>
+</li>
+<li><p>对应具体业务和设备；</p>
+</li>
+<li><p>各种网络管理系统之间的没有统一的操作平台，无法互通；</p>
+</li>
+<li><p>许多是现场的物理操作。</p>
+</li>
+</ul>
+<p>（4）后期网络管理——远程监控</p>
+<ul>
+<li><p><code>定义</code>：</p>
+</li>
+<li><p>随着网络技术的更新与发展，提出了以远程监控为基础的网络管理的新框架。</p>
+</li>
+<li><p><code>特点</code>：</p>
+</li>
+<li><p>远程逻辑管理：本地的物理管理变成了远程逻辑管理；</p>
+</li>
+<li><p>有了预测问题的能力：网络的性能状况可以定期或实时得到监视；</p>
+</li>
+<li><p>对有明确定义的全局信息进行解释：从根据现场检测的局部信息进行孤立判断，转变为对有明确定义的全局信息进行解释。</p>
+</li>
+</ul>
+<p><strong>4、网络管理概述</strong></p>
+<p>（1）网络管理的<code>定义</code></p>
+<p>网络管理，简称<code>网管</code>，简单地说就是为保证网络系统能够持续、稳定、安全、可靠和高效地运行，对网络实施的一系列方法和措施。</p>
+<p>（2）网络管理的任务——<code>监测</code>和<code>控制</code></p>
+<p>网络管理的任务就是收集、监控网络中各种设备和设施的工作参数、工作状态信息，将结果显示给管理员并进行处理，从而控制网络中的设备、设施、工作参数和工作状态，使其可靠运行。</p>
+<p><strong>5、网络管理的目标</strong></p>
+<ul>
+<li><code>有效性</code>：网络准确及时地传递信息</li>
+<li><code>可靠性</code>：持续稳定地运行</li>
+<li><code>开放性</code>：兼容不同类型的设备</li>
+<li><code>综合性</code>：综合业务功能</li>
+<li><code>安全性</code>：安全保障，防止计算机病毒和非法入侵者的破坏</li>
+<li><code>经济性</code>：减少运行费用，提高网络使用效率</li>
+</ul>
+<p><strong>6、网络管理的对象——网络中的硬件资源和软件资源</strong></p>
+<p>（1）<code>硬件资源</code>是指物理介质、计算机设备和网络互连设备<br><code>软件资源</code>主要包括操作系统、应用软件和通信软件</p>
+<ul>
+<li><p><code>物理介质</code>：</p>
+</li>
+<li><p>网卡、双绞线、同轴电缆、光纤</p>
+</li>
+<li><p><code>网络互连设备</code>：</p>
+</li>
+<li><p>中继器、网桥、交换机、路由器</p>
+</li>
+</ul>
+<p>（2）所有资源被抽象为<code>被管对象（Managed Object，MO）</code></p>
+<p>（3）被管对象的集合称为<code>管理信息库（MIB）</code></p>
+<p><strong>7、网络管理的标准</strong></p>
+<ul>
+<li>ISO管理</li>
+<li>TCP/IP网络管理（SNMP重点）</li>
+<li>RMON</li>
+<li>IEEE802.1b LAN/MAN管理</li>
+</ul>
+<p><strong>（二）网络管理的体系结构</strong></p>
+<p><strong>1、提出几个问题</strong></p>
+<ul>
+<li>网络管理系统由几部分组成，各部分的功能和关系如何？</li>
+<li>管理的基本模型？</li>
+<li>管理模式有哪些？</li>
+</ul>
+<p><strong>2、网络管理的体系结构的地位</strong></p>
+<p>网络管理的体系结构定义了网络管理系统的结构及系统成员间相互关系的一套规则，它是建立网络管理系统的<code>基础</code>。</p>
+<p><strong>3、网络管理系统由几部分组成，各部分的功能和关系如何？</strong></p>
+<p>网络管理系统主要包括四大部分：至少一个网络管理站(Manager)、多个被管代理(Agent)、网管协议(如SNMP、CMIP)，以及至少一个网管信息库(MIB)。</p>
+<p><code>网络管理站</code>：一般是一个设备，也可以是共享系统的一个能力。管理站驻留在网络管理的服务器上，实施网络管理功能。它被作为网络管理员与网络管理系统的接口。</p>
+<p><code>被管代理</code>：主机、网桥、路由器及集线器可作为被管代理工作。被管代理对来自管理站的信息请求和动作请求进行应答，并异步地为管理站报告一些意外事件。它常驻留在被管理的网络设备上，配合网络管理。</p>
+<p><code>网管信息库</code>：网络资源常被表示为被管对象，被管对象的集合称为管理信息库</p>
+<p><code>网管协议</code>：管理站和被管代理的信息交换是通过SNMP来实现。</p>
+<p><strong>4、网络管理的基本模型</strong></p>
+<p>（1）<code>总体模型图</code></p>
+<p><img src="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/001.jpg" alt></p>
+<p>（2）<code>局部模型图</code></p>
+<p><img src="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/002.jpg" alt></p>
+<p><img src="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/003.jpg" alt></p>
+<p>（3）<code>名词解释</code></p>
+<p><code>网络管理者</code>：管理指令的发出者。管理者是整个网管系统的核心，负责完成网络的各项管理功能。管理者一般位于网络中的一个主机节点上。</p>
+<p><code>管理代理</code>：一般可有多个，分别位于网络中的被管理的设备内部，负责把来自管理者的命令或信息请求转换为本设备特有的指令再执行管理操作，并将结果信息传送给管理者。</p>
+<p><code>网络管理协议</code>：网络管理站和代理之间用以交换管理信息的协议。</p>
+<ul>
+<li><p><code>简单网络管理协议（SNMP）</code>：由一组网络管理的标准组成，包含一个应用层协议（application layer protocol）、数据库模型（database schema）和一组资源对象。SNMP最大的优点是简易性与可扩展性。</p>
+</li>
+<li><p><code>公共管理信息服务/公共管理信息协议（CMIS/CMIP）</code>。</p>
+</li>
+</ul>
+<p><code>管理信息库（Management Information Base，MIB）</code>：是被管对象结构化组织的一种抽象。它是一个概念上的数据库，是由多个被管对象及其属性组成，能够提供有关网络设备的信息。代理具有从MIB中读取各种变量值和在MIB中修改各种变量值两个基本功能。</p>
+<p><strong>5、网络管理模式</strong></p>
+<p>（1）网络管理模式分为集中式网络管理模式、分布式网络管理模式以及混合管理模式3种。</p>
+<p>（2）<code>集中式网络管理模式</code></p>
+<ul>
+<li><p><code>定义</code>：由一个网络管理者对整个网络的管理负责。网络管理者处理所有来自被管理系统上的管理代理的通信信息，为全网提供集中的决策支持，并控制和维护管理工作站上的信息存储。</p>
+</li>
+<li><p><code>模式图</code></p>
+</li>
+</ul>
+<p><img src="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/004.jpg" alt></p>
+<p><img src="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/005.jpg" alt></p>
+<ul>
+<li><code>优点</code>：结构简单、低价格以及易维护。</li>
+<li><code>缺点</code>：不可扩展性；功能固定，不灵活；不可靠性；传输中的瓶颈。</li>
+<li><code>适合使用的网络</code>：小型局域网、部门专用网络、统一经营的公共服务网、专用C/S结构网、企业互联网。</li>
+</ul>
+<p>（3）<code>分布式网络管理模式</code></p>
+<ul>
+<li><p><code>定义</code>：为了减少集中控制的负担，将信息智能分布到网络各处，在最靠近问题源的地方能够做出基本的决策，是分布式管理的核心思想。</p>
+</li>
+<li><p><code>模式图</code>：</p>
+</li>
+</ul>
+<p><img src="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/006.jpg" alt></p>
+<ul>
+<li><code>特点</code>：自适应基于策略的管理；分布式的设备查找与监视；智能过滤；分布式阈值监视；轮询引擎；分布式管理任务引擎。</li>
+</ul>
+<p>（3）<code>混合管理模式</code></p>
+<ul>
+<li><p><code>定义</code>：以分布式管理模式为基础，指定某个或某些节点为网络管理节点，给予其较高的特权。</p>
+</li>
+<li><p><code>特点</code>：部分集中，部分分布；联邦制管理模式；分级网中的分级管理。</p>
+</li>
+</ul>
+<p><strong>6、网络管理软件结构</strong></p>
+<p>（1）<code>模式图</code></p>
+<p><img src="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/007.jpg" alt></p>
+<p>（2）<code>名词解释</code></p>
+<ul>
+<li><code>用户接口软件</code>：用户通过网络管理接口与管理专用软件交互作用，监视和控制网络资源。</li>
+<li><code>管理专用软件</code>：支持多种网络管理应用，适用于各种网络设备和网络配置。</li>
+<li><code>管理支持软件</code>：包括MIB访问模块和通信协议栈。</li>
+</ul>
+<p><strong>7、网络管理的组织模型</strong></p>
+<p>（1）<code>定义</code></p>
+<p>描述了网络管理系统的组件、功能和基础。</p>
+<p>（2）<code>管理域</code></p>
+<p>管理对象的集合叫做管理域。管理域的划分可能是基于地理范围的，也可能是基于行政管理的。</p>
+<p><strong>（三）网络管理的功能</strong></p>
+<p><strong>1、提出几个问题</strong></p>
+<ul>
+<li><p>网络管理应该解决哪些问题？</p>
+</li>
+<li><p>网络管理应有哪些功能？</p>
+</li>
+</ul>
+<p><strong>2、ISO在ISO/IEC 7498-4文件中定义了网络管理的5个功能域</strong></p>
+<ul>
+<li>故障管理（Fault Management）</li>
+<li>配置管理（Configuration Management）</li>
+<li>安全管理（Security Management）</li>
+<li>性能管理（Performance Management）</li>
+<li>计费管理（Accounting Management）</li>
+</ul>
+<p><strong>3、故障管理</strong></p>
+<p>（1）<code>定义</code></p>
+<p>故障管理（Fault Management）又称失效管理，主要对来自硬件设备或路径节点的报警信息进行监控、报告和存储，以及进行故障的诊断、定位与处理。</p>
+<p><code>备注</code>：<code>故障</code>，就是那些引起系统以非正常方式运行的事件。</p>
+<p>（2）<code>主要功能</code></p>
+<ul>
+<li><p><code>故障检测和报警功能</code>：故障监视代理要随时记录网络系统出错的情况和可能引起故障的事件，并把这些信息存储在运行日志数据库中。</p>
+</li>
+<li><p><code>故障预测功能</code>：对各种可能引起故障的参数建立门限值并随时监视参数值变化，一旦超过门限值，就发送警报。</p>
+</li>
+<li><p><code>故障诊断和定位功能</code>：对设备和通信线路进行测试，找出故障原因和地点。</p>
+</li>
+</ul>
+<p><strong>4、配置管理</strong></p>
+<p>（1）<code>定义</code></p>
+<p>配置管理（Configuration Management）它初始化网络、并配置网络，以使其提供网络服务。配置管理的目的是为了实现某个特定功能或使网络性能达到最优。配置管理包括拓扑管理、软件管理和设备管理。</p>
+<ul>
+<li><p><code>设备管理包括（尤其重要）</code>：</p>
+</li>
+<li><p><code>布线系统的维护</code>：做好布线系统的日常维护工作，确保底层网络连接完好，是计算机网络正常、高效运行的基础。对布线系统的测试和维护一般借助于双绞线测试仪、光纤测试仪和信道测试仪等;</p>
+</li>
+<li><p><code>关键设备管理</code>：网络中的关键设备一般包括网络的主干交换机、中心路由器以及关键服务器。</p>
+</li>
+</ul>
+<p>（2）<code>网络配置信息</code></p>
+<ul>
+<li>网络设备的拓扑关系，即存在性和连接关系；</li>
+<li>网络设备的域名、IP地址，即寻址信息；</li>
+<li>网络设备的运行特性，即运行参数；</li>
+<li>网络设备的备份操作参数，即是否备份、备份启用条件；</li>
+<li>网络设备的配置更改条件。</li>
+</ul>
+<p>（3）<code>主要功能</code></p>
+<ul>
+<li>定义配置信息；</li>
+<li>设置和修改设备属性；</li>
+<li>定义和修改网络元素间的互连关系；</li>
+<li>启动和终止网络运行；</li>
+<li>发行软件；</li>
+<li>检查参数值、互连关系和报告配置现状。</li>
+</ul>
+<p><strong>5、安全管理</strong></p>
+<p>（1）<code>定义</code></p>
+<p>安全管理（Security Management）主要保护网络资源与设备不被非法访问，以及对加密机构中的密钥进行管理。</p>
+<p>（2）网络中需要解决的<code>安全问题</code></p>
+<ul>
+<li><code>网络数据的私有性</code>：保护网络数据不被侵入者非法获取</li>
+<li><code>授权</code>：防止侵入者在网络上发送错误信息</li>
+<li><code>访问控制</code>：控制用户对网络资源的访问</li>
+</ul>
+<p>（3）<code>主要内容</code></p>
+<ul>
+<li>安全措施相关信息分发</li>
+<li>安全相关通知</li>
+<li>安全服务措施管理</li>
+<li>事件记录和日志管理</li>
+</ul>
+<p>（4）保证的<code>安全性</code></p>
+<ul>
+<li>保密性</li>
+<li>数据完整性</li>
+<li>可用性</li>
+</ul>
+<p>（6）面对的<code>安全威胁</code></p>
+<ul>
+<li>伪装的用户</li>
+<li>假冒的管理程序</li>
+<li>侵入信息交换过程</li>
+</ul>
+<p><strong>6、性能管理</strong></p>
+<p>（1）<code>定义</code></p>
+<p>网络性能管理活动是持续地测评网络运行中的主要性能指标，以检验网络服务是否达到了预定的水平，找出已经发生或潜在的网络瓶颈，报告网络性能的变化趋势，为网络管理决策提供依据。</p>
+<p>（2）<code>主要内容</code></p>
+<p><code>性能监测</code>与<code>网络控制</code>:性能监测指网络工作状态信息的收集和整理；而网络控制则是为改善网络设备的性能而采取的动作和措施。</p>
+<p>（3）<code>基本功能</code></p>
+<ul>
+<li>实时采集与网络性能相关的数据。</li>
+<li>分析和统计数据。</li>
+<li>维护并检查系统的运行日志。</li>
+<li>性能的预警。</li>
+<li>生成性能分析报告。</li>
+</ul>
+<p>（4）常用的网络性能<code>测评指标</code></p>
+<ul>
+<li>可用性</li>
+<li>响应时间</li>
+<li>吞吐量</li>
+<li>包（帧）延迟</li>
+<li>丢包（帧）率</li>
+<li>利用率</li>
+</ul>
+<p>（5）网络性能的<code>测评方法</code></p>
+<ul>
+<li><p><code>直接测量法</code>：对网络的信道利用率、碰撞分布和吞吐率等参数进行动态数据统计，以得到测评结果。</p>
+</li>
+<li><p><code>模拟法</code>：给网络建立数学模型，运用仿真程序通过数学计算得出网络相关参数指标。同时也可以与实测结果进行比较，经过多次校正得到真实的测评结果。</p>
+</li>
+<li><p><code>分析法</code>：通过采用概率论、过程论和排队论等对各种网络进行模拟，其分析结果可用于对未来的网络进行优化设计。</p>
+</li>
+</ul>
+<p><strong>7、计费管理</strong></p>
+<p>（1）<code>主要任务</code></p>
+<p>根据网络管理部门指定的计费策略，按用户对网络资源的使用情况收取费用。</p>
+<p>（2）<code>主要目的</code></p>
+<p>计费管理的目的是正确地计算和收取用户使用网络资源及服务的费用，计费管理还要进行网络资源利用率的统计和网络的成本效益核算</p>
+<p>（3）<code>主要功能</code></p>
+<ul>
+<li>计算网络建设及运营成本，包括设备、网络服务、人工费用等成本</li>
+<li>统计网络及其所包含的资源的利用率，确定计费标准</li>
+<li>将应该缴纳的费用通知用户</li>
+<li>支持用户费用上限的设置</li>
+<li>在必须用多个通信实体才能完成通信时，能够把使用多个管理对象的费用结合起来</li>
+<li>保存收费账单及必要的原始数据，以备用户查询和质疑</li>
+</ul>
+<p>（4）<code>主要类型</code></p>
+<ul>
+<li><p><code>基于网络流量计费</code>：网络流量计费是根据用户的网络或者用户的主机在一段时间内使用的网络流量收取用户费用的一种计费方式，主要用于专线（如DDN、E1、X.25线路等）接入用户。</p>
+</li>
+<li><p><code>基于使用时间计费</code>：使用时间计费是根据用户使用网络的时间长短来收取用户费用的一种计费方式。该如ADSL接入网络的用户</p>
+</li>
+<li><p><code>基于网络服务计费</code>：网络服务计费是根据用户使用网络服务的次数或时间来收取用户费用的一种计费方式。收取费用的服务包括电子邮件、数据库信息查询、光盘检索、网络游戏等。</p>
+</li>
+</ul>
+<p>（5）<code>子过程</code></p>
+<ul>
+<li>使用率度量过程；</li>
+<li>计费处理过程；</li>
+<li>账单管理过程。</li>
+</ul>
+<p>（6）<code>管理对象</code></p>
+<ul>
+<li>使用率度量控制对象；</li>
+<li>使用率度量数据对象；</li>
+<li>使用率记录。</li>
+</ul>
+<p><strong>（四）网络管理员的职责</strong></p>
+<ul>
+<li>基础设施管理</li>
+<li>操作系统管理</li>
+<li>应用系统管理</li>
+<li>用户服务与管理</li>
+<li>安全保密管理</li>
+<li>信息存储备份管理</li>
+<li>机房管理</li>
+</ul>
+<p><strong>（五）网络操作系统</strong></p>
+<p><strong>1、网络操作系统的定义</strong></p>
+<p>网络操作系统（Network Operating System, NOS）是能够控制和管理网络资源的特殊的操作系统。它实际上是使网络中各计算机能方便而有效地共享网络资源，为网络用户提供所需的各种服务的软件和有关规则的集合，是网络环境下用户与网络资源之间的接口，它通过网络，向网络上的计算机和外部设备提供各种网络服务。</p>
+<p><strong>2、网络操作系统的功能</strong></p>
+<p>（1）<code>基本功能</code></p>
+<ul>
+<li>处理机管理</li>
+<li>存储器管理</li>
+<li>设备管理</li>
+<li>文件管理</li>
+</ul>
+<p>（2）<code>网络管理方面的功能</code></p>
+<ul>
+<li><code>协调用户</code>：对系统资源进行合理分配和调度；</li>
+<li><code>提供网络通信服务</code>；</li>
+<li><code>控制用户访问</code>：可对用户进行访问权限的设置，保证系统的安全性和提供可靠的保密方式；</li>
+<li><code>管理文件</code>：在网络系统中，各种文件可达上万个，通常是把它们存放在系统中的一个专用设备里，快速、准确、 安全可靠的对文件进行管理是一件非常重要的任务；</li>
+<li><code>系统管理</code>：跟踪网络活动，建立和修改网络的服务，管理网络的应用环境。</li>
+</ul>
+<p><strong>3、常用网络操作系统</strong></p>
+<ul>
+<li><p><code>Windows操作系统</code>：Windows系列操作系统是Microsoft开发的一种界面友好操作 简便的网络操作系统。</p>
+</li>
+<li><p><code>UNIX操作系统</code>：UNIX操作系统是麻省理工学院开发一种时分操作系统的基 础上发展起来的网络操作系统。UNIX是一个多用户、多任 务的实时操作系统。<br>Linux操作系统 Linux是芬兰赫尔辛基大学的学生Linux Torvalds开发的具有 UNIX操作系统特征的新一代的开源网络操作系统。</p>
+</li>
+<li><p><code>NetWare网络操作系统</code>：NetWare服务器对无盘站和游戏的支持较好，常用于教学网 和游戏厅。</p>
+</li>
+</ul>
+<h3 id="三、第一课时作业"><a href="#三、第一课时作业" class="headerlink" title="三、第一课时作业"></a><strong>三、第一课时作业</strong></h3><p><strong>（一）单选题</strong></p>
+<p><strong>1、下列哪些不是网络故障管理的功能？</strong></p>
+<p>A、故障检测<br>B、故障诊断<br>C、故障修复<br>D、故障排除</p>
+<p><code>我的答案：C</code></p>
+<p><strong>2、网络管理的功能不包括？</strong></p>
+<p>A、功能管理<br>B、配置管理<br>C、计费管理<br>D、故障管理</p>
+<p><code>我的答案：A</code></p>
+<p><strong>3、现代管理计算机网络系统基本上有4个部分组成，下列不属于此4个部分的为？</strong></p>
+<p>A、多个代理<br>B、至少一个网络管理器<br>C、多个管理信息库<br>D、网关</p>
+<p><code>我的答案：D</code></p>
+<p><strong>4、一个网络管理系统定义的内容不包含？</strong></p>
+<p>A、计算机型号<br>B、系统结构<br>C、系统的功能<br>D、网络资源的表示</p>
+<p><code>我的答案：A</code></p>
+<p><strong>5、下列哪些不属于网络管理标准？</strong></p>
+<p>A、WWCP<br>B、CMIS/CMIP<br>C、LMMP<br>D、SNMP</p>
+<p><code>我的答案：A</code></p>
+<p><strong>6、网络管理的主要职责不包含？</strong></p>
+<p>A、操作系统管理<br>B、基础设施管理<br>C、用户服务与管理<br>D、程序设计</p>
+<p><code>我的答案：D</code></p>
+<p><strong>7、掌管机房设备供电线布线情况，需要在增减设备时注意什么的合理配置？</strong></p>
+<p>A、负载<br>B、适配器<br>C、电源<br>D、文件</p>
+<p><code>我的答案：D</code></p>
+<p><strong>8、不属于常用的网络操作系统主要有？</strong></p>
+<p>A、OPPO<br>B、Windows<br>C、Linux<br>D、UNIX</p>
+<p><code>我的答案：A</code></p>
+<p><strong>9、以下符合即插即用、多任务、对称多处理和群集功能的操作系统的是？</strong></p>
+<p>A、Netware<br>B、Linux<br>C、Windows<br>D、UNIX</p>
+<p><code>我的答案：C</code></p>
+<p><strong>10、不属于安全管理的主要内容的是？</strong></p>
+<p>A、记录、维护和浏览安全日志，以便对安全问题进行事后分析。<br>B、创建、控制和删除与安全有关的服务和设施。<br>C、设置开放系统中有关路由操作的参数。<br>D、分布和设置与安全措施有关的各种信息，如密钥的分发、访问权限的设置。</p>
+<p><code>我的答案：D</code></p>
+<p><strong>（二）多选题</strong></p>
+<p><strong>1、下列属于网络故障管理的是？</strong></p>
+<p>A、故障诊断<br>B、故障修复<br>C、故障检测<br>D、故障重启</p>
+<p><code>我的答案：BC</code></p>
+<p><strong>2、通常对一个网络管理系统需要定义以下内容？</strong></p>
+<p>A、网络资源的表示<br>B、网络管理信息的表示<br>C、系统的功能<br>D、系统的结构</p>
+<p><code>我的答案：ABC</code></p>
+<p><strong>3、下列属于网络管理标准的是？</strong></p>
+<p>A、SNMP<br>B、CMIS/CMIP<br>C、LMMP<br>D、CMOT</p>
+<p><code>我的答案：ABC</code></p>
+<p><strong>4、以下属于网络操作系统功能的为？</strong></p>
+<p>A、提供网络通信服务<br>B、协调用户，对系统资源进行合理分配和调度<br>C、控制用户访问<br>D、系统管理</p>
+<p><code>我的答案：BD</code></p>
+<p><strong>5、网络管理模式包括？</strong></p>
+<p>A、集中式网络管理模式<br>B、分布式网络管理模式<br>C、混合式网络管理模式<br>D、C/S式网络管理模式</p>
+<p><code>我的答案：ABD</code></p>
+<p><strong>（三）判断题</strong></p>
+<p>1、网络管理员的主要职责有以下几个方面：基础设施管理、操作系统管理、应用系统管理、用户服务与管理、安全保密管理、信息存储备份管理和机房管理。</p>
+<p><code>我的答案： √</code></p>
+<p>2、网络操作系统除了具有一般操作系统的处理机管理、存储器管理、设备管理及文件管理的基本功能外，还具有网络管理方面的功能。</p>
+<p><code>我的答案： √</code></p>
+<p>3、性能管理用来评估系统资源的运行状况及通信效率等系统性能。主要功能包括初始化网络、配置网络使其提供网络服务。</p>
+<p><code>我的答案： ×</code></p>
+<p>4、公共管理信息服务CMIS定义了每个网络组成部分提供的网络管理服务，公共管理信息协议CMIP则是实现CMIS服务的协议。</p>
+<p><code>我的答案： ×</code></p>
+<p>5、简单网络管理协议SNMP的优点是复杂和广泛的使用和支持。</p>
+<p><code>我的答案： ×</code></p>
+<p><strong>（四）简答题</strong></p>
+<p><strong>1、什么是网络管理？网络管理的目标是什么？</strong></p>
+<p><code>正确答案：</code></p>
+<p>网络管理是指对网络的运行状态进行监测和控制，并能提供有效、可靠、安全、经济的服务。</p>
+<p>网络管理的目标是使网络的性能达到最优化状态。通过网络管理，要能够预知潜在的网络故障，采取必要的措施加以预防和处理，达到零停机；通过监控网络性能，调整网络运行配置，提高网络性能；借助有效的性能尺度和评估方法，扩充和规划网络的发展。所以网络管理的根本目标就是最大限度地满足网络管理者和网络用户对计算机网络的有效性、可靠性、开放性、综合性、安全性和经济性的要求。</p>
+<p><strong>2、集中式网络管理和分布式网络管理有什么区别？各有什么优缺点？</strong></p>
+<p><code>正确答案：</code></p>
+<p>集中式网络管理模式是由一个网络管理者对整个网络的管理负责。网络管理者处理所有来自被管理系统上的管理代理的通信信息，为全网提供集中的决策支持，并控制和维护管理工作站上的信息存储。</p>
+<p>分布式管理将数据采集、监视以及管理分散开来，它可以从网络上的所有数据源采集数据而不必考虑网络的拓扑结构，为网络管理员提供更加有效的、大型的、地理分布广泛的网络管理方案。</p>
+<p>集中式网络管理模式的优点是管理集中，有专人负责，有利于从整个网络系统的全局对网络实施较为有效的管理；缺点是管理信息集中汇总到网络管理中心节点上，导致网络信息流比较拥挤，管理不够灵活，管理节点如果发生故障有可能影响全网正常工作。</p>
+<p>分布式网络管理模式的优点是随着网络的扩展，监视智能及任务职责会同时不断地分布开来，即提供了很好的扩展性，同时也降低了管理的复杂性。将管理任务都分布到各域的管理者，使网络管理更加稳固可靠，也提高了网络性能，并且使网络管理在通信和计算方面的开销大大减少。</p>
+<p><strong>3、网络管理的5大功能是什么？</strong></p>
+<p><code>正确答案：</code></p>
+<p>网络管理的5个功能域：故障管理（Fault Management）、配置管理（Configuration Management）、安全管理（Security Management）、性能管理（Performance Management）、计费管理（Accounting Management）。</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" rel="tag">网络管理</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/photo/index/pay/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/photo/index/pay/wechat.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/">
+                <span class="level-item">Python入门基础知识学习（二）</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="张之卿">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        张之卿
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        为了那个梦想
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>安徽-桐城</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            21
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            7
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            21
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zazdream" target="_blank" rel="noopener">
+                关注我</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/zazdream">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="E-mail" href="mailto:zazdream@163.com">
+                
+                <i class="fab fa-envira"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Weibo" href="https://weibo.com/u/5013594041">
+                
+                <i class="fab fa-weibo"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            相关链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://me.csdn.net/weixin_42146857" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">我的CSDN首页</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">me.csdn.net</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://space.bilibili.com/29187794" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">我的B站首页</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">space.bilibili.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Python%E5%AD%A6%E4%B9%A0/">
+            <span class="level-start">
+                <span class="level-item">Python学习</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/">
+            <span class="level-start">
+                <span class="level-item">专业知识分享</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/">
+            <span class="level-start">
+                <span class="level-item">博客网站的搭建</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">9</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/">
+            <span class="level-start">
+                <span class="level-item">网络工程专业学习</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+            <span class="level-start">
+                <span class="level-item">网络管理基础知识</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E8%80%83%E7%A0%942021/">
+            <span class="level-start">
+                <span class="level-item">考研2021</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E9%9A%8F%E7%AC%94/">
+            <span class="level-start">
+                <span class="level-item">随笔</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/CDN%E5%8A%A0%E9%80%9F/" style="font-size: 10px;">CDN加速</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Icarus/" style="font-size: 15px;">Icarus</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/" style="font-size: 10px;">交换机</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 12.5px;">入门</a> <a href="/tags/%E5%88%9D%E7%AF%87/" style="font-size: 10px;">初篇</a> <a href="/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/" style="font-size: 10px;">图片轮播</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 10px;">安装</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">插件</a> <a href="/tags/%E6%94%BF%E6%B2%BB%E4%B8%80/" style="font-size: 10px;">政治一</a> <a href="/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/" style="font-size: 15px;">数学一</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/" style="font-size: 10px;">网络工程</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" style="font-size: 10px;">网络管理</a> <a href="/tags/%E8%80%83%E7%A0%94/" style="font-size: 17.5px;">考研</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E4%B8%80/" style="font-size: 10px;">英语一</a> <a href="/tags/%E8%AF%97%E8%AF%8D/" style="font-size: 10px;">诗词</a>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow  ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="网络管理基础知识学习（一）">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-21T09:50:58.000Z">2020-03-21</time></div>
+                    <a href="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">网络管理基础知识学习（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">网络管理基础知识</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article2.jpg" alt="Python入门基础知识学习（二）">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T13:52:13.000Z">2020-03-17</time></div>
+                    <a href="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Python入门基础知识学习（二）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article6.jpg" alt="Python入门基础知识学习（一）">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T02:20:16.000Z">2020-03-17</time></div>
+                    <a href="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Python入门基础知识学习（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article0.jpg" alt="Python的安装与使用">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T14:35:06.000Z">2020-03-16</time></div>
+                    <a href="/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Python的安装与使用</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/photo/index/suiji/article1.jpg" alt="考研数学中的高中数学知识（三）">
+                </p>
+            </a>
+            
+        
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-14T09:29:54.000Z">2020-03-14</time></div>
+                    <a href="/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/" class="title has-link-black-ter is-size-6 has-text-weight-normal">考研数学中的高中数学知识（三）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E8%80%83%E7%A0%942021/">考研2021</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">14</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CDN%E5%8A%A0%E9%80%9F/">
+                        <span class="tag">CDN加速</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Git/">
+                        <span class="tag">Git</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Icarus/">
+                        <span class="tag">Icarus</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Markdown/">
+                        <span class="tag">Markdown</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/">
+                        <span class="tag">交换机</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%85%A5%E9%97%A8/">
+                        <span class="tag">入门</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%88%9D%E7%AF%87/">
+                        <span class="tag">初篇</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/">
+                        <span class="tag">图片轮播</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%9F%9F%E5%90%8D/">
+                        <span class="tag">域名</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%AE%89%E8%A3%85/">
+                        <span class="tag">安装</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%8F%92%E4%BB%B6/">
+                        <span class="tag">插件</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%94%BF%E6%B2%BB%E4%B8%80/">
+                        <span class="tag">政治一</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/">
+                        <span class="tag">数学一</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/">
+                        <span class="tag">网络工程</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+                        <span class="tag">网络管理</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%80%83%E7%A0%94/">
+                        <span class="tag">考研</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%8B%B1%E8%AF%AD%E4%B8%80/">
+                        <span class="tag">英语一</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%AF%97%E8%AF%8D/">
+                        <span class="tag">诗词</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="网络管理基础知识学习（一）" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 张之卿&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                <br>
+                
+                </p>
+            </div>
+            <div class="number+time">
+                <div style="text-align:center">
+                    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+                        <script>
+                            var now = new Date(); 
+                            function createtime() { 
+                                var grt= new Date("02/09/2020 12:00:00");//此处修改你的建站时间或者网站上线时间 
+                                now.setTime(now.getTime()+250); 
+                                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                                document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+                                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                            } 
+                        setInterval("createtime()",250);
+                        </script>
+                    <br>
+                    <span id="busuanzi_container_site_uv">
+                        本站总访问量<span id="busuanzi_value_site_pv">0</span>次 | 
+                    </span>
+                    <span id="busuanzi_container_site_uv">
+                        您是第<span id="busuanzi_value_site_uv">0</span>个小伙伴
+                    </span>
+                </div> 
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'https://zazdream.com',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+            //    PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+    <!-- 雪花特效 -->
+    <script type="text/javascript">
+        var windowWidth = $(window).width();
+        if (windowWidth > 480) {
+          document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+        }
+    </script>
+</body>
+</html>
