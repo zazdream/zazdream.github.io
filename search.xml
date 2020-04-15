@@ -545,7 +545,7 @@
 <p><code>我的答案:  第一空：简单类型  第二空：构造类型  第三空：标签类型  第四空：其他类型</code></p>
 <p><strong>4、序列：用（  ）表示不同类型元素的序列，用（  ）表示相同类型元素的序列。</strong></p>
 <p><code>我的答案:  第一空：SEQUENCE  第二空：SEQUENCE OF</code></p>
-<p><strong>5、把ASN.1表示的抽象类型值编码为字节串。</strong></p>
+<p><strong>5、（  ）把ASN.1表示的抽象类型值编码为字节串。</strong></p>
 <p><code>我的答案:  第一空：OCTET STRING</code></p>
 <p><strong>（三）简答题</strong></p>
 <p><strong>1、布尔类型有两个值FALSE和TRUE，分别写出FALSE和TRUE的编码。</strong></p>
