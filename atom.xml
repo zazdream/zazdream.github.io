@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zazdream.com/"/>
-  <updated>2020-03-21T12:53:07.248Z</updated>
+  <updated>2020-04-15T14:14:42.755Z</updated>
   <id>https://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络管理基础知识学习（二）</title>
+    <link href="https://zazdream.com/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://zazdream.com/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <published>2020-03-28T03:27:51.000Z</published>
+    <updated>2020-04-15T14:14:42.755Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;第二课时：抽象语法表示&quot;&gt;&lt;a href=&quot;#第二课时：抽象语法表示&quot; class=&quot;headerlink&quot; title=&quot;第二课时：抽象语法表示&quot;&gt;&lt;/a&gt;&lt;strong&gt;第二课时：抽象语法表示&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;一、学习速览&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据表示&lt;/li&gt;
+&lt;li&gt;ASN.1语法&lt;/li&gt;
+&lt;li&gt;ASN.1基本编码规则BER&lt;/li&gt;
+&lt;li&gt;宏定义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;二、抽象语法表示的两个概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（一）抽象语法表示ASN.1&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Abstract Syntax Notation(ASN.1)是一种形式语言。&lt;/li&gt;
+&lt;li&gt;提供统一的网络数据表示，用于定义应用数据的抽象语法和应用协议数据单元的结构。&lt;/li&gt;
+&lt;li&gt;OSI或SNMP管理信息库，都是用ASN.1定义的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;（二）基本编码规则BER&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic Encoding Rule（BER）是一种编码规则。&lt;/li&gt;
+&lt;li&gt;用ASN.1定义的应用数据在传送过程中按照BER变换成比特串。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="网络管理基础知识" scheme="https://zazdream.com/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="网络管理" scheme="https://zazdream.com/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Python入门基础知识学习（三）</title>
@@ -51,7 +90,7 @@
     <link href="https://zazdream.com/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>https://zazdream.com/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2020-03-21T09:50:58.000Z</published>
-    <updated>2020-03-21T11:17:46.235Z</updated>
+    <updated>2020-04-15T02:37:57.334Z</updated>
     
     <summary type="html">
     
@@ -62,7 +101,15 @@
 &lt;li&gt;能利用网络工具分析网络中一些常见故障发生的原因并排除故障&lt;/li&gt;
 &lt;li&gt;具有一定的网络管理和网络维护能力。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;二、第一课时-网络管理概论&quot;&gt;&lt;a href=&quot;#二、第一课时-网络管理概论&quot; class=&quot;headerlink&quot; title=&quot;二、第一课时 网络管理概论&quot;&gt;&lt;/a&gt;&lt;strong&gt;二、第一课时 网络管理概论&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;（一）网络管理的几个概念&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;二、第一课时-网络管理概论&quot;&gt;&lt;a href=&quot;#二、第一课时-网络管理概论&quot; class=&quot;headerlink&quot; title=&quot;二、第一课时 网络管理概论&quot;&gt;&lt;/a&gt;&lt;strong&gt;二、第一课时 网络管理概论&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;（一）学习速览&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络管理的几个概念&lt;/li&gt;
+&lt;li&gt;网络管理的体系结构&lt;/li&gt;
+&lt;li&gt;网络管理的功能&lt;/li&gt;
+&lt;li&gt;网络管理员的职责&lt;/li&gt;
+&lt;li&gt;网络操作系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;（二）网络管理的几个概念&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1、提出几个问题&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;为什么要网络管理？&lt;/li&gt;
@@ -524,29 +571,6 @@
     
     
       <category term="Node.js" scheme="https://zazdream.com/tags/Node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HEXO的安装与使用</title>
-    <link href="https://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>https://zazdream.com/2020/02/17/HEXO%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
-    <published>2020-02-17T02:22:00.000Z</published>
-    <updated>2020-02-18T06:14:42.699Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;什么是-Hexo&quot;&gt;&lt;a href=&quot;#什么是-Hexo&quot; class=&quot;headerlink&quot; title=&quot;什么是 Hexo&quot;&gt;&lt;/a&gt;&lt;strong&gt;什么是 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;h3 id=&quot;安装HEXO&quot;&gt;&lt;a href=&quot;#安装HEXO&quot; class=&quot;headerlink&quot; title=&quot;安装HEXO&quot;&gt;&lt;/a&gt;&lt;strong&gt;安装HEXO&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;安装前提&lt;/strong&gt;&lt;br&gt;安装 Hexo 相当简单，只需要先安装下列应用程序即可：&lt;/p&gt;
-&lt;p&gt;（1）&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt; (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)&lt;br&gt;（2）&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="博客网站的搭建" scheme="https://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
-    
-    
-      <category term="Hexo" scheme="https://zazdream.com/tags/Hexo/"/>
     
   </entry>
   
