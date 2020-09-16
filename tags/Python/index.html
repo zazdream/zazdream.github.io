@@ -177,7 +177,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8 分钟 读完 (大约 1181 个字)
+                    8 分钟 读完 (大约 1203 个字)
                 </span>
                 
                 
@@ -202,130 +202,16 @@
 <li>2、通过国内服务器加速安装Django框架</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>3、进入python环境</li>
-</ul>
-<p>python</p>
-<ul>
-<li>4、导入django </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import django</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>5、查看django版本信息</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django.VERSION</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>6、退出python环境 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit()</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建Django工程项目"><a href="#创建Django工程项目" class="headerlink" title="创建Django工程项目"></a><strong>创建Django工程项目</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject webDemo</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建Django的blog-app"><a href="#创建Django的blog-app" class="headerlink" title="创建Django的blog app"></a><strong>创建Django的blog app</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startapp zyb_blog</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置settings-py文件"><a href="#配置settings-py文件" class="headerlink" title="配置settings.py文件"></a><strong>配置settings.py文件</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ALLOWED_HOSTS &#x3D; [&#39;*&#39;]</span><br><span class="line">&#x2F;&#x2F;允许所有ip的请求</span><br><span class="line"></span><br><span class="line"># Application definition</span><br><span class="line"></span><br><span class="line">INSTALLED_APPS &#x3D; [</span><br><span class="line">    &#39;django.contrib.admin&#39;,</span><br><span class="line">    &#39;django.contrib.auth&#39;,</span><br><span class="line">    &#39;django.contrib.contenttypes&#39;,</span><br><span class="line">    &#39;django.contrib.sessions&#39;,</span><br><span class="line">    &#39;django.contrib.messages&#39;,</span><br><span class="line">    &#39;django.contrib.staticfiles&#39;,</span><br><span class="line">    &#39;zyb_blog&#39;,</span><br><span class="line">&#x2F;&#x2F;添加我的blog app</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">MIDDLEWARE &#x3D; [</span><br><span class="line">    &#39;django.middleware.security.SecurityMiddleware&#39;,</span><br><span class="line">    &#39;django.contrib.sessions.middleware.SessionMiddleware&#39;,</span><br><span class="line">    &#39;django.middleware.common.CommonMiddleware&#39;,</span><br><span class="line">  # &#39;django.middleware.csrf.CsrfViewMiddleware&#39;,</span><br><span class="line">&#x2F;&#x2F;取消跨站攻击保护，即注释掉此行代码</span><br><span class="line">    &#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;,</span><br><span class="line">    &#39;django.contrib.messages.middleware.MessageMiddleware&#39;,</span><br><span class="line">    &#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动Django工程"><a href="#启动Django工程" class="headerlink" title="启动Django工程"></a><strong>启动Django工程</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver 0.0.0.0:8090</span><br></pre></td></tr></table></figure>
-
-<h3 id="新建一条你的url"><a href="#新建一条你的url" class="headerlink" title="新建一条你的url"></a><strong>新建一条你的url</strong></h3><ul>
-<li>1、修改urls.py文件，新建url</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from django.conf.urls import url</span><br><span class="line">from django.contrib import admin</span><br><span class="line">from zyb_blog import views  &#x2F;&#x2F;add</span><br><span class="line"></span><br><span class="line">urlpatterns &#x3D; [</span><br><span class="line">    url(r&#39;^admin&#x2F;&#39;, admin.site.urls),</span><br><span class="line">    url(r&#39;^zyb_blog&#x2F;&#39;,views.zyb_blog)  &#x2F;&#x2F;add</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>2、修改views.py文件，创建对应处理函数</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">from __future__ import unicode_literals</span><br><span class="line"></span><br><span class="line">from django.shortcuts import render</span><br><span class="line"></span><br><span class="line"># Create your views here.</span><br><span class="line">def zyb_blog(request):</span><br><span class="line"></span><br><span class="line">        context &#x3D; &#123;&#125;</span><br><span class="line">        return render(request,&#39;zyb_blog.html&#39;,context)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>3、访问url</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;58.213.119.26:18080&#x2F;api&#x2F;v1&#x2F;namespaces&#x2F;web-ide&#x2F;services&#x2F;theia-ide-abb35e498637:web-8090&#x2F;proxy&#x2F;zyb_blog&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建templates文件夹"><a href="#创建templates文件夹" class="headerlink" title="创建templates文件夹"></a><strong>创建templates文件夹</strong></h3><ul>
-<li><p>1、在你的博客文件夹<code>zyb_blog</code>下新建templates文件夹</p>
-</li>
-<li><p>2、在templates文件夹下创建zyb_blog.html文件并添加内容</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;hello&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;html&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="完善你的博客主页"><a href="#完善你的博客主页" class="headerlink" title="完善你的博客主页"></a><strong>完善你的博客主页</strong></h3><ul>
-<li>1、新建对应所需文件夹</li>
-</ul>
-<p>在你的博客目录下新建<code>static文件夹</code>，并在<code>static文件夹</code>下新建<code>img文件夹</code>和<code>js文件夹</code></p>
-<ul>
-<li>2、添加或上传需要的文件到对应文件夹</li>
-</ul>
-<p>上传一个图片<code>head.jpg</code>到<code>img文件夹</code>，上传<code>jquery-3.3.1.min.js</code>到<code>js文件夹</code></p>
-<ul>
-<li>3、修改主页文件<code>zyb_blog.html</code>的标签，新增<code>input</code>和<code>textarea</code>标签</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">        &lt;p&gt;hello&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;input id&#x3D;&quot;title&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;请输入标题&quot;&gt;&lt;br&gt;</span><br><span class="line">        &lt;textarea id&#x3D;&quot;context&quot; cols&#x3D;&quot;20&quot; rows&#x3D;&quot;20&quot; placeholder&#x3D;&quot;请输入内容&quot;&gt;&lt;&#x2F;textarea&gt;&lt;br&gt;</span><br><span class="line">        &lt;button id&#x3D;&quot;submit_btn&quot;&gt;发布内容&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;html&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>4、新建博客主页中相关控件所需的js文件<code>zyb_blog.js</code>，并编辑内容</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;监听button按钮</span><br><span class="line">$(&#39;#submit_btn&#39;).on(&#39;click&#39;,function()&#123;</span><br><span class="line"></span><br><span class="line">    var title &#x3D; $(&#39;#title&#39;).val();</span><br><span class="line">    var context &#x3D; $(&#39;#context&#39;).val();</span><br><span class="line">    var post_data &#x3D; &#123;&quot;title&quot;:title,&quot;context&quot;:context&#125;;</span><br><span class="line">&#x2F;&#x2F;获取input输入</span><br><span class="line">    console.log(&#39;HELLO zyb&#39;);&#x2F;&#x2F;测试监听按钮是否正常</span><br><span class="line">    console.log(title);</span><br><span class="line">    console.log(context);</span><br><span class="line">&#x2F;&#x2F;新建ajax请求</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        type: &quot;POST&quot;,</span><br><span class="line">        url: &quot;zyb_blog&#x2F;&quot;,</span><br><span class="line">        data: post_data,</span><br><span class="line">        success: function(data)&#123;</span><br><span class="line">            console.log(&#39;return&amp;nbspsuccess&#39;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>5、修改<code>views.py</code>文件，修改<code>view函数</code>，接受<code>post请求</code></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">from __future__ import unicode_literals</span><br><span class="line"></span><br><span class="line">from django.shortcuts import render</span><br><span class="line">from django.http import JsonResponse</span><br><span class="line"></span><br><span class="line"># Create your views here.</span><br><span class="line">def zyb_blog(request):</span><br><span class="line"></span><br><span class="line">    if request.method &#x3D;&#x3D; &quot;GET&quot;:</span><br><span class="line">        context &#x3D; &#123;&#125;</span><br><span class="line">        return render(request,&#39;zyb_blog.html&#39;,context)</span><br><span class="line">    else:</span><br><span class="line">        title &#x3D; request.POST.get(&quot;title&quot;)</span><br><span class="line">        context &#x3D; request.POST.get(&quot;context&quot;)</span><br><span class="line">        print(title)</span><br><span class="line">        print(context)</span><br><span class="line">        context &#x3D; &#123;&quot;result&quot;: &quot;success&quot;&#125;</span><br><span class="line">        return JsonResponse(context)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>6、修改<code>zyb_blog.html</code>的文件，应用个性化<code>zyb_blog.js</code></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;% load static %&#125;</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">        &lt;p&gt;hello&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;input id&#x3D;&quot;title&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;请输入标题&quot;&gt;&lt;br&gt;</span><br><span class="line">        &lt;textarea id&#x3D;&quot;context&quot; cols&#x3D;&quot;20&quot; rows&#x3D;&quot;20&quot; placeholder&#x3D;&quot;请输入内容&quot;&gt;&lt;&#x2F;textarea&gt;&lt;br&gt;</span><br><span class="line">        &lt;button id&#x3D;&quot;submit_btn&quot;&gt;发布内容&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src&#x3D;&quot;&#x2F;static&#x2F;js&#x2F;jquery-3.3.1.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;&#x2F;static&#x2F;js&#x2F;zyb_blog.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>7、新建博客主页头部<code>head</code>，引用图片</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&quot;&#x2F;static&#x2F;img&#x2F;head.jpg&quot;&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>8、启动数据库，新建数据库webDemo</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;启动数据库</span><br><span class="line">service mysql start</span><br><span class="line">&#x2F;&#x2F;链接数据库</span><br><span class="line">mysql -u root -popenlab</span><br><span class="line">&#x2F;&#x2F;查看数据库</span><br><span class="line">show databases;</span><br><span class="line">&#x2F;&#x2F;创建数据库</span><br><span class="line">create database webDemo default charset utf8;</span><br><span class="line">&#x2F;&#x2F;进入数据库</span><br><span class="line">use webDemo;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>9、修改<code>settings.py</code>数据库链接文件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATABASES &#x3D; &#123;</span><br><span class="line">    &#39;default&#39;: &#123;</span><br><span class="line">        &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,</span><br><span class="line">        &#39;NAME&#39;: &quot;webDemo&quot;,</span><br><span class="line">        &#39;USER&#39;: &quot;root&quot;,</span><br><span class="line">        &#39;PASSWORD&#39;:&quot;openlab&quot;,</span><br><span class="line">        &#39;HOST&#39;:&#39;127.0.0.1&#39;,</span><br><span class="line">        &#39;PORT&#39;:&#39;3306&#39;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>10、安装python操作mysql的包</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@theia-ide-abb35e498637-0:&#x2F;home&#x2F;openlab&#x2F;workspace&#x2F;webDemo# pip install mysqlclient -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>11、刷表</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@theia-ide-abb35e498637-0:&#x2F;home&#x2F;openlab&#x2F;workspace&#x2F;webDemo# python manage.py makemigrations</span><br><span class="line">&#x2F;&#x2F;</span><br><span class="line">root@theia-ide-abb35e498637-0:&#x2F;home&#x2F;openlab&#x2F;workspace&#x2F;webDemo# python manage.py migrate</span><br><span class="line">&#x2F;&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h3 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a><strong>其他操作</strong></h3><p><strong>重新启动</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">root@theia-ide-abb35e498637-0:&#x2F;home&#x2F;openlab&#x2F;workspace# ls</span><br><span class="line">webDemo</span><br><span class="line">root@theia-ide-abb35e498637-0:&#x2F;home&#x2F;openlab&#x2F;workspace# cd webDemo</span><br><span class="line">root@theia-ide-abb35e498637-0:&#x2F;home&#x2F;openlab&#x2F;workspace&#x2F;webDemo# python manage.py runserver 0.0.0.0:8090</span><br><span class="line">Performing system checks...</span><br><span class="line"></span><br><span class="line">System check identified no issues (0 silenced).</span><br><span class="line"></span><br><span class="line">You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.</span><br><span class="line">Run &#39;python manage.py migrate&#39; to apply them.</span><br><span class="line"></span><br><span class="line">September 16, 2020 - 06:35:47</span><br><span class="line">Django version 1.11.29, using settings &#39;webDemo.settings&#39;</span><br><span class="line">Starting development server at http:&#x2F;&#x2F;0.0.0.0:8090&#x2F;</span><br><span class="line">Quit the server with CONTROL-C.</span><br><span class="line">[16&#x2F;Sep&#x2F;2020 06:35:51] &quot;GET &#x2F;zyb_blog&#x2F; HTTP&#x2F;1.1&quot; 200 480</span><br><span class="line">[16&#x2F;Sep&#x2F;2020 06:35:51] &quot;GET &#x2F;static&#x2F;js&#x2F;jquery-3.3.1.min.js HTTP&#x2F;1.1&quot; 200 86927</span><br><span class="line">[16&#x2F;Sep&#x2F;2020 06:35:51] &quot;GET &#x2F;static&#x2F;js&#x2F;zyb_blog.js HTTP&#x2F;1.1&quot; 200 444</span><br><span class="line">[16&#x2F;Sep&#x2F;2020 06:35:51] &quot;GET &#x2F;static&#x2F;img&#x2F;head.jpg HTTP&#x2F;1.1&quot; 200 91084</span><br></pre></td></tr></table></figure>
-
-<p><strong>查看表结构</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; desc zyb_blog_table;</span><br><span class="line">+---------+--------------+------+-----+---------+----------------+</span><br><span class="line">| Field   | Type         | Null | Key | Default | Extra          |</span><br><span class="line">+---------+--------------+------+-----+---------+----------------+</span><br><span class="line">| id      | int(11)      | NO   | PRI | NULL    | auto_increment |</span><br><span class="line">| title   | varchar(128) | NO   |     | NULL    |                |</span><br><span class="line">| context | longtext     | NO   |     | NULL    |                |</span><br><span class="line">+---------+--------------+------+-----+---------+----------------+</span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
-
-<p><strong>选择数据库所有数据</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from zyb_blog_table;</span><br><span class="line">Empty set (0.00 sec)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">from __future__ import unicode_literals</span><br><span class="line"></span><br><span class="line">from django.shortcuts import render</span><br><span class="line">from django.http import JsonResponse</span><br><span class="line">from models import Table &#x2F;&#x2F;add</span><br><span class="line"></span><br><span class="line"># Create your views here.</span><br><span class="line">def zyb_blog(request):</span><br><span class="line"></span><br><span class="line">    if request.method &#x3D;&#x3D; &quot;GET&quot;:</span><br><span class="line">        context &#x3D; &#123;&#125;</span><br><span class="line">        return render(request,&#39;zyb_blog.html&#39;,context)</span><br><span class="line">    else:</span><br><span class="line">        title &#x3D; request.POST.get(&quot;title&quot;)</span><br><span class="line">        context &#x3D; request.POST.get(&quot;context&quot;)</span><br><span class="line">        print(title)</span><br><span class="line">        print(context)</span><br><span class="line">        table &#x3D; Table(title&#x3D;title,context&#x3D;context) &#x2F;&#x2F;add</span><br><span class="line">        table.save() &#x2F;&#x2F;add</span><br><span class="line">        context &#x3D; &#123;&quot;result&quot;: &quot;success&quot;&#125;</span><br><span class="line">        return JsonResponse(context)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def zyb_blog(request):</span><br><span class="line"></span><br><span class="line">    if request.method &#x3D;&#x3D; &quot;GET&quot;:</span><br><span class="line">        context &#x3D; &#123;&#125;</span><br><span class="line">        ret &#x3D; Table.objects.all()</span><br><span class="line">        context[&#39;tables&#39;] &#x3D; ret</span><br><span class="line">        print(len(ret))</span><br><span class="line">        return render(request,&#39;zyb_blog.html&#39;,context)</span><br></pre></td></tr></table></figure>
-
-<p><strong>将数据渲染到页面</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;img src&#x3D;&quot;&#x2F;static&#x2F;img&#x2F;head.jpg&quot;&gt;</span><br><span class="line">        &#123;% for table in tables %&#125;</span><br><span class="line">            &lt;h3&gt;&#123;&#123; table.title&#125;&#125;&lt;&#x2F;h3&gt;</span><br><span class="line">            &lt;p&gt;&#123;&#123; table.context&#125;&#125;&lt;&#x2F;p&gt;</span><br><span class="line">        &#123;% endfor %&#125;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">        &lt;p&gt;hello&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;input id&#x3D;&quot;title&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;请输入标题&quot;&gt;&lt;br&gt;</span><br><span class="line">        &lt;textarea id&#x3D;&quot;context&quot; cols&#x3D;&quot;20&quot; rows&#x3D;&quot;20&quot; placeholder&#x3D;&quot;请输入内容&quot;&gt;&lt;&#x2F;textarea&gt;&lt;br&gt;</span><br><span class="line">        &lt;button id&#x3D;&quot;submit_btn&quot;&gt;发布内容&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;html&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>主动刷新页面</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">        type: &quot;POST&quot;,</span><br><span class="line">        url: &quot;zyb_blog&#x2F;&quot;,</span><br><span class="line">        data: post_data,</span><br><span class="line">        success: function(data)&#123;</span><br><span class="line">        &#x2F;&#x2F;console.log(&#39;return success&#39;);</span><br><span class="line">            location.reload();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -811,7 +697,7 @@
             
             <a href="/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="Python实战：个人博客网站搭建">
+                    <img class="thumbnail" src="/photo/index/suiji/article5.jpg" alt="Python实战：个人博客网站搭建">
                 </p>
             </a>
             
@@ -831,7 +717,7 @@
             
             <a href="/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article5.jpg" alt="网络管理基础知识学习（二）">
+                    <img class="thumbnail" src="/photo/index/suiji/article0.jpg" alt="网络管理基础知识学习（二）">
                 </p>
             </a>
             
@@ -851,7 +737,7 @@
             
             <a href="/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="Python入门基础知识学习（三）">
+                    <img class="thumbnail" src="/photo/index/suiji/article5.jpg" alt="Python入门基础知识学习（三）">
                 </p>
             </a>
             
@@ -871,7 +757,7 @@
             
             <a href="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="网络管理基础知识学习（一）">
+                    <img class="thumbnail" src="/photo/index/suiji/article0.jpg" alt="网络管理基础知识学习（一）">
                 </p>
             </a>
             
@@ -891,7 +777,7 @@
             
             <a href="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article0.jpg" alt="Python入门基础知识学习（二）">
+                    <img class="thumbnail" src="/photo/index/suiji/article2.jpg" alt="Python入门基础知识学习（二）">
                 </p>
             </a>
             
@@ -1145,7 +1031,7 @@
             
             <a href="/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="Python实战：个人博客网站搭建">
+                    <img class="thumbnail" src="/photo/index/suiji/article5.jpg" alt="Python实战：个人博客网站搭建">
                 </p>
             </a>
             
@@ -1165,7 +1051,7 @@
             
             <a href="/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article5.jpg" alt="网络管理基础知识学习（二）">
+                    <img class="thumbnail" src="/photo/index/suiji/article0.jpg" alt="网络管理基础知识学习（二）">
                 </p>
             </a>
             
@@ -1185,7 +1071,7 @@
             
             <a href="/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="Python入门基础知识学习（三）">
+                    <img class="thumbnail" src="/photo/index/suiji/article5.jpg" alt="Python入门基础知识学习（三）">
                 </p>
             </a>
             
@@ -1205,7 +1091,7 @@
             
             <a href="/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article3.jpg" alt="网络管理基础知识学习（一）">
+                    <img class="thumbnail" src="/photo/index/suiji/article0.jpg" alt="网络管理基础知识学习（一）">
                 </p>
             </a>
             
@@ -1225,7 +1111,7 @@
             
             <a href="/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/photo/index/suiji/article0.jpg" alt="Python入门基础知识学习（二）">
+                    <img class="thumbnail" src="/photo/index/suiji/article2.jpg" alt="Python入门基础知识学习（二）">
                 </p>
             </a>
             
