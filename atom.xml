@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zazdream.com/"/>
-  <updated>2020-04-15T14:20:51.515Z</updated>
+  <updated>2020-09-16T08:19:46.466Z</updated>
   <id>https://zazdream.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python实战：个人博客网站搭建</title>
+    <link href="https://zazdream.com/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    <id>https://zazdream.com/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</id>
+    <published>2020-09-16T05:20:01.000Z</published>
+    <updated>2020-09-16T08:19:46.466Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;编程环境&quot;&gt;&lt;a href=&quot;#编程环境&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python学习" scheme="https://zazdream.com/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Python" scheme="https://zazdream.com/tags/Python/"/>
+    
+      <category term="进阶" scheme="https://zazdream.com/tags/%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>网络管理基础知识学习（二）</title>
@@ -548,29 +577,6 @@
     
     
       <category term="Git" scheme="https://zazdream.com/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js的安装</title>
-    <link href="https://zazdream.com/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/"/>
-    <id>https://zazdream.com/2020/02/17/Node-js%E7%9A%84%E5%AE%89%E8%A3%85/</id>
-    <published>2020-02-17T04:44:06.000Z</published>
-    <updated>2020-02-17T12:05:54.215Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在安装Node.js之前，我们应改弄清两个问题：（1）NodeJS是什么？（2）NodeJS能做什么？&lt;/p&gt;
-&lt;h3 id=&quot;NodeJS是什么&quot;&gt;&lt;a href=&quot;#NodeJS是什么&quot; class=&quot;headerlink&quot; title=&quot;NodeJS是什么&quot;&gt;&lt;/a&gt;&lt;strong&gt;NodeJS是什么&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;脚本语言需要一个解析器才能运行，JavaScript是脚本语言，在不同的位置有不一样的解析器，对于需要独立运行的JS，NodeJS就是一个解析器。&lt;/p&gt;
-&lt;h3 id=&quot;NodeJS能做什么&quot;&gt;&lt;a href=&quot;#NodeJS能做什么&quot; class=&quot;headerlink&quot; title=&quot;NodeJS能做什么&quot;&gt;&lt;/a&gt;&lt;strong&gt;NodeJS能做什么&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;NodeJS的作者说，他创造NodeJS的目的是为了实现高性能Web服务器。对于前端而言，简单方面可以通过NodeJS使用命令交互模式调试JS代码片段，复杂方面可以使用NodeJS编写工具提升工作效率。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="博客网站的搭建" scheme="https://zazdream.com/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
-    
-    
-      <category term="Node.js" scheme="https://zazdream.com/tags/Node-js/"/>
     
   </entry>
   
