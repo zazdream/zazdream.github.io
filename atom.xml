@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>zazdream</title>
-  <icon>https://www.zybhome.online/icon.png</icon>
+  <icon>https://zybhome.online/icon.png</icon>
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.zybhome.online/"/>
+  <link href="https://zybhome.online/"/>
   <updated>2022-05-10T03:42:30.434Z</updated>
-  <id>https://www.zybhome.online/</id>
+  <id>https://zybhome.online/</id>
   
   <author>
     <name>张之卿</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>（Windows环境下）Oracle学习系列——前期的准备工作</title>
-    <link href="https://www.zybhome.online/2022/05/10/%EF%BC%88Windows%E7%8E%AF%E5%A2%83%E4%B8%8B%EF%BC%89Oracle%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%89%8D%E6%9C%9F%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/"/>
-    <id>https://www.zybhome.online/2022/05/10/%EF%BC%88Windows%E7%8E%AF%E5%A2%83%E4%B8%8B%EF%BC%89Oracle%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%89%8D%E6%9C%9F%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</id>
+    <link href="https://zybhome.online/2022/05/10/%EF%BC%88Windows%E7%8E%AF%E5%A2%83%E4%B8%8B%EF%BC%89Oracle%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%89%8D%E6%9C%9F%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/"/>
+    <id>https://zybhome.online/2022/05/10/%EF%BC%88Windows%E7%8E%AF%E5%A2%83%E4%B8%8B%EF%BC%89Oracle%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%89%8D%E6%9C%9F%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</id>
     <published>2022-05-10T03:40:48.000Z</published>
     <updated>2022-05-10T03:42:30.434Z</updated>
     
@@ -42,19 +42,19 @@
     </summary>
     
     
-      <category term="Oracle学习" scheme="https://www.zybhome.online/categories/Oracle%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Oracle学习" scheme="https://zybhome.online/categories/Oracle%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="入门" scheme="https://www.zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
+      <category term="入门" scheme="https://zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
     
-      <category term="Oracle" scheme="https://www.zybhome.online/tags/Oracle/"/>
+      <category term="Oracle" scheme="https://zybhome.online/tags/Oracle/"/>
     
   </entry>
   
   <entry>
     <title>Python实战：个人博客网站搭建</title>
-    <link href="https://www.zybhome.online/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
-    <id>https://www.zybhome.online/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</id>
+    <link href="https://zybhome.online/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    <id>https://zybhome.online/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</id>
     <published>2020-09-16T05:20:01.000Z</published>
     <updated>2020-09-18T04:28:14.000Z</updated>
     
@@ -77,19 +77,19 @@
     </summary>
     
     
-      <category term="Python学习" scheme="https://www.zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Python学习" scheme="https://zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="https://www.zybhome.online/tags/Python/"/>
+      <category term="Python" scheme="https://zybhome.online/tags/Python/"/>
     
-      <category term="进阶" scheme="https://www.zybhome.online/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="https://zybhome.online/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>网络管理基础知识学习（二）</title>
-    <link href="https://www.zybhome.online/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/28/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
     <published>2020-03-28T03:27:51.000Z</published>
     <updated>2020-04-15T14:20:52.000Z</updated>
     
@@ -118,17 +118,17 @@
     </summary>
     
     
-      <category term="网络管理基础知识" scheme="https://www.zybhome.online/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+      <category term="网络管理基础知识" scheme="https://zybhome.online/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     
-      <category term="网络管理" scheme="https://www.zybhome.online/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/"/>
+      <category term="网络管理" scheme="https://zybhome.online/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>Python入门基础知识学习（三）</title>
-    <link href="https://www.zybhome.online/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/21/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/</id>
     <published>2020-03-21T11:20:08.000Z</published>
     <updated>2020-03-21T12:53:08.000Z</updated>
     
@@ -146,19 +146,19 @@
     </summary>
     
     
-      <category term="Python学习" scheme="https://www.zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Python学习" scheme="https://zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="https://www.zybhome.online/tags/Python/"/>
+      <category term="Python" scheme="https://zybhome.online/tags/Python/"/>
     
-      <category term="入门" scheme="https://www.zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
+      <category term="入门" scheme="https://zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
   <entry>
     <title>网络管理基础知识学习（一）</title>
-    <link href="https://www.zybhome.online/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/21/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2020-03-21T09:50:58.000Z</published>
     <updated>2020-04-15T02:37:58.000Z</updated>
     
@@ -190,17 +190,17 @@
     </summary>
     
     
-      <category term="网络管理基础知识" scheme="https://www.zybhome.online/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+      <category term="网络管理基础知识" scheme="https://zybhome.online/categories/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     
-      <category term="网络管理" scheme="https://www.zybhome.online/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/"/>
+      <category term="网络管理" scheme="https://zybhome.online/tags/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>Python入门基础知识学习（二）</title>
-    <link href="https://www.zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
     <published>2020-03-17T13:52:13.000Z</published>
     <updated>2020-03-17T16:03:30.000Z</updated>
     
@@ -212,19 +212,19 @@
     </summary>
     
     
-      <category term="Python学习" scheme="https://www.zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Python学习" scheme="https://zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="https://www.zybhome.online/tags/Python/"/>
+      <category term="Python" scheme="https://zybhome.online/tags/Python/"/>
     
-      <category term="入门" scheme="https://www.zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
+      <category term="入门" scheme="https://zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
   <entry>
     <title>Python入门基础知识学习（一）</title>
-    <link href="https://www.zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/17/Python%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2020-03-17T02:20:16.000Z</published>
     <updated>2020-03-17T05:22:18.000Z</updated>
     
@@ -237,19 +237,19 @@
     </summary>
     
     
-      <category term="Python学习" scheme="https://www.zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Python学习" scheme="https://zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="https://www.zybhome.online/tags/Python/"/>
+      <category term="Python" scheme="https://zybhome.online/tags/Python/"/>
     
-      <category term="入门" scheme="https://www.zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
+      <category term="入门" scheme="https://zybhome.online/tags/%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
   <entry>
     <title>Python的安装与使用</title>
-    <link href="https://www.zybhome.online/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>https://www.zybhome.online/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://zybhome.online/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>https://zybhome.online/2020/03/16/Python%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
     <published>2020-03-16T14:35:06.000Z</published>
     <updated>2020-03-16T15:39:20.000Z</updated>
     
@@ -263,19 +263,19 @@
     </summary>
     
     
-      <category term="Python学习" scheme="https://www.zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Python学习" scheme="https://zybhome.online/categories/Python%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="https://www.zybhome.online/tags/Python/"/>
+      <category term="Python" scheme="https://zybhome.online/tags/Python/"/>
     
-      <category term="安装" scheme="https://www.zybhome.online/tags/%E5%AE%89%E8%A3%85/"/>
+      <category term="安装" scheme="https://zybhome.online/tags/%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
   <entry>
     <title>考研数学中的高中数学知识（三）</title>
-    <link href="https://www.zybhome.online/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89/</id>
     <published>2020-03-14T09:29:54.000Z</published>
     <updated>2020-03-16T14:19:18.000Z</updated>
     
@@ -292,19 +292,19 @@
     </summary>
     
     
-      <category term="考研2021" scheme="https://www.zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
+      <category term="考研2021" scheme="https://zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
     
     
-      <category term="考研" scheme="https://www.zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
+      <category term="考研" scheme="https://zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
     
-      <category term="数学一" scheme="https://www.zybhome.online/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/"/>
+      <category term="数学一" scheme="https://zybhome.online/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/"/>
     
   </entry>
   
   <entry>
     <title>考研数学中的高中数学知识（二）</title>
-    <link href="https://www.zybhome.online/2020/03/07/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/07/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/07/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/07/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
     <published>2020-03-07T07:08:02.000Z</published>
     <updated>2020-03-07T07:42:12.000Z</updated>
     
@@ -320,19 +320,19 @@
     </summary>
     
     
-      <category term="考研2021" scheme="https://www.zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
+      <category term="考研2021" scheme="https://zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
     
     
-      <category term="考研" scheme="https://www.zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
+      <category term="考研" scheme="https://zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
     
-      <category term="数学一" scheme="https://www.zybhome.online/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/"/>
+      <category term="数学一" scheme="https://zybhome.online/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/"/>
     
   </entry>
   
   <entry>
     <title>考研数学中的高中数学知识（一）</title>
-    <link href="https://www.zybhome.online/2020/03/06/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/03/06/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/03/06/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/03/06/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89/</id>
     <published>2020-03-06T07:37:13.000Z</published>
     <updated>2020-03-07T07:31:44.000Z</updated>
     
@@ -346,19 +346,19 @@
     </summary>
     
     
-      <category term="考研2021" scheme="https://www.zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
+      <category term="考研2021" scheme="https://zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
     
     
-      <category term="考研" scheme="https://www.zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
+      <category term="考研" scheme="https://zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
     
-      <category term="数学一" scheme="https://www.zybhome.online/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/"/>
+      <category term="数学一" scheme="https://zybhome.online/tags/%E6%95%B0%E5%AD%A6%E4%B8%80/"/>
     
   </entry>
   
   <entry>
     <title>考研英语一真题怎么刷</title>
-    <link href="https://www.zybhome.online/2020/02/28/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E4%B8%80%E7%9C%9F%E9%A2%98%E6%80%8E%E4%B9%88%E5%88%B7/"/>
-    <id>https://www.zybhome.online/2020/02/28/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E4%B8%80%E7%9C%9F%E9%A2%98%E6%80%8E%E4%B9%88%E5%88%B7/</id>
+    <link href="https://zybhome.online/2020/02/28/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E4%B8%80%E7%9C%9F%E9%A2%98%E6%80%8E%E4%B9%88%E5%88%B7/"/>
+    <id>https://zybhome.online/2020/02/28/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E4%B8%80%E7%9C%9F%E9%A2%98%E6%80%8E%E4%B9%88%E5%88%B7/</id>
     <published>2020-02-28T07:22:16.000Z</published>
     <updated>2020-02-28T10:47:58.000Z</updated>
     
@@ -369,19 +369,19 @@
     </summary>
     
     
-      <category term="考研2021" scheme="https://www.zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
+      <category term="考研2021" scheme="https://zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
     
     
-      <category term="考研" scheme="https://www.zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
+      <category term="考研" scheme="https://zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
     
-      <category term="英语一" scheme="https://www.zybhome.online/tags/%E8%8B%B1%E8%AF%AD%E4%B8%80/"/>
+      <category term="英语一" scheme="https://zybhome.online/tags/%E8%8B%B1%E8%AF%AD%E4%B8%80/"/>
     
   </entry>
   
   <entry>
     <title>如何迎战考研政治</title>
-    <link href="https://www.zybhome.online/2020/02/28/%E5%A6%82%E4%BD%95%E8%BF%8E%E6%88%98%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/"/>
-    <id>https://www.zybhome.online/2020/02/28/%E5%A6%82%E4%BD%95%E8%BF%8E%E6%88%98%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/</id>
+    <link href="https://zybhome.online/2020/02/28/%E5%A6%82%E4%BD%95%E8%BF%8E%E6%88%98%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/"/>
+    <id>https://zybhome.online/2020/02/28/%E5%A6%82%E4%BD%95%E8%BF%8E%E6%88%98%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/</id>
     <published>2020-02-28T07:20:32.000Z</published>
     <updated>2020-02-28T12:22:46.000Z</updated>
     
@@ -403,19 +403,19 @@
     </summary>
     
     
-      <category term="考研2021" scheme="https://www.zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
+      <category term="考研2021" scheme="https://zybhome.online/categories/%E8%80%83%E7%A0%942021/"/>
     
     
-      <category term="考研" scheme="https://www.zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
+      <category term="考研" scheme="https://zybhome.online/tags/%E8%80%83%E7%A0%94/"/>
     
-      <category term="政治一" scheme="https://www.zybhome.online/tags/%E6%94%BF%E6%B2%BB%E4%B8%80/"/>
+      <category term="政治一" scheme="https://zybhome.online/tags/%E6%94%BF%E6%B2%BB%E4%B8%80/"/>
     
   </entry>
   
   <entry>
     <title>交换机的基本配置</title>
-    <link href="https://www.zybhome.online/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/"/>
-    <id>https://www.zybhome.online/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://zybhome.online/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/"/>
+    <id>https://zybhome.online/2020/02/23/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</id>
     <published>2020-02-23T05:18:18.000Z</published>
     <updated>2020-02-23T13:57:18.000Z</updated>
     
@@ -435,19 +435,19 @@
     </summary>
     
     
-      <category term="网络工程专业学习" scheme="https://www.zybhome.online/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/"/>
+      <category term="网络工程专业学习" scheme="https://zybhome.online/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E4%B8%93%E4%B8%9A%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="网络工程" scheme="https://www.zybhome.online/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/"/>
+      <category term="网络工程" scheme="https://zybhome.online/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/"/>
     
-      <category term="交换机" scheme="https://www.zybhome.online/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
+      <category term="交换机" scheme="https://zybhome.online/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>博客网站的发布</title>
-    <link href="https://www.zybhome.online/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/"/>
-    <id>https://www.zybhome.online/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/</id>
+    <link href="https://zybhome.online/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/"/>
+    <id>https://zybhome.online/2020/02/22/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%91%E5%B8%83/</id>
     <published>2020-02-22T03:41:43.000Z</published>
     <updated>2020-02-22T09:18:48.000Z</updated>
     
@@ -463,21 +463,21 @@
     </summary>
     
     
-      <category term="博客网站的搭建" scheme="https://www.zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客网站的搭建" scheme="https://zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Hexo" scheme="https://www.zybhome.online/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://zybhome.online/tags/Hexo/"/>
     
-      <category term="域名" scheme="https://www.zybhome.online/tags/%E5%9F%9F%E5%90%8D/"/>
+      <category term="域名" scheme="https://zybhome.online/tags/%E5%9F%9F%E5%90%8D/"/>
     
-      <category term="CDN加速" scheme="https://www.zybhome.online/tags/CDN%E5%8A%A0%E9%80%9F/"/>
+      <category term="CDN加速" scheme="https://zybhome.online/tags/CDN%E5%8A%A0%E9%80%9F/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客主题之Icarus的图片轮播效果</title>
-    <link href="https://www.zybhome.online/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/"/>
-    <id>https://www.zybhome.online/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/</id>
+    <link href="https://zybhome.online/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/"/>
+    <id>https://zybhome.online/2020/02/22/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD%E6%95%88%E6%9E%9C/</id>
     <published>2020-02-22T02:25:13.000Z</published>
     <updated>2020-02-22T03:13:22.000Z</updated>
     
@@ -489,21 +489,21 @@
     </summary>
     
     
-      <category term="博客网站的搭建" scheme="https://www.zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客网站的搭建" scheme="https://zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Hexo" scheme="https://www.zybhome.online/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://zybhome.online/tags/Hexo/"/>
     
-      <category term="Icarus" scheme="https://www.zybhome.online/tags/Icarus/"/>
+      <category term="Icarus" scheme="https://zybhome.online/tags/Icarus/"/>
     
-      <category term="图片轮播" scheme="https://www.zybhome.online/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/"/>
+      <category term="图片轮播" scheme="https://zybhome.online/tags/%E5%9B%BE%E7%89%87%E8%BD%AE%E6%92%AD/"/>
     
   </entry>
   
   <entry>
     <title>Hexo中常用插件的安装与使用</title>
-    <link href="https://www.zybhome.online/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>https://www.zybhome.online/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://zybhome.online/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>https://zybhome.online/2020/02/21/Hexo%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
     <published>2020-02-21T09:30:21.000Z</published>
     <updated>2020-02-22T03:16:58.000Z</updated>
     
@@ -516,19 +516,19 @@
     </summary>
     
     
-      <category term="博客网站的搭建" scheme="https://www.zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客网站的搭建" scheme="https://zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Hexo" scheme="https://www.zybhome.online/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://zybhome.online/tags/Hexo/"/>
     
-      <category term="插件" scheme="https://www.zybhome.online/tags/%E6%8F%92%E4%BB%B6/"/>
+      <category term="插件" scheme="https://zybhome.online/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>博文书写之Markdown的基本语法和注意事项</title>
-    <link href="https://www.zybhome.online/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>https://www.zybhome.online/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
+    <link href="https://zybhome.online/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>https://zybhome.online/2020/02/21/Markdown%E4%B9%A6%E5%86%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
     <published>2020-02-21T05:53:36.000Z</published>
     <updated>2020-02-22T03:10:36.000Z</updated>
     
@@ -539,19 +539,19 @@
     </summary>
     
     
-      <category term="博客网站的搭建" scheme="https://www.zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客网站的搭建" scheme="https://zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Hexo" scheme="https://www.zybhome.online/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://zybhome.online/tags/Hexo/"/>
     
-      <category term="Markdown" scheme="https://www.zybhome.online/tags/Markdown/"/>
+      <category term="Markdown" scheme="https://zybhome.online/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客主题之Icarus的设置与美化（进阶）</title>
-    <link href="https://www.zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89/</id>
     <published>2020-02-18T09:01:19.000Z</published>
     <updated>2020-02-22T03:12:02.000Z</updated>
     
@@ -564,19 +564,19 @@
     </summary>
     
     
-      <category term="博客网站的搭建" scheme="https://www.zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客网站的搭建" scheme="https://zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Hexo" scheme="https://www.zybhome.online/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://zybhome.online/tags/Hexo/"/>
     
-      <category term="Icarus" scheme="https://www.zybhome.online/tags/Icarus/"/>
+      <category term="Icarus" scheme="https://zybhome.online/tags/Icarus/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客主题之Icarus的设置与美化（基础）</title>
-    <link href="https://www.zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/"/>
-    <id>https://www.zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/</id>
+    <link href="https://zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/"/>
+    <id>https://zybhome.online/2020/02/18/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E4%B9%8BIcarus%E7%9A%84%E8%AE%BE%E7%BD%AE%E4%B8%8E%E7%BE%8E%E5%8C%96%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/</id>
     <published>2020-02-18T05:09:02.000Z</published>
     <updated>2020-02-19T05:18:56.000Z</updated>
     
@@ -590,12 +590,12 @@
     </summary>
     
     
-      <category term="博客网站的搭建" scheme="https://www.zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客网站的搭建" scheme="https://zybhome.online/categories/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="Hexo" scheme="https://www.zybhome.online/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://zybhome.online/tags/Hexo/"/>
     
-      <category term="Icarus" scheme="https://www.zybhome.online/tags/Icarus/"/>
+      <category term="Icarus" scheme="https://zybhome.online/tags/Icarus/"/>
     
   </entry>
   
