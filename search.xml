@@ -1,232 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>“Oracle基础学习（一）”</title>
-    <url>/2022/05/12/%E2%80%9COracle%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%9D/</url>
-    <content><![CDATA[<h1 id="第1章-了解SQL"><a href="#第1章-了解SQL" class="headerlink" title="第1章 了解SQL"></a>第1章 了解SQL</h1><h2 id="1-1-数据库基础"><a href="#1-1-数据库基础" class="headerlink" title="1.1 数据库基础"></a>1.1 数据库基础</h2><h3 id="1-1-1-什么是数据库"><a href="#1-1-1-什么是数据库" class="headerlink" title="1.1.1 什么是数据库"></a>1.1.1 什么是数据库</h3><ul>
-<li>数据库是指以某种有组织的方式存储的数据集合；</li>
-<li>数据库是用于存储有组织的数据的容器；</li>
-<li>注意区别：数据库软件称为数据库管理系统（DBMS）。<h3 id="1-1-2-表"><a href="#1-1-2-表" class="headerlink" title="1.1.2 表"></a>1.1.2 表</h3></li>
-<li>表是结构化的文件，可以存储特定类型的数据；</li>
-<li>表是特定类型数据的结构化列表；</li>
-<li>表名称：每个表都具有一个用于标识它的名称，具有唯一性；</li>
-<li>模式：描述了数据库内的特定表和整个数据库可以及数据库内的表之间的关系；<h3 id="1-1-3-列和数据类型"><a href="#1-1-3-列和数据类型" class="headerlink" title="1.1.3 列和数据类型"></a>1.1.3 列和数据类型</h3></li>
-<li>列：包含表中特定的信息；</li>
-<li>数据类型：允许的数据的类型。每个表列都具有一种与之关联的数据类型，用以限制（或允许）在该列中存储特定的数据；<h3 id="1-1-4-行"><a href="#1-1-4-行" class="headerlink" title="1.1.4 行"></a>1.1.4 行</h3></li>
-<li>行：表中的记录。<h3 id="1-1-5-主键"><a href="#1-1-5-主键" class="headerlink" title="1.1.5 主键"></a>1.1.5 主键</h3></li>
-<li>主键：Primary Key；</li>
-<li>主键：唯一地标识表中的每一行的列（或列集合）；</li>
-<li>任意列设定为主键需满足的条件：（1）任意两行都不能具有相同的主键值，（2）每一行都必须具有一个主键值；</li>
-<li>定义主键：通常情况下，在表中的单独一列上定义主键。另外，当使用多个列定义主键时，规则必须适用于多个列的所有列，且多个列的所有列的值组合起来必须是唯一的，其中，多个列的单独列不需要具有唯一的值。<h2 id="什么是SQL"><a href="#什么是SQL" class="headerlink" title="什么是SQL"></a>什么是SQL</h2></li>
-<li>专门用于同数据库交流的语言</li>
-<li>优点：适用性广、容易学习、功能强大。<h1 id="第2章-初识Oracle和PL-SQL"><a href="#第2章-初识Oracle和PL-SQL" class="headerlink" title="第2章 初识Oracle和PL/SQL"></a>第2章 初识Oracle和PL/SQL</h1></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Linux基础学习（一）</title>
-    <url>/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="第一部分-Linux的规则与安装"><a href="#第一部分-Linux的规则与安装" class="headerlink" title="第一部分 Linux的规则与安装"></a>第一部分 Linux的规则与安装</h1><h2 id="第5章-首次登录与在线求助man-page"><a href="#第5章-首次登录与在线求助man-page" class="headerlink" title="第5章 首次登录与在线求助man page"></a>第5章 首次登录与在线求助man page</h2><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><ul>
-<li>X windows快速重启：<code>Alt+Ctrl+Backspace</code></li>
-<li>文字登录界面切换：<code>Ctrl+Alt+F1~F6</code></li>
-<li>图形登录界面切换：<code>Ctrl+Alt+F7</code></li>
-<li>启动X窗口：<code>startx</code></li>
-<li>注销Linux：<code>exit</code></li>
-<li>修改语言：<code>LANG=en_us</code></li>
-<li>显示日期与时间：<code>date</code></li>
-<li>显示日历：<code>cal</code></li>
-<li>计算器：<code>bc</code></li>
-<li>停止：<code>Ctrl+c</code></li>
-<li>结束输入：<code>Ctrl+d</code></li>
-<li>在线求助：<code>man 命令</code>、<code>info 命令</code></li>
-<li>查看系统的使用状态：<br>（1）查看目前在线用户：<code>who</code><br>（2）查看网络联机状态：<code>netstat -a</code><br>（3）查看后台执行程序：<code>ps -aux</code></li>
-<li>数据同步写入磁盘：<code>sync</code></li>
-<li>关机命令：<br>（1）<code>shutdown [-t 秒] [-arkhncfF] 时间 [警告信息]</code><br>（2）<code>halt</code> 可以执行硬件关机的特殊功能<br>（3）<code>reboot</code><br>（4）<code>poweroff</code></li>
-<li>切换执行等级：<code>init</code><br>（1）run level 0：关机<br>（2）run level 3：纯命令行模式<br>（3）run level 5：含有图形界面模式<br>（4）run level 6：重启<h1 id="第二部分-Linux、目录与磁盘格式"><a href="#第二部分-Linux、目录与磁盘格式" class="headerlink" title="第二部分 Linux、目录与磁盘格式"></a>第二部分 Linux、目录与磁盘格式</h1><h2 id="第6章-Linux的文件权限与目录配置"><a href="#第6章-Linux的文件权限与目录配置" class="headerlink" title="第6章 Linux的文件权限与目录配置"></a>第6章 Linux的文件权限与目录配置</h2><h3 id="6-2-1-Linux文件属性"><a href="#6-2-1-Linux文件属性" class="headerlink" title="6.2.1 Linux文件属性"></a>6.2.1 Linux文件属性</h3><h4 id="文件的类型与权限"><a href="#文件的类型与权限" class="headerlink" title="文件的类型与权限"></a>文件的类型与权限</h4>（1）d 目录<br>（2）- 文件<br>（3）l 连接文件<br>（4）b 可供存储的接口设备<br>（5）c 串行端口设备<br>（6）r 可读<br>（7）w 可写<br>（8）x 可执行<h4 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h4></li>
-<li>列出所有文件详细的权限与属性：<code>ls -al</code></li>
-<li>改变所属用户组：<code>chgrp [-R] dirname/filename</code></li>
-<li>改变文件所有者：<code>chown</code><br>（1）<code>chown [-R] 账号名称 文件或目录</code><br>（2）<code>chown [-R] 账号名称：组名 文件或目录</code></li>
-<li>改变权限：<code>chmod</code><br>（1）三种身份：owner、group、others<br>（2）9个基本权限：<code>-rwxrwxrwx</code><br>（3）权限分数：r-4、w-2、x-1<br>（4）<code>chmod [-R] xyz 文件或目录</code><br>（5）<code>chomd [u/g/o/a] +/-/= r/w/x 文件或目录</code><h3 id="6-2-4-文件种类与拓展名"><a href="#6-2-4-文件种类与拓展名" class="headerlink" title="6.2.4 文件种类与拓展名"></a>6.2.4 文件种类与拓展名</h3><h4 id="文件种类及属性符号"><a href="#文件种类及属性符号" class="headerlink" title="文件种类及属性符号"></a>文件种类及属性符号</h4></li>
-<li>普通文件：<code>-</code><br>（1）纯文本文件<br>（2）二进制文件<br>（3）数据格式文件</li>
-<li>目录：<code>d</code></li>
-<li>连接文件：<code>l</code></li>
-<li>设备与设备文件<br>（1）块设备文件：存储数据以提供系统随机访问的接口设备 <code>b</code><br>（2）字符设备文件：串行端口的接口设备 <code>c</code></li>
-<li>套接字：<code>s</code></li>
-<li>管道FIFO：<code>p</code><h4 id="Linux文件拓展名"><a href="#Linux文件拓展名" class="headerlink" title="Linux文件拓展名"></a>Linux文件拓展名</h4></li>
-<li><code>*.sh</code>：脚本或批处理文件</li>
-<li><code>*Z、*.tar、*.tar.gz、*.zip、*.tgz</code>：压缩文件</li>
-<li><em>.html、</em>.php：网页相关文件<h2 id="6-3-Linux目录配置"><a href="#6-3-Linux目录配置" class="headerlink" title="6.3 Linux目录配置"></a>6.3 Linux目录配置</h2><h3 id="6-3-1-Linux目录配置标准：FHS"><a href="#6-3-1-Linux目录配置标准：FHS" class="headerlink" title="6.3.1 Linux目录配置标准：FHS"></a>6.3.1 Linux目录配置标准：FHS</h3></li>
-<li>四种交互作用的形态<br>（1）可分享的<br>（2）不可分项的<br>（3）不变的<br>（4）可变动的</li>
-<li>三层目录<br>（1）<code>/</code>：与开机系统有关<br>（2）<code>/usr</code>：与软件安装/执行有关，放置的数据属于可分享的与不可变动的，“UNIX操作系统软件资源”放置目录<br>（3）<code>/var</code>：与系统运作过程有关，主要针对常态性变动的文件，包括缓存、登录文件以及某些软件运行所产生的文件</li>
-<li><code>/</code> 下子目录（FHS标准规定）<br>（1）<code>/bin</code>：放置在单用户维护模式下还能够被操作的命令，不可与根目录放在不同分区<br>（2）<code>/boot</code>：放置开机会使用到的文件<br>（3）<code>/dev</code>：放置文件形式的设备与接口设备，不可与根目录放在不同分区<br>（4）<code>/etc</code>：放置主要的配置文件，不可与根目录放在不同分区<br>（5）<code>/home</code>：默认的用户主文件夹<br>（6）<code>/lib</code>：放置开机会用到的函数库以及/bin或/sbin下命令会调用的函数库，不可与根目录放在不同分区<br>（7）<code>/media</code>：放置可删除的设备<br>（8）<code>/mnt</code>：用来暂时挂载某些额外的设备<br>（9）<code>/opt</code>：第三方软件放置的目录<br>（10）<code>/root</code>：系统管理员的主文件夹<br>（11）<code>/sbin</code>：放置开机过程中需要的，包括开机、修复、还原系统的命令，不可与根目录放在不同分区<br>（12）<code>/srv</code>：放置一些网络服务启动后需要取用的数据<br>（13）<code>/tmp</code>：放置一般用户或正在执行的程序暂时放置文件的地方</li>
-<li><code>/</code> 下子目录（其他重要）<br>（1）<code>/lost+found</code>：放置一些在文件系统发生错误时丢失的片段<br>（2）<code>/proc</code>：一个虚拟文件系统，放置的数据在内存当中，不占硬盘空间<br>（3）<code>/sys</code>：一个虚拟文件系统，记录与内核相关的信息，不占硬盘空间</li>
-<li><code>/usr</code>下子目录<br>（1）<code>/usr/X11R6/</code>:放置X Window系统重要数据<br>（2）<code>/usr/bin/</code>：放置绝大部分的用户可使用命令<br>（3）<code>/usr/include/</code>：放置C/C++等程序语言的头文件与包含文件<br>（4）<code>/usr/lib/</code>：放置各应用软件的函数库、目标文件以及不被一般用户惯用的执行文件或脚本<br>（5）<code>/usr/local/</code>：放置自行下载安装的软件<br>（6）<code>/usr/sbin/</code>：放置非系统正常运行所需要的系统命令<br>（7）<code>/usr/share/</code>：放置共享文件的地方<br>（8）<code>/usr/src/</code>：放置源码<ul>
-<li><code>/var</code>下子目录<br>（1）<code>/var/cache/</code>：放置应用程序运行过程中会产生的一些暂存文件<br>（2）<code>/var/lib/</code>：放置在程序执行过程中需要使用到的数据文件<br>（3）<code>/var/lock/</code>：设备锁<br>（4）<code>/var/log/</code>：放置登录文件<br>（5）<code>/var/mail/</code>:放置个人电子邮件信箱的目录<br>（6）<code>/var/run/</code>：放置某些程序或者服务启动后的PID<br>（7）<code>/var/spool/</code>：放置一些队列数据<h3 id="6-3-3-绝对路径与相对路径"><a href="#6-3-3-绝对路径与相对路径" class="headerlink" title="6.3.3 绝对路径与相对路径"></a>6.3.3 绝对路径与相对路径</h3></li>
-</ul>
-</li>
-<li><code>.</code> :代表当前的目录，也可以使用 <code>./</code> 来表示</li>
-<li><code>..</code> :代表上一层目录，也可以使用 <code>../</code> 来表示<h3 id="6-3-4-Centos的查看"><a href="#6-3-4-Centos的查看" class="headerlink" title="6.3.4 Centos的查看"></a>6.3.4 Centos的查看</h3></li>
-<li>查看实际的内核版本：<code>uname -r</code></li>
-<li>查看distribution的具体版本信息：<code>lsb_release -a</code><h2 id="第7章-Linux文件与目录管理"><a href="#第7章-Linux文件与目录管理" class="headerlink" title="第7章 Linux文件与目录管理"></a>第7章 Linux文件与目录管理</h2><h3 id="7-1-目录与路径"><a href="#7-1-目录与路径" class="headerlink" title="7.1 目录与路径"></a>7.1 目录与路径</h3><h4 id="7-1-1-相对路径与绝对路径"><a href="#7-1-1-相对路径与绝对路径" class="headerlink" title="7.1.1 相对路径与绝对路径"></a>7.1.1 相对路径与绝对路径</h4></li>
-<li>绝对路径：路径的写法一定由根目录<code>/</code>写起</li>
-<li>相对路径：路径的写法不是由<code>/</code>写起，指相对于目前工作目录的路径<h4 id="7-1-2-目录的相关操作"><a href="#7-1-2-目录的相关操作" class="headerlink" title="7.1.2 目录的相关操作"></a>7.1.2 目录的相关操作</h4></li>
-<li>比较特殊的目录：<br>（1）<code>.</code> :代表此层目录<br>（2）<code>..</code> ：代表上一层目录<br>（3）<code>-</code> ：代表前一个工作目录<br>（4）<code>~</code> ：代表“目前用户身份”所在的主文件夹<br>（5）<code>~account</code> ：代表account这个用户的主文件夹</li>
-<li>常见处理目录的命令<br>（1）切换目录：<code>cd [相对路径或绝对路径]</code><br>（2）显示当前目录：<code>pwd [-p]</code><br><code>-p</code> 显示出当前的路径，而非使用连接（link）路径<br>（3）新建一个新的目录：<code>mkdir [-mp] 目录名称</code><br><code>-m</code>配置目录的权限（强制）<br><code>-p</code> 递归创建需要的目录<br>（4）删除一个空的目录：<code>rmdir [-p] 目录名称</code><br><code>-p</code> 递归删除空目录<br>（5）删除目录及目录下所有东西：<code>rm -r 目录名称</code><h3 id="7-2-文件与目录管理"><a href="#7-2-文件与目录管理" class="headerlink" title="7.2 文件与目录管理"></a>7.2 文件与目录管理</h3><h4 id="7-2-1-查看文件与目录：-ls"><a href="#7-2-1-查看文件与目录：-ls" class="headerlink" title="7.2.1 查看文件与目录： ls"></a>7.2.1 查看文件与目录： ls</h4></li>
-<li><code>ls [-aAdfFhilnrRSt] 目录名称</code><br>（1）<code>-a</code> ：全部的文件，连同隐藏文件一起列出来<br>（2）<code>-d</code> ：仅列出目录本身<br>（3）<code>-l</code> ：列出长数据串，包含文件的属性与权限等数据</li>
-<li><code>ls [--color={never,auto,always}] 目录名称</code></li>
-<li><code>ls [--full-time] 目录名称</code><h3 id="7-2-2-复制、删除与移动：cp-rm-mv"><a href="#7-2-2-复制、删除与移动：cp-rm-mv" class="headerlink" title="7.2.2 复制、删除与移动：cp,rm,mv"></a>7.2.2 复制、删除与移动：cp,rm,mv</h3></li>
-<li><code>cp [-adfilprsu] 源文件 目标文件</code><br>（1）<code>-a</code> ：相当于-pdr<br>（2）<code>-i</code> ：若目标文件已经存在时，在覆盖时会先询问操作的进行<br>（3）<code>-p</code> ：连同文件的属性一起复制过去，而非使用默认属性<br>（3）<code>-r</code> ：递归持续复制，用于目录的复制行为</li>
-<li><code>cp [options] source1 source2 source3 ... directory</code></li>
-<li><code>rm [-fir] 文件或目录</code><br>（1）<code>-f</code> :忽略不存在的文件，不会出现警告信息<br>（2）<code>-i</code> ：互动模式，在删除前会询问用户是否操作<br>（3）<code>-r</code> ：递归删除</li>
-<li><code>mv [-fiu] source destination</code><br>（1）<code>-f</code> :强制<br>（2）<code>-i</code> ：若目标文件已经存在，就会询问是否覆盖<br>（3）<code>-u</code> ：若目标文件已经存在，且source比较新，才会更新</li>
-<li><code>mv [options] source1 source2 source3 directory</code><h3 id="7-2-3-取得路径的文件名与目录名称"><a href="#7-2-3-取得路径的文件名与目录名称" class="headerlink" title="7.2.3 取得路径的文件名与目录名称"></a>7.2.3 取得路径的文件名与目录名称</h3></li>
-<li><code>basename 路径</code> ：取得文件名</li>
-<li><code>dirname 路径</code> ：取得目录名<h2 id="7-3-文件内容查阅"><a href="#7-3-文件内容查阅" class="headerlink" title="7.3 文件内容查阅"></a>7.3 文件内容查阅</h2><h3 id="7-3-1-直接查看文件内容"><a href="#7-3-1-直接查看文件内容" class="headerlink" title="7.3.1 直接查看文件内容"></a>7.3.1 直接查看文件内容</h3></li>
-<li><code>cat [-AbEnTv] 文件路径</code> ：由第一行开始显示文件内容<br>（1）<code>-A</code> ：相当于 -vET的整合参数，可列出一些特殊字符<br>（2）<code>-b</code> ：列出行号，仅针对非空白行做行号显示<br>（3）<code>-n</code> ：打印出行号，连同空白行也会有行号</li>
-<li><code>tac 文件路径</code> ：由最后一行开始显示</li>
-<li><code>nl [-bnw] 文件</code> ：显示的时候输出行号<h3 id="7-3-2-可翻页查看"><a href="#7-3-2-可翻页查看" class="headerlink" title="7.3.2 可翻页查看"></a>7.3.2 可翻页查看</h3></li>
-<li><code>more 文件路径</code> ：一页一页地显示文件内容</li>
-<li><code>less 文件路径</code> ：一页一页地显示文件内容（可以往前翻页）<h3 id="7-3-3-数据选取"><a href="#7-3-3-数据选取" class="headerlink" title="7.3.3 数据选取"></a>7.3.3 数据选取</h3></li>
-<li>head [-n number] 文件 ：取出前面几行</li>
-<li>tail [-n number] 文件 ：取出后面几行<h3 id="7-3-4-非纯文本文件：od"><a href="#7-3-4-非纯文本文件：od" class="headerlink" title="7.3.4 非纯文本文件：od"></a>7.3.4 非纯文本文件：od</h3></li>
-<li><code>od [-t TYPE] 文件</code><br>（1）<code>a</code> 利用默认字符来输出<br>（2）<code>c</code> 利用ASCII字符来输出<br>（3）<code>d</code> 利用十进制来输出数据<br>（4）<code>f</code> 利用浮点数来输出数据<br>（5）<code>o</code> 利用八进制来输出数据<br>（6）<code>x</code> 利用十六进制来输出数据<h3 id="7-3-5-修改文件时间或创建新文件：touch"><a href="#7-3-5-修改文件时间或创建新文件：touch" class="headerlink" title="7.3.5 修改文件时间或创建新文件：touch"></a>7.3.5 修改文件时间或创建新文件：touch</h3></li>
-<li>三个时间参数<br>（1）<code>mtime</code> ：文件内容数据最后更新时间（ls默认显示的时间）<br>（2）<code>ctime</code> ：文件状态最后更新时间<br>（3）<code>atime</code> ：文件内容最后读取时间</li>
-<li><code>ls -l --time=时间参数 文件</code></li>
-<li><code>touch [-acdmt] 文件</code><br>（1）<code>-d</code>：后接欲修改的日期<br>（2）<code>-t</code>：后接欲修改的时间，格式[YYMMDDhhmm]</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linxu学习</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>入门</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>（Windows环境下）Oracle学习系列——前期的准备工作</title>
-    <url>/2022/05/10/%EF%BC%88Windows%E7%8E%AF%E5%A2%83%E4%B8%8B%EF%BC%89Oracle%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%89%8D%E6%9C%9F%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</url>
-    <content><![CDATA[<h1 id="一、推荐书籍"><a href="#一、推荐书籍" class="headerlink" title="一、推荐书籍"></a>一、推荐书籍</h1><ul>
-<li>Oracle PL/SQL必知必会</li>
-<li><a href="https://www.epubit.com/bookDetails?id=N13640">出版社官网</a></li>
-<li>图书封面<img src="https://img-blog.csdnimg.cn/img_convert/3afa3dbb77f567c938f733472abb56cb.png#pic_center" alt="图书封面"></li>
-<li><a href="https://www.aliyundrive.com/s/TrxGtvAxmsy">电子书PDF格式</a><h1 id="二、软件下载"><a href="#二、软件下载" class="headerlink" title="二、软件下载"></a>二、软件下载</h1><h2 id="（一）Oracle19c"><a href="#（一）Oracle19c" class="headerlink" title="（一）Oracle19c"></a>（一）Oracle19c</h2></li>
-</ul>
-<ul>
-<li>软件介绍<br>Oracle Database 19c 是最新的长期版本，支持持续时间最广。</li>
-<li>软件版本</li>
-</ul>
-<p>19.3 - Enterprise Edition (also includes Standard Edition 2) Microsoft Windows x64 (64-bit)</p>
-<ul>
-<li>下载地址<br>（1）<a href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html">官网下载地址</a><br>（2）我的阿里云下载地址（暂不支持）<a id="more"></a>
-<h2 id="（二）Oracle-SQL-Developer"><a href="#（二）Oracle-SQL-Developer" class="headerlink" title="（二）Oracle SQL Developer"></a>（二）Oracle SQL Developer</h2></li>
-<li>软件介绍<br>Oracle SQL Developer 是一个免费的集成开发环境，简化了传统部署和云部署中 Oracle 数据库的开发和管理。SQL Developer 提供完整的端到端的 PL/SQL 应用开发，包括一个用于运行查询和脚本的工作表，一个用于管理数据库的 DBA 控制台，一个报告界面、一个全面的数据建模解决方案，以及一个用于将您的第三方数据库迁移到 Oracle 的迁移平台。</li>
-<li>软件版本<br>Version 21.4.3.063.0100 - March 3, 2022 Windows 64-bit with JDK 8 included</li>
-<li>下载地址<br>（1）<a href="https://www.oracle.com/tools/downloads/sqldev-downloads.html">官网下载地址</a><br>（2）我的阿里云下载地址（暂不支持）<h1 id="二、软件安装与卸载"><a href="#二、软件安装与卸载" class="headerlink" title="二、软件安装与卸载"></a>二、软件安装与卸载</h1><h2 id="（一）Oracle19c-1"><a href="#（一）Oracle19c-1" class="headerlink" title="（一）Oracle19c"></a>（一）Oracle19c</h2><h3 id="1、Oracle19c的安装——服务器类"><a href="#1、Oracle19c的安装——服务器类" class="headerlink" title="1、Oracle19c的安装——服务器类"></a>1、Oracle19c的安装——服务器类</h3></li>
-</ul>
-<ul>
-<li><p>下载好后获得名为<strong>WINDOWS.X64_193000_db_home.zip</strong>的压缩包，解压缩到本地硬盘的指定位置，我的路径是<strong>D:\WINDOWS.X64_193000_db_home</strong>；<br><img src="https://img-blog.csdnimg.cn/e380a95e83324f0e9f5e0f0515c20bba.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>以管理员模式运行<strong>setup.exe</strong>开始安装；<br><img src="https://img-blog.csdnimg.cn/16b224f4540d49ea9dc31cff4b8c0bb5.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>选择配置选项</strong>窗口中，选择 <strong>创建并配置简单实例数据库</strong> ，然后点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/a8fe5f16172f4e1ebb056861f83c8627.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>选择系统类</strong>窗口中，选择 <strong>服务器类</strong>，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/7843f4544088451a90b5803bc098ed08.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>选择安装类型</strong>窗口中，选择<strong>高级安装</strong>，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/aa55991f2dc34ec491ea9494e2dceb48.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>选择数据库版本</strong>窗口中，选择<strong>企业版</strong>，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/651c89c857154ef6b919328d776406aa.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定Oracle主目录用户</strong>窗口中，为了便于管理，选择<strong>创建新Windows用户</strong>，并填写<strong>用户名</strong>和<strong>口令</strong>，我的用户名ZAZDREAM，口令ZYB1314520ZG，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/1b1eda4e70554f9386c11a0f64a7c551.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定安装位置</strong>窗口中，选择安装程序指定的默认路径即可，也可以自己指定位置，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/ed97ad6822e4485282eebd7dae4723bb.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>选择配置类型</strong>窗口中，选择<strong>一般用途/事务处理</strong>，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/e15bf8d062f54a1998d6841941cd8d09.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定数据库标识符</strong>窗口中，设置<strong>全局数据库名</strong>，我的为<strong>orcl</strong>（务必记住！！！），并且<strong>Oracle系统标识符</strong>也设置为<strong>orcl</strong>，与全局数据库名保持一致，将<strong>创建为容器数据库</strong>前面的勾选去掉，这里我们不使用他，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/6e20b93319f145d7ba718110f58b7fae.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定配置选项</strong>窗口中，全部默认选项即可，注意我这里的数据库字符集默认已经是<strong>UTF-８</strong>编码，如果你的默认不是，可以手动切换，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/8748f30abf6a440d88559440ad2eac1f.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/9140e2f9a3f645928b3331a3c5fff6ec.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/e39d2cf0babc40fe9631d8f85d2142d9.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定数据库存储选项</strong>窗口中，选择<strong>文件系统</strong>，<strong>指定数据库文件位置</strong>默认即可，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/4ffe3172962f4f64bf873b3715ed94d0.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定管理选项</strong>窗口中，默认不选，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/e1ac1d0620c648b199c205afdd6df881.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定恢复选项</strong>窗口中，勾选<strong>启用恢复</strong>，选择<strong>文件系统</strong>，<strong>恢复区位置</strong>默认即可，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/a1aa3a8d46be439291ffc0e0eb6e2c7d.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>在<strong>指定口令方案</strong>窗口中，为了便于使用，选择<strong>对所有账户使用相同的口令</strong>，并按要求设置好口令，我的口令为zYB1314520ZG，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/c2b5860194824cdc90bc61e30e8ea573.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>进入<strong>执行先决条件检查</strong>窗口；<br><img src="https://img-blog.csdnimg.cn/509250899c7b4f0d95ace22a1fbfd3f1.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>进入<strong>概要</strong>窗口，点击<strong>安装</strong>；<br><img src="https://img-blog.csdnimg.cn/ba529c555ca44cd1904ac064c4cc665d.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>安装过程中可能会弹出<strong>无法为指定的用户设置ACL</strong>警告窗口，点击<strong>继续</strong>即可，需要点击两次，慢慢等待安装程序完成。温馨提示：在进度为42%时会进入长时间等待，这是正常情况；<br><img src="https://img-blog.csdnimg.cn/dae190d2faf84629bb1a6a730d019771.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/4e63def8fc8f43bb98f0684610833938.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>安装完成，点击<strong>关闭</strong>。<br><img src="https://img-blog.csdnimg.cn/1458bad30acd4aad9563d24879757e2c.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-<li><p>测试是否安装成功：以<strong>管理员身份</strong>运行<strong>SQL  Plus</strong>，输入正确的用户名和密码，键入<code>SELECT  sysdate FROM dual;</code>，若成功返回系统时间，则数据库安装成功~<br><img src="https://img-blog.csdnimg.cn/1fae216c6ec340b7854b29d6d579f434.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/569a0203c79c49fbb4762abb2929c820.png#pic_center" alt="在这里插入图片描述"></p>
-</li>
-</ul>
-<h3 id="2、Oracle19c的安装——桌面类"><a href="#2、Oracle19c的安装——桌面类" class="headerlink" title="2、Oracle19c的安装——桌面类"></a>2、Oracle19c的安装——桌面类</h3><p>桌面类安装过程与服务器类安装过程类似，主要对几个不一样的步骤进行说明。</p>
-<ul>
-<li>在<strong>选择系统类</strong>窗口中，选择 <strong>桌面类</strong>，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/debc88c7303a47b08fe4299799c18e0a.png#pic_center" alt="在这里插入图片描述"></li>
-<li>在<strong>典型安装配置</strong>窗口中，<strong>Oracle基目录</strong>选择指定目录，我的为<strong>D:\Oracle19c</strong>，<strong>数据库文件位置</strong>、<strong>数据库版本</strong>、<strong>字符集</strong>默认即可，设置<strong>全局数据库名</strong>，我的为<strong>orcl</strong>（务必记住！！！），<strong>口令</strong>按要求设置，去掉<strong>创建为容器数据库</strong>的勾选，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/97f294ae51c84e7c88d021520736ffa6.png#pic_center" alt="在这里插入图片描述"></li>
-<li>进入<strong>概要</strong>窗口，点击<strong>安装</strong>。<br><img src="https://img-blog.csdnimg.cn/f16901ae24484896b878973fc56f9be6.png#pic_center" alt="在这里插入图片描述"><h3 id="3、Oracle19c的配置"><a href="#3、Oracle19c的配置" class="headerlink" title="3、Oracle19c的配置"></a>3、Oracle19c的配置</h3><h4 id="（1）解锁scott用户"><a href="#（1）解锁scott用户" class="headerlink" title="（1）解锁scott用户"></a>（1）解锁scott用户</h4></li>
-<li>scott用户是什么?<br>在Oracle数据库中，scott是一个示例用户的名称，学习者可以用scott登录数据库，使用Oracle提供的一些简单应用示例。</li>
-<li>为什么需要解锁scott用户?<br>这是因为Oracle19c默认没有把Scott用户加入进来，需要我们自己手动添加。</li>
-<li>找到<strong>scott.sql</strong>文件，文件所在路径为<strong>D:\WINDOWS.X64_193000_db_home\rdbms\admin\scott.sql</strong> 。温馨提示：该目录在Oracle19c的解压目录下。<br><img src="https://img-blog.csdnimg.cn/c99a6140ba7c41859987afeb19e9ce57.png#pic_center" alt="在这里插入图片描述"></li>
-<li>以<strong>管理员身份</strong>运行<strong>SQL  Plus</strong>，输入用户名system和密码zYB1314520ZG，键入命令<code>@D:\WINDOWS.X64_193000_db_home\rdbms\admin\scott.sql</code><br><img src="https://img-blog.csdnimg.cn/a922e298f1a2448abac3fa48ad1783cc.png#pic_center" alt="在这里插入图片描述"></li>
-<li>关闭<strong>SQL  Plus</strong>，重新以<strong>管理员身份</strong>运行<strong>SQL  Plus</strong>，输入用户名system和密码zYB1314520ZG，键入命令<code>ALTER USER scott ACCOUNT UNLOCK;</code>解锁scott用户，然后键入命令<code>ALTER USER scott IDENTIFIED BY ZYB1314520ZG;</code>给scott用户设置新口令 ZYB1314520ZG（自己设定）。<br><img src="https://img-blog.csdnimg.cn/a0a0371b5a7e4df993a568ee8b7870d3.png#pic_center" alt="在这里插入图片描述"></li>
-<li>关闭<strong>SQL  Plus</strong>，重新以<strong>管理员身份</strong>运行<strong>SQL  Plus</strong>，输入用户名scott和密码ZYB1314520ZG，经测试能够正常连接。<br><img src="https://img-blog.csdnimg.cn/e892262ea2ee4116bb772b262e79cf99.png#pic_center" alt="在这里插入图片描述"><h4 id="（2）配置网络服务"><a href="#（2）配置网络服务" class="headerlink" title="（2）配置网络服务"></a>（2）配置网络服务</h4></li>
-<li>打开<strong>Net Manager</strong>；<br><img src="https://img-blog.csdnimg.cn/155df75ebbcc4276a5712a1369629920.png#pic_center" alt="在这里插入图片描述"></li>
-<li>点击并展开<strong>本地</strong>，点击<strong>服务命名</strong>，点击左上角绿色的 + ；<br><img src="https://img-blog.csdnimg.cn/d6605c5e21114906a2c66b984ec10962.png#pic_center" alt="在这里插入图片描述"></li>
-<li>设置<strong>网络服务名</strong>，我的为MyOracle19c，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/871b3760f8a741b0aae148322e76d4e3.png#pic_center" alt="在这里插入图片描述"></li>
-<li>选择<strong>TCP/IP</strong>，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/81754caeb1c2423dbaaf0b622ff4e449.png#pic_center" alt="在这里插入图片描述"></li>
-<li>主机名只能填<strong>localhost</strong>或者 <strong>127.0.0.1</strong>，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/4d596b3d4475448c8d2353641f8c6f04.png#pic_center" alt="在这里插入图片描述"></li>
-<li>设置<strong>服务名</strong>，我的为orcl，点击<strong>下一步</strong>；<br><img src="https://img-blog.csdnimg.cn/de45c572ebe44f289c9fec414efd28a8.png#pic_center" alt="在这里插入图片描述"></li>
-<li>点击<strong>测试</strong>，结果连接失败；<br><img src="https://img-blog.csdnimg.cn/4691b2f9ab0b4df18dcd0ae473be1227.png#pic_center" alt="在这里插入图片描述"></li>
-<li>点击<strong>更改登录</strong>，用户名system，口令zYB1314520ZG，点击<strong>确定</strong>，点击<strong>测试</strong>，结果连接测试成功，然后关闭；<br><img src="https://img-blog.csdnimg.cn/4ba3df1e4bd545cca44e790160699f3d.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/c04e64c4cc7c4356a6fd4e93ab758d91.png#pic_center" alt="在这里插入图片描述"></li>
-<li>关闭<strong>Net Manager</strong>窗口时，弹出<strong>更改配置确认</strong>窗口，点击<strong>保存</strong>。<br><img src="https://img-blog.csdnimg.cn/cc8ea42b65ed487a9c2d49feca6d8128.png#pic_center" alt="在这里插入图片描述"><h3 id="4、Oracle19c的故障解决"><a href="#4、Oracle19c的故障解决" class="headerlink" title="4、Oracle19c的故障解决"></a>4、Oracle19c的故障解决</h3><h4 id="（1）Oracle安装过程的时候，安装程序显示-“Oracle-主目录位置包含无效字符”。"><a href="#（1）Oracle安装过程的时候，安装程序显示-“Oracle-主目录位置包含无效字符”。" class="headerlink" title="（1）Oracle安装过程的时候，安装程序显示 “Oracle 主目录位置包含无效字符”。"></a>（1）Oracle安装过程的时候，安装程序显示 “Oracle 主目录位置包含无效字符”。</h4></li>
-<li>故障原因：可能由于软件安装路径中包含中文字符所导致。</li>
-<li>故障截图：<br><img src="https://img-blog.csdnimg.cn/f7d41656ccfc4d4dbf63eba1bf01ea55.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/38673da9eab7407bb11069df165e462c.png#pic_center" alt="在这里插入图片描述"></li>
-<li>解决方法：将Oracle安装路径都更改成Oracle的有效字符（英文、下划线、数字等）。<h4 id="（2）Oracle本地监听配置出现故障。"><a href="#（2）Oracle本地监听配置出现故障。" class="headerlink" title="（2）Oracle本地监听配置出现故障。"></a>（2）Oracle本地监听配置出现故障。</h4></li>
-<li>故障原因：监听程序未启动</li>
-<li>情况一：使用<strong>Net Manager</strong>配置时总是显示测试连接不成功，无监听程序：<br><img src="https://img-blog.csdnimg.cn/8c64d08fad5b4642a06bc178d3c4b275.png#pic_center" alt="在这里插入图片描述"></li>
-<li>情况二：在CMD下键入<code>lsnrctl status</code>命令查看监听器程序运行状态，发现无监听器程序运行，然后键入<code>lsnrctl start</code>命令启动监听器程序时，返回如下：<br><img src="https://img-blog.csdnimg.cn/1c405233e8c0412cb596429adb98607d.png#pic_center" alt="在这里插入图片描述"></li>
-<li>解决方式：用<strong>管理员身份</strong>打开CMD，再次键入<code>lsnrctl start</code>命令，按照提示输入Oracle19c安装过程中创建的Windows用户ZAZDREAM的口令ZYB1314520ZG，结果显示监听器程序启动成功。<br><img src="https://img-blog.csdnimg.cn/c4430cfaa6494db18c6e094937d14246.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/ad12254bb8d44ab0ac1a555ce76fdd6b.png#pic_center" alt="在这里插入图片描述"><h3 id="5、Oracle19c的完全卸载（手动卸载）"><a href="#5、Oracle19c的完全卸载（手动卸载）" class="headerlink" title="5、Oracle19c的完全卸载（手动卸载）"></a>5、Oracle19c的完全卸载（手动卸载）</h3><h4 id="（1）停止运行所有关于Oracle的服务"><a href="#（1）停止运行所有关于Oracle的服务" class="headerlink" title="（1）停止运行所有关于Oracle的服务"></a>（1）停止运行所有关于Oracle的服务</h4></li>
-<li>打开<strong>控制面板</strong>；<br><img src="https://img-blog.csdnimg.cn/9b970b3c4176488c8832bcf6fd6a5539.png#pic_center" alt="在这里插入图片描述"></li>
-<li>打开<strong>服务</strong>；<br><img src="https://img-blog.csdnimg.cn/cba3c8f858ce417cae1b39a0e4cf483c.png#pic_center" alt="在这里插入图片描述"></li>
-<li>停止运行所有以<strong>Oracle</strong>开头的服务；<br><img src="https://img-blog.csdnimg.cn/5ad6a78cc10144dfada5d23537d5f8e3.png#pic_center" alt="在这里插入图片描述"><h4 id="（2）删除所有关于Oracle的注册表"><a href="#（2）删除所有关于Oracle的注册表" class="headerlink" title="（2）删除所有关于Oracle的注册表"></a>（2）删除所有关于Oracle的注册表</h4></li>
-<li>打开<strong>注册表编辑器</strong><br><img src="https://img-blog.csdnimg.cn/4e830de839904060841de3180b3fea57.png#pic_center" alt="在这里插入图片描述"></li>
-<li>将<strong>HKEY_CLASS_ROOT</strong>下的所有以<strong>Ora</strong>开头的注册表项删除；<br><img src="https://img-blog.csdnimg.cn/d89279eeb6114d6cb444e1a502a9addb.png#pic_center" alt="在这里插入图片描述"></li>
-<li>将<strong>HKEY_LOCAL_MACHINE\SOFTWARE</strong>下的<strong>ORACLE</strong>注册表项删除；<br><img src="https://img-blog.csdnimg.cn/aa1d1bb9f56640edb3641d47ddc113ec.png#pic_center" alt="在这里插入图片描述"></li>
-<li>将<strong>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services</strong>下的所有以<strong>Oracle</strong>开头的注册表项删除；<br><img src="https://img-blog.csdnimg.cn/7074d5b6024b4e708f98d5e819c69a71.png#pic_center" alt="在这里插入图片描述"></li>
-<li>将<strong>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application</strong>所有以<strong>Oracle</strong>开头的注册表项删除；<br><img src="https://img-blog.csdnimg.cn/12292a8519b744b1b4e7eef640c7db01.png#pic_center" alt="在这里插入图片描述"></li>
-<li>温馨提示：删除注册表一定要看仔细，不要误删了其他注册表项！！！<h4 id="（3）删除本地用户和组中所有关于Oracle的用户和组"><a href="#（3）删除本地用户和组中所有关于Oracle的用户和组" class="headerlink" title="（3）删除本地用户和组中所有关于Oracle的用户和组"></a>（3）删除本地用户和组中所有关于Oracle的用户和组</h4></li>
-<li>右击桌面上的<strong>此电脑</strong>，选择<strong>管理</strong>，打开<strong>计算机管理</strong>；<br><img src="https://img-blog.csdnimg.cn/f14f97db75fb488cbdb2b8f40487815d.png#pic_center" alt="在这里插入图片描述"></li>
-<li>删除在Oracle19c安装过程中新建的Windows<strong>用户</strong>ZAZDREAM；<br><img src="https://img-blog.csdnimg.cn/ee4bbaf67dab4a15b422df6a9afb500c.png#pic_center" alt="在这里插入图片描述"></li>
-<li>删除在Oracle19c安装过程中自动创建的所有以<strong>ORA</strong>开头的<strong>组</strong>；<br><img src="https://img-blog.csdnimg.cn/e097e01c509d4fec8acce783fab4635f.png#pic_center" alt="在这里插入图片描述"><h4 id="（4）删除所有关于Oracle的本地文件"><a href="#（4）删除所有关于Oracle的本地文件" class="headerlink" title="（4）删除所有关于Oracle的本地文件"></a>（4）删除所有关于Oracle的本地文件</h4></li>
-<li>重启计算机后，需要删除两个与Oracle相关的本地文件目录，第一个是Oracle19c安装过程中我们指定的文件目录，我的文件目录是Oracle19c，路径为<strong>D:\Oracle19c</strong>，第二个是Oracle19c安装过程中自动生成的文件目录Oracle，路径为<strong>C:\Program Files\Oracle</strong>。<br><img src="https://img-blog.csdnimg.cn/5c34ac6998f2415a97d41aa6b85dcf9f.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2d430e89c3554aefb8931a51a201bf56.png#pic_center" alt="在这里插入图片描述"></li>
-<li>在删除我们指定的文件目录Oracle19c的过程中，我们会遇到一个很麻烦的文件<strong>ewallet.p12</strong>，即使在提供管理员权限的条件下也无法将其删除，需要进行相关操作后才能顺利删除，操作步骤如下（按照图示顺序即可）：<br><img src="https://img-blog.csdnimg.cn/5d111128746a44a0a9ef3e2bcba8e4e8.png#pic_center" alt="在这里插入图片描述"></li>
-</ul>
-<p><strong>第一步</strong>：选中ewallet.p12，右击选择属性；<br><img src="https://img-blog.csdnimg.cn/0558eef91f5644899acc181317bc5c3f.png#pic_center" alt="在这里插入图片描述"><br><strong>第二步</strong>：选择安全-&gt;点击高级-&gt;选择更改-&gt;选择高级-&gt;选择立即查找-&gt;选择本地账户-&gt;点击确定-&gt;点击确定-&gt;点击应用-&gt;点击确定-&gt;弹出提示窗口-&gt;点击确定；<br><img src="https://img-blog.csdnimg.cn/287b2779daf84a2197309466b885a0a6.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/b016f7164bf24156898705eb7dae77a1.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/e0c8861a8d8047c7ac1057d226e791c2.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/e0562b85f70f44e8bb3d2d9f5e4f4464.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/095db6b52c094e7eb731d694b2bd13ca.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/df80a2b007994b919e0e70da72cc1cde.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8ed5e4e2e659444b869ae6d9785a0ffd.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/e59c87643fac4ffe8f06ecd6fcd04bea.png#pic_center" alt="在这里插入图片描述"><br><strong>第三步</strong>：重新打开属性，发现安全选项卡不一样了，点击编辑-&gt;点击添加-&gt;点击高级-&gt;点击立即查找-&gt;选择本地用户-&gt;点击确定；<br><img src="https://img-blog.csdnimg.cn/d5fc2456bd81460397f63e3b569805bd.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/f5c17d1e39eb4fb1b4ae051d817fc40a.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/41f647d82ff24c81b0daf93dbd69b3ed.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/757d7687627c4da79783730bb4c26fe6.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/71f8c69803b248b795b08fe02bb5832b.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/c48bedcc347b4de1bb62d8679c4d807b.png#pic_center" alt="在这里插入图片描述"><br><strong>第四步</strong>：勾选本地账户的所有权限，点击应用，点击确定，关闭后，可以删除该文件了。<br><img src="https://img-blog.csdnimg.cn/ed7504194841404eba7df770d473d39e.png#pic_center" alt="在这里插入图片描述"></p>
-<ul>
-<li>至此Oracle数据库手动卸载完成，可以重新安装新的数据库了~</li>
-</ul>
-<h2 id="（二）Oracle-SQL-Developer-1"><a href="#（二）Oracle-SQL-Developer-1" class="headerlink" title="（二）Oracle SQL Developer"></a>（二）Oracle SQL Developer</h2><h3 id="1、Oracle-SQL-Developer的安装"><a href="#1、Oracle-SQL-Developer的安装" class="headerlink" title="1、Oracle SQL Developer的安装"></a>1、Oracle SQL Developer的安装</h3><h4 id="（1）将下载好的Oracle-SQL-Developer压缩包放到指定位置；"><a href="#（1）将下载好的Oracle-SQL-Developer压缩包放到指定位置；" class="headerlink" title="（1）将下载好的Oracle SQL Developer压缩包放到指定位置；"></a>（1）将下载好的Oracle SQL Developer压缩包放到指定位置；</h4><p><img src="https://img-blog.csdnimg.cn/c3e52e4c3c844d52a38534a5e083cd18.png#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="（2）解压Oracle-SQL-Developer压缩包到指定目录，我的路径是D-Program-Files-sqldeveloper-21-4-3-063-0100-x64；"><a href="#（2）解压Oracle-SQL-Developer压缩包到指定目录，我的路径是D-Program-Files-sqldeveloper-21-4-3-063-0100-x64；" class="headerlink" title="（2）解压Oracle SQL Developer压缩包到指定目录，我的路径是D:\Program Files\sqldeveloper-21.4.3.063.0100-x64；"></a>（2）解压Oracle SQL Developer压缩包到指定目录，我的路径是D:\Program Files\sqldeveloper-21.4.3.063.0100-x64；</h4><p><img src="https://img-blog.csdnimg.cn/ecf01e2e79514c91940f4810864993fb.png#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="（3）打开sqldeveloper-exe即可使用Oracle-SQL-Developer。"><a href="#（3）打开sqldeveloper-exe即可使用Oracle-SQL-Developer。" class="headerlink" title="（3）打开sqldeveloper.exe即可使用Oracle SQL Developer。"></a>（3）打开sqldeveloper.exe即可使用Oracle SQL Developer。<img src="https://img-blog.csdnimg.cn/8741dc964cb4406fb2ea74764b4eeb99.png#pic_center" alt="在这里插入图片描述"></h4><h3 id="2、Oracle-SQL-Developer的配置"><a href="#2、Oracle-SQL-Developer的配置" class="headerlink" title="2、Oracle SQL Developer的配置"></a>2、Oracle SQL Developer的配置</h3><h4 id="（1）打开Oracle-SQL-Developer软件后，等加载完毕会出现下图所示界面，点击靠近右上角的绿色小加号建立数据库连接；"><a href="#（1）打开Oracle-SQL-Developer软件后，等加载完毕会出现下图所示界面，点击靠近右上角的绿色小加号建立数据库连接；" class="headerlink" title="（1）打开Oracle SQL Developer软件后，等加载完毕会出现下图所示界面，点击靠近右上角的绿色小加号建立数据库连接；"></a>（1）打开Oracle SQL Developer软件后，等加载完毕会出现下图所示界面，点击靠近右上角的绿色小加号建立数据库连接；</h4><p><img src="https://img-blog.csdnimg.cn/e4ca9327023e46039e68bc6b268c7b62.png#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="（2）Name：crashcourse、数据库类型：默认、验证类型：默认、用户名：scott、密码：ZYB1314520ZG、连接类型：基本、主机名：默认、端口：默认、服务名：orcl或者SID：orcl，点击测试，结果右下角状态显示成功；"><a href="#（2）Name：crashcourse、数据库类型：默认、验证类型：默认、用户名：scott、密码：ZYB1314520ZG、连接类型：基本、主机名：默认、端口：默认、服务名：orcl或者SID：orcl，点击测试，结果右下角状态显示成功；" class="headerlink" title="（2）Name：crashcourse、数据库类型：默认、验证类型：默认、用户名：scott、密码：ZYB1314520ZG、连接类型：基本、主机名：默认、端口：默认、服务名：orcl或者SID：orcl，点击测试，结果右下角状态显示成功；"></a>（2）Name：crashcourse、数据库类型：默认、验证类型：默认、用户名：scott、密码：ZYB1314520ZG、连接类型：基本、主机名：默认、端口：默认、服务名：orcl或者SID：orcl，点击测试，结果右下角状态显示成功；</h4><p><img src="https://img-blog.csdnimg.cn/158e8936ba324e60b4334f0353747b9e.png#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="（3）点击连接，成功进入数据库连接界面。"><a href="#（3）点击连接，成功进入数据库连接界面。" class="headerlink" title="（3）点击连接，成功进入数据库连接界面。"></a>（3）点击连接，成功进入数据库连接界面。</h4><p><img src="https://img-blog.csdnimg.cn/832800c21fe64dcb9cd166d60fb78550.png#pic_center" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>Oracle学习</category>
-      </categories>
-      <tags>
-        <tag>入门</tag>
-        <tag>Oracle</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python实战：个人博客网站搭建</title>
     <url>/2020/09/16/Python%E5%AE%9E%E6%88%98%EF%BC%9A%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h3 id="编程环境"><a href="#编程环境" class="headerlink" title="编程环境"></a><strong>编程环境</strong></h3><ul>
@@ -1155,8 +929,8 @@
         <category>Python学习</category>
       </categories>
       <tags>
-        <tag>入门</tag>
         <tag>Python</tag>
+        <tag>入门</tag>
       </tags>
   </entry>
   <entry>
@@ -1726,8 +1500,8 @@
         <category>Python学习</category>
       </categories>
       <tags>
-        <tag>入门</tag>
         <tag>Python</tag>
+        <tag>入门</tag>
       </tags>
   </entry>
   <entry>
@@ -1992,8 +1766,8 @@
         <category>Python学习</category>
       </categories>
       <tags>
-        <tag>入门</tag>
         <tag>Python</tag>
+        <tag>入门</tag>
       </tags>
   </entry>
   <entry>
